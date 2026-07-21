@@ -1,0 +1,11 @@
+{
+  "name": "radix-sort-nonneg-ints",
+  "algorithm": "radix_sort",
+  "notes": "LSD radix sort, base 10, non-negative integers only; throws 'invalid' on negative input.",
+  "ops": [
+    { "op": "radixSort", "args": [[170, 45, 75, 90, 802, 24, 2, 66]], "expect": { "value": [2, 24, 45, 66, 75, 90, 170, 802] } },
+    { "op": "radixSort", "args": [[4, 1, 0, 4, 1, 9, 2, 2, 2]], "expect": { "value": [0, 1, 1, 2, 2, 2, 4, 4, 9] } },
+    { "op": "radixSort", "args": [[]], "expect": { "value": [] } },
+    { "op": "radixSort", "args": [[1, -2, 3]], "error": "invalid" }
+  ]
+}

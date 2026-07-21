@@ -1,0 +1,10 @@
+{
+  "name": "connected-components-min-label",
+  "algorithm": "components",
+  "notes": "Args: [n, edges]. Always treated as undirected. Component ids normalized to the minimum vertex id within each component.",
+  "ops": [
+    { "op": "connectedComponents", "args": [6, [[0, 1], [1, 2], [3, 4]]], "expect": { "value": [0, 0, 0, 3, 3, 5] } },
+    { "op": "connectedComponents", "args": [1, []], "expect": { "value": [0] } },
+    { "op": "connectedComponents", "args": [4, [[0, 1], [2, 3], [1, 2]]], "expect": { "value": [0, 0, 0, 0] } }
+  ]
+}

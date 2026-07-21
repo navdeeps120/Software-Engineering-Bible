@@ -1,0 +1,11 @@
+{
+  "name": "levenshtein-edit-distance",
+  "algorithm": "edit_distance",
+  "notes": "Insert/delete/substitute each cost 1.",
+  "ops": [
+    { "op": "editDistance", "args": ["kitten", "sitting"], "expect": { "value": 3 } },
+    { "op": "editDistance", "args": ["", ""], "expect": { "value": 0 } },
+    { "op": "editDistance", "args": ["same", "same"], "expect": { "value": 0 } },
+    { "op": "editDistance", "args": ["", "abc"], "expect": { "value": 3 } }
+  ]
+}

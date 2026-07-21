@@ -1,0 +1,14 @@
+{
+  "name": "topological-sort-kahn-deterministic",
+  "algorithm": "topological",
+  "notes": "Args: [n, edges]. Directed only. Among all zero-indegree vertices, the lowest id is always removed first, so the order is a specific deterministic order, not just 'any valid one'. Certificate isValidTopo is also checked. Raises 'cycle' when the graph is not a DAG.",
+  "ops": [
+    {
+      "op": "topologicalSort",
+      "args": [6, [[5, 2], [5, 0], [4, 0], [4, 1], [2, 3], [3, 1]]],
+      "expect": { "value": [4, 5, 0, 2, 3, 1] }
+    },
+    { "op": "topologicalSort", "args": [3, []], "expect": { "value": [0, 1, 2] } },
+    { "op": "topologicalSort", "args": [3, [[0, 1], [1, 2], [2, 0]]], "error": "cycle" }
+  ]
+}

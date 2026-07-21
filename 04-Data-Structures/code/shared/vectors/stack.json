@@ -1,0 +1,19 @@
+{
+  "name": "stack_lifo",
+  "structure": "Stack",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "isEmpty", "expect": { "value": true } },
+    { "op": "push", "args": [1], "expect": { "size": 1 } },
+    { "op": "push", "args": [2], "expect": { "size": 2 } },
+    { "op": "push", "args": [3], "expect": { "size": 3 } },
+    { "op": "peek", "expect": { "value": 3 } },
+    { "op": "pop", "expect": { "value": 3, "size": 2 } },
+    { "op": "pop", "expect": { "value": 2, "size": 1 } },
+    { "op": "isEmpty", "expect": { "value": false } },
+    { "op": "pop", "expect": { "value": 1, "size": 0 } },
+    { "op": "isEmpty", "expect": { "value": true } },
+    { "op": "pop", "error": "empty" },
+    { "op": "peek", "error": "empty" }
+  ]
+}

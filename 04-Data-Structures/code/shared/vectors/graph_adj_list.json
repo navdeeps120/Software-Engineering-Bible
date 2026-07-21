@@ -1,0 +1,22 @@
+{
+  "name": "adjacency_list_undirected",
+  "structure": "AdjListGraph",
+  "notes": "Undirected: addEdge implicitly creates both endpoints and both directions. neighbors() is always sorted.",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "addVertex", "args": ["A"] },
+    { "op": "addVertex", "args": ["B"] },
+    { "op": "addEdge", "args": ["A", "B"] },
+    { "op": "addEdge", "args": ["A", "C"] },
+    { "op": "addEdge", "args": ["B", "C"] },
+    { "op": "neighbors", "args": ["A"], "expect": { "list": ["B", "C"] } },
+    { "op": "neighbors", "args": ["C"], "expect": { "list": ["A", "B"] } },
+    { "op": "vertexCount", "expect": { "value": 3 } },
+    { "op": "edgeCount", "expect": { "value": 3 } },
+    { "op": "neighbors", "args": ["Z"], "error": "missing" },
+    { "op": "addVertex", "args": ["D"] },
+    { "op": "vertexCount", "expect": { "value": 4 } },
+    { "op": "neighbors", "args": ["D"], "expect": { "list": [] } },
+    { "op": "edgeCount", "expect": { "value": 3 } }
+  ]
+}

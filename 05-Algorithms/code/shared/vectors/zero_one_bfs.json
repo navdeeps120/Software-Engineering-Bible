@@ -1,0 +1,14 @@
+{
+  "name": "zero-one-bfs-deque",
+  "algorithm": "zero_one_bfs",
+  "notes": "Args: [n, edges(u,v,w in {0,1}), src, directed]. Deque-based O(V+E) shortest paths for 0/1 weights only; throws 'invalid' for any other weight.",
+  "ops": [
+    {
+      "op": "zeroOneBfs",
+      "args": [4, [[0, 1, 0], [1, 2, 1], [0, 2, 1], [2, 3, 0]], 0, true],
+      "expect": { "value": [0, 0, 1, 1] }
+    },
+    { "op": "zeroOneBfs", "args": [2, [[0, 1, 5]], 0, true], "error": "invalid" },
+    { "op": "zeroOneBfs", "args": [3, [[0, 1, 1]], 0, true], "expect": { "value": [0, 1, null] } }
+  ]
+}

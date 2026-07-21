@@ -1,0 +1,23 @@
+{
+  "name": "bitset_basic",
+  "structure": "Bitset",
+  "notes": "toBits() returns a string of exactly nBits characters, index 0 first.",
+  "ops": [
+    { "op": "construct", "args": [8] },
+    { "op": "set", "args": [0, true] },
+    { "op": "get", "args": [0], "expect": { "value": true } },
+    { "op": "get", "args": [1], "expect": { "value": false } },
+    { "op": "count", "expect": { "value": 1 } },
+    { "op": "set", "args": [3, true] },
+    { "op": "count", "expect": { "value": 2 } },
+    { "op": "toBits", "expect": { "value": "10010000" } },
+    { "op": "set", "args": [0, false] },
+    { "op": "count", "expect": { "value": 1 } },
+    { "op": "toBits", "expect": { "value": "00010000" } },
+    { "op": "set", "args": [7, true] },
+    { "op": "toBits", "expect": { "value": "00010001" } },
+    { "op": "get", "args": [8], "error": "index" },
+    { "op": "set", "args": [-1, true], "error": "index" },
+    { "op": "set", "args": [8, true], "error": "index" }
+  ]
+}

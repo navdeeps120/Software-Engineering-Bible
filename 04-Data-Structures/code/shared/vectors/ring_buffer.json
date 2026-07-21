@@ -1,0 +1,23 @@
+{
+  "name": "ring_buffer_wraparound",
+  "structure": "RingBuffer",
+  "notes": "Capacity 3; exercises fill, wraparound after partial drain, and full/empty errors.",
+  "ops": [
+    { "op": "construct", "args": [3] },
+    { "op": "push", "args": [1], "expect": { "size": 1 } },
+    { "op": "push", "args": [2], "expect": { "size": 2 } },
+    { "op": "isFull", "expect": { "value": false } },
+    { "op": "push", "args": [3], "expect": { "size": 3 } },
+    { "op": "isFull", "expect": { "value": true } },
+    { "op": "push", "args": [4], "error": "full" },
+    { "op": "pop", "expect": { "value": 1, "size": 2 } },
+    { "op": "isEmpty", "expect": { "value": false } },
+    { "op": "push", "args": [4], "expect": { "size": 3 } },
+    { "op": "toList", "expect": { "list": [2, 3, 4] } },
+    { "op": "pop", "expect": { "value": 2, "size": 2 } },
+    { "op": "pop", "expect": { "value": 3, "size": 1 } },
+    { "op": "pop", "expect": { "value": 4, "size": 0 } },
+    { "op": "isEmpty", "expect": { "value": true } },
+    { "op": "pop", "error": "empty" }
+  ]
+}

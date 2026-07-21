@@ -1,0 +1,24 @@
+{
+  "name": "radix_tree_compressed_edges",
+  "structure": "RadixTree",
+  "notes": "Deletion is intentionally out of scope for this lab (documented optional in the spec); only insert/contains/startsWith are exercised.",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "insert", "args": ["cat"] },
+    { "op": "insert", "args": ["car"] },
+    { "op": "insert", "args": ["card"] },
+    { "op": "insert", "args": ["dog"] },
+    { "op": "contains", "args": ["cat"], "expect": { "contains": true } },
+    { "op": "contains", "args": ["ca"], "expect": { "contains": false } },
+    { "op": "contains", "args": ["card"], "expect": { "contains": true } },
+    { "op": "startsWith", "args": ["ca"], "expect": { "contains": true } },
+    { "op": "startsWith", "args": ["car"], "expect": { "contains": true } },
+    { "op": "startsWith", "args": ["do"], "expect": { "contains": true } },
+    { "op": "startsWith", "args": ["x"], "expect": { "contains": false } },
+    { "op": "startsWith", "args": [""], "expect": { "contains": true } },
+    { "op": "contains", "args": ["care"], "expect": { "contains": false } },
+    { "op": "insert", "args": ["care"] },
+    { "op": "contains", "args": ["care"], "expect": { "contains": true } },
+    { "op": "startsWith", "args": ["car"], "expect": { "contains": true } }
+  ]
+}

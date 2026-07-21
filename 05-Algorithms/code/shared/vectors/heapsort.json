@@ -1,0 +1,11 @@
+{
+  "name": "heapsort-general",
+  "algorithm": "heapsort",
+  "notes": "In-place binary max-heap over a copy; returns a new array.",
+  "ops": [
+    { "op": "heapSort", "args": [[5, 3, 8, 1, 9, 2, 7, 4, 6, 0]], "expect": { "value": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] } },
+    { "op": "heapSort", "args": [[4, -1, 0, 4, -1, 9, 2]], "expect": { "value": [-1, -1, 0, 2, 4, 4, 9] } },
+    { "op": "heapSort", "args": [[]], "expect": { "value": [] } },
+    { "op": "heapSort", "args": [[3, 3, 2, 1]], "expect": { "value": [1, 2, 3, 3] } }
+  ]
+}

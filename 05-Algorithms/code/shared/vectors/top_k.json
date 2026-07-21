@@ -1,0 +1,11 @@
+{
+  "name": "top-k-smallest-ascending",
+  "algorithm": "top_k",
+  "notes": "Returns the k smallest elements sorted ascending (documented convention; not k largest).",
+  "ops": [
+    { "op": "topK", "args": [[5, 2, 9, 1, 5, 6], 3], "expect": { "value": [1, 2, 5] } },
+    { "op": "topK", "args": [[5, 2, 9, 1, 5, 6], 0], "expect": { "value": [] } },
+    { "op": "topK", "args": [[3, 1, 2], 3], "expect": { "value": [1, 2, 3] } },
+    { "op": "topK", "args": [[1, 2, 3], 5], "error": "index" }
+  ]
+}

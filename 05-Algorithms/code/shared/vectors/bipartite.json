@@ -1,0 +1,10 @@
+{
+  "name": "bipartite-2-coloring",
+  "algorithm": "bipartite",
+  "notes": "Args: [n, edges]. Undirected. A 4-cycle is bipartite; a triangle (odd cycle) is not.",
+  "ops": [
+    { "op": "isBipartite", "args": [4, [[0, 1], [1, 2], [2, 3], [3, 0]]], "expect": { "value": true } },
+    { "op": "isBipartite", "args": [3, [[0, 1], [1, 2], [2, 0]]], "expect": { "value": false } },
+    { "op": "isBipartite", "args": [5, [[0, 1], [2, 3]]], "expect": { "value": true } }
+  ]
+}

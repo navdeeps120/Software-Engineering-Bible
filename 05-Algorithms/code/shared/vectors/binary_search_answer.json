@@ -1,0 +1,11 @@
+{
+  "name": "binary-search-on-answer-sqrt-ceiling",
+  "algorithm": "binary_search_answer",
+  "notes": "The runner builds the predicate x*x >= target from op args [lo, hi, target] since predicates can't be JSON-encoded directly; the real function takes an arbitrary monotonic predicate callback.",
+  "ops": [
+    { "op": "binarySearchAnswer", "args": [0, 100, 50], "expect": { "value": 8 } },
+    { "op": "binarySearchAnswer", "args": [0, 10, 0], "expect": { "value": 0 } },
+    { "op": "binarySearchAnswer", "args": [0, 5, 100], "error": "not_found" },
+    { "op": "binarySearchAnswer", "args": [5, 2, 1], "error": "invalid" }
+  ]
+}

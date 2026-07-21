@@ -1,0 +1,11 @@
+{
+  "name": "merge-sort-general",
+  "algorithm": "merge_sort",
+  "notes": "Returns a new array; input negatives/duplicates allowed. The runner also checks the isSorted certificate on every result.",
+  "ops": [
+    { "op": "mergeSort", "args": [[5, 3, 8, 1, 9, 2, 7, 4, 6, 0]], "expect": { "value": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] } },
+    { "op": "mergeSort", "args": [[4, -1, 0, 4, -1, 9, 2]], "expect": { "value": [-1, -1, 0, 2, 4, 4, 9] } },
+    { "op": "mergeSort", "args": [[]], "expect": { "value": [] } },
+    { "op": "mergeSort", "args": [[2, 1]], "expect": { "value": [1, 2] } }
+  ]
+}

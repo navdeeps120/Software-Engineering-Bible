@@ -1,0 +1,19 @@
+{
+  "name": "hash_set_basic",
+  "structure": "HashSet",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "add", "args": ["x"], "expect": { "size": 1 } },
+    { "op": "add", "args": ["y"], "expect": { "size": 2 } },
+    { "op": "add", "args": ["x"], "expect": { "size": 2 } },
+    { "op": "has", "args": ["x"], "expect": { "contains": true } },
+    { "op": "has", "args": ["z"], "expect": { "contains": false } },
+    { "op": "delete", "args": ["y"], "expect": { "value": true, "size": 1 } },
+    { "op": "delete", "args": ["z"], "expect": { "value": false, "size": 1 } },
+    { "op": "values", "expect": { "list": ["x"] } },
+    { "op": "add", "args": ["a"], "expect": { "size": 2 } },
+    { "op": "add", "args": ["b"], "expect": { "size": 3 } },
+    { "op": "values", "expect": { "list": ["a", "b", "x"] } },
+    { "op": "size", "expect": { "value": 3 } }
+  ]
+}

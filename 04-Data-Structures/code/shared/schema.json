@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://software-engineering-bible/04-data-structures/shared/schema.json",
+  "title": "Data Structures Lab Vector",
+  "description": "A deterministic operation sequence executed identically by the TypeScript and Python test suites against one data structure implementation.",
+  "type": "object",
+  "required": ["name", "structure", "ops"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Unique, human-readable identifier for this vector."
+    },
+    "structure": {
+      "type": "string",
+      "description": "Name of the structure adapter to instantiate (must match a registered adapter in both language runners).",
+      "enum": [
+        "DynamicArray",
+        "Bitset",
+        "RingBuffer",
+        "SinglyLinkedList",
+        "DoublyLinkedList",
+        "Stack",
+        "Queue",
+        "Deque",
+        "ChainingHashMap",
+        "OpenAddressingHashMap",
+        "HashSet",
+        "BST",
+        "AVL",
+        "BinaryHeap",
+        "IndexedHeap",
+        "Trie",
+        "RadixTree",
+        "AdjListGraph",
+        "AdjMatrixGraph",
+        "UnionFind",
+        "BloomFilter",
+        "LRUCache",
+        "PersistentStack",
+        "MutexMap",
+        "BoundedConcurrentQueue"
+      ]
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-text documentation, e.g. concurrency model or hashing scheme assumptions."
+    },
+    "ops": {
+      "type": "array",
+      "minItems": 2,
+      "description": "The first op MUST be {\"op\":\"construct\",\"args\":[...]} providing constructor arguments (empty array if none).",
+      "items": { "$ref": "#/definitions/op" }
+    }
+  },
+  "definitions": {
+    "op": {
+      "type": "object",
+      "required": ["op"],
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "type": "string",
+          "description": "Method name to invoke on the instance, e.g. push, pop, get, set, contains."
+        },
+        "args": {
+          "type": "array",
+          "description": "Positional arguments passed to the method."
+        },
+        "expect": {
+          "type": "object",
+          "description": "Subset of the result fields to assert. Supported keys: size, value, list, contains.",
+          "additionalProperties": true,
+          "properties": {
+            "size": { "type": "number" },
+            "value": {},
+            "list": { "type": "array" },
+            "contains": { "type": "boolean" }
+          }
+        },
+        "error": {
+          "type": "string",
+          "description": "If present, the op is expected to throw/raise an error whose code matches this value.",
+          "enum": ["empty", "full", "index", "missing"]
+        }
+      }
+    }
+  }
+}

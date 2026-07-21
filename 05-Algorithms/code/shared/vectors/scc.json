@@ -1,0 +1,14 @@
+{
+  "name": "strongly-connected-components-kosaraju",
+  "algorithm": "scc",
+  "notes": "Args: [n, edges]. Directed. Component ids normalized to the minimum vertex id per component (Kosaraju's finishing-time order otherwise depends on traversal internals, but the final labeling doesn't).",
+  "ops": [
+    {
+      "op": "stronglyConnectedComponents",
+      "args": [6, [[0, 1], [1, 2], [2, 0], [2, 3], [3, 4], [4, 5], [5, 3]]],
+      "expect": { "value": [0, 0, 0, 3, 3, 3] }
+    },
+    { "op": "stronglyConnectedComponents", "args": [3, [[0, 1], [1, 2]]], "expect": { "value": [0, 1, 2] } },
+    { "op": "stronglyConnectedComponents", "args": [1, []], "expect": { "value": [0] } }
+  ]
+}

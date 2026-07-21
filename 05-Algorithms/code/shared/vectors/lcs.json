@@ -1,0 +1,11 @@
+{
+  "name": "longest-common-subsequence",
+  "algorithm": "lcs",
+  "notes": "Length only (not the subsequence itself, which is non-unique).",
+  "ops": [
+    { "op": "lcs", "args": ["ABCBDAB", "BDCABA"], "expect": { "value": 4 } },
+    { "op": "lcs", "args": ["", "abc"], "expect": { "value": 0 } },
+    { "op": "lcs", "args": ["abc", "abc"], "expect": { "value": 3 } },
+    { "op": "lcs", "args": ["abc", "xyz"], "expect": { "value": 0 } }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "union_find_components",
+  "structure": "UnionFind",
+  "notes": "Only find(0) is asserted directly (guaranteed to be 0 pre-union); all other relational checks use connected()/count() since exact root ids after union-by-rank are an implementation detail.",
+  "ops": [
+    { "op": "construct", "args": [6] },
+    { "op": "find", "args": [0], "expect": { "value": 0 } },
+    { "op": "count", "expect": { "value": 6 } },
+    { "op": "union", "args": [0, 1], "expect": { "value": 5 } },
+    { "op": "connected", "args": [0, 1], "expect": { "contains": true } },
+    { "op": "union", "args": [1, 2], "expect": { "value": 4 } },
+    { "op": "connected", "args": [0, 2], "expect": { "contains": true } },
+    { "op": "connected", "args": [0, 3], "expect": { "contains": false } },
+    { "op": "union", "args": [3, 4], "expect": { "value": 3 } },
+    { "op": "connected", "args": [3, 4], "expect": { "contains": true } },
+    { "op": "connected", "args": [0, 4], "expect": { "contains": false } },
+    { "op": "union", "args": [0, 4], "expect": { "value": 2 } },
+    { "op": "connected", "args": [0, 4], "expect": { "contains": true } },
+    { "op": "connected", "args": [2, 3], "expect": { "contains": true } },
+    { "op": "count", "expect": { "value": 2 } },
+    { "op": "find", "args": [10], "error": "index" }
+  ]
+}

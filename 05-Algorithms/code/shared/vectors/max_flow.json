@@ -1,0 +1,14 @@
+{
+  "name": "max-flow-edmonds-karp",
+  "algorithm": "max_flow",
+  "notes": "Args: [n, edges(u,v,capacity), s, t]. Edmonds-Karp (BFS augmenting paths). Directed capacity graph; parallel edges are summed.",
+  "ops": [
+    {
+      "op": "maxFlow",
+      "args": [4, [[0, 1, 3], [0, 2, 2], [1, 2, 1], [1, 3, 2], [2, 3, 3]], 0, 3],
+      "expect": { "value": 5 }
+    },
+    { "op": "maxFlow", "args": [2, [], 0, 1], "expect": { "value": 0 } },
+    { "op": "maxFlow", "args": [2, [[0, 1, -3]], 0, 1], "error": "invalid" }
+  ]
+}

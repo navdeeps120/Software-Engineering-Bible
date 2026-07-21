@@ -1,0 +1,11 @@
+{
+  "name": "kmp-substring-search",
+  "algorithm": "kmp",
+  "notes": "Overlapping matches included; ascending start indices.",
+  "ops": [
+    { "op": "kmpSearch", "args": ["ababcabcabababd", "ababd"], "expect": { "value": [10] } },
+    { "op": "kmpSearch", "args": ["aaaaa", "aa"], "expect": { "value": [0, 1, 2, 3] } },
+    { "op": "kmpSearch", "args": ["abcdef", "xyz"], "expect": { "value": [] } },
+    { "op": "kmpSearch", "args": ["abc", ""], "expect": { "value": [] } }
+  ]
+}

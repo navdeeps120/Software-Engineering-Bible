@@ -1,0 +1,16 @@
+{
+  "name": "queue_fifo",
+  "structure": "Queue",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "enqueue", "args": [1], "expect": { "size": 1 } },
+    { "op": "enqueue", "args": [2], "expect": { "size": 2 } },
+    { "op": "peek", "expect": { "value": 1 } },
+    { "op": "dequeue", "expect": { "value": 1, "size": 1 } },
+    { "op": "enqueue", "args": [3], "expect": { "size": 2 } },
+    { "op": "dequeue", "expect": { "value": 2, "size": 1 } },
+    { "op": "dequeue", "expect": { "value": 3, "size": 0 } },
+    { "op": "dequeue", "error": "empty" },
+    { "op": "peek", "error": "empty" }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "binary_heap_min_order",
+  "structure": "BinaryHeap",
+  "notes": "Relies only on the heap invariant (peek/pop always return the current minimum) rather than any specific internal array layout, so toList() is intentionally never asserted on.",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "push", "args": [5], "expect": { "size": 1 } },
+    { "op": "push", "args": [3], "expect": { "size": 2 } },
+    { "op": "push", "args": [8], "expect": { "size": 3 } },
+    { "op": "push", "args": [1], "expect": { "size": 4 } },
+    { "op": "push", "args": [9], "expect": { "size": 5 } },
+    { "op": "push", "args": [2], "expect": { "size": 6 } },
+    { "op": "peek", "expect": { "value": 1 } },
+    { "op": "size", "expect": { "value": 6 } },
+    { "op": "pop", "expect": { "value": 1, "size": 5 } },
+    { "op": "pop", "expect": { "value": 2, "size": 4 } },
+    { "op": "peek", "expect": { "value": 3 } },
+    { "op": "pop", "expect": { "value": 3, "size": 3 } },
+    { "op": "pop", "expect": { "value": 5, "size": 2 } },
+    { "op": "pop", "expect": { "value": 8, "size": 1 } },
+    { "op": "pop", "expect": { "value": 9, "size": 0 } },
+    { "op": "pop", "error": "empty" },
+    { "op": "peek", "error": "empty" }
+  ]
+}

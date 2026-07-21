@@ -1,0 +1,10 @@
+{
+  "name": "bfs-visit-order",
+  "algorithm": "bfs",
+  "notes": "Graph args: [n, edges, src, directed]. Vertices 0..n-1. Neighbors always visited ascending id first (buildAdjList sorts each adjacency list), so the order is deterministic. Returns visitation order, not distances.",
+  "ops": [
+    { "op": "bfs", "args": [5, [[0, 1], [0, 2], [1, 3], [2, 3], [3, 4]], 0, false], "expect": { "value": [0, 1, 2, 3, 4] } },
+    { "op": "bfs", "args": [4, [[0, 1], [0, 2], [1, 3], [2, 3], [3, 0]], 0, true], "expect": { "value": [0, 1, 2, 3] } },
+    { "op": "bfs", "args": [3, [[0, 1]], 5, false], "error": "index" }
+  ]
+}

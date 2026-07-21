@@ -1,0 +1,10 @@
+{
+  "name": "bipartite-matching-kuhn",
+  "algorithm": "bipartite_matching",
+  "notes": "Args: [nLeft, nRight, edges([left,right])]. Kuhn's DFS-augmenting algorithm; left vertices and each DFS's candidates are both explored in ascending id order.",
+  "ops": [
+    { "op": "bipartiteMatching", "args": [3, 3, [[0, 0], [0, 1], [1, 0], [2, 1], [2, 2]]], "expect": { "value": 3 } },
+    { "op": "bipartiteMatching", "args": [2, 2, []], "expect": { "value": 0 } },
+    { "op": "bipartiteMatching", "args": [2, 2, [[0, 5]]], "error": "index" }
+  ]
+}

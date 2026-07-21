@@ -1,0 +1,17 @@
+{
+  "name": "bounded_concurrent_queue_try_semantics",
+  "structure": "BoundedConcurrentQueue",
+  "notes": "Concurrency model: non-blocking try* API shaped for multi-producer/multi-consumer use, driven here by one deterministic sequential caller (no real threads spawned). Capacity 2.",
+  "ops": [
+    { "op": "construct", "args": [2] },
+    { "op": "tryOffer", "args": [1], "expect": { "value": true, "size": 1 } },
+    { "op": "tryOffer", "args": [2], "expect": { "value": true, "size": 2 } },
+    { "op": "tryOffer", "args": [3], "expect": { "value": false, "size": 2 } },
+    { "op": "tryPoll", "expect": { "value": 1, "size": 1 } },
+    { "op": "tryOffer", "args": [3], "expect": { "value": true, "size": 2 } },
+    { "op": "tryPoll", "expect": { "value": 2, "size": 1 } },
+    { "op": "tryPoll", "expect": { "value": 3, "size": 0 } },
+    { "op": "tryPoll", "expect": { "value": null, "size": 0 } },
+    { "op": "size", "expect": { "value": 0 } }
+  ]
+}

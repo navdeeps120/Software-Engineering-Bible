@@ -1,0 +1,20 @@
+{
+  "name": "lru_eviction_order",
+  "structure": "LRUCache",
+  "notes": "Capacity 2. get() promotes a key to most-recently-used; put() at capacity evicts the least-recently-used key.",
+  "ops": [
+    { "op": "construct", "args": [2] },
+    { "op": "put", "args": [1, "a"], "expect": { "size": 1 } },
+    { "op": "put", "args": [2, "b"], "expect": { "size": 2 } },
+    { "op": "get", "args": [1], "expect": { "value": "a" } },
+    { "op": "put", "args": [3, "c"], "expect": { "size": 2 } },
+    { "op": "get", "args": [2], "expect": { "value": null } },
+    { "op": "get", "args": [3], "expect": { "value": "c" } },
+    { "op": "get", "args": [1], "expect": { "value": "a" } },
+    { "op": "put", "args": [4, "d"], "expect": { "size": 2 } },
+    { "op": "get", "args": [3], "expect": { "value": null } },
+    { "op": "get", "args": [4], "expect": { "value": "d" } },
+    { "op": "get", "args": [1], "expect": { "value": "a" } },
+    { "op": "size", "expect": { "value": 2 } }
+  ]
+}

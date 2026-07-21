@@ -1,0 +1,11 @@
+{
+  "name": "counting-sort-nonneg-ints",
+  "algorithm": "counting_sort",
+  "notes": "Non-negative integers only; throws 'invalid' on negative input.",
+  "ops": [
+    { "op": "countingSort", "args": [[4, 1, 0, 4, 1, 9, 2, 2, 2]], "expect": { "value": [0, 1, 1, 2, 2, 2, 4, 4, 9] } },
+    { "op": "countingSort", "args": [[]], "expect": { "value": [] } },
+    { "op": "countingSort", "args": [[0, 0, 0]], "expect": { "value": [0, 0, 0] } },
+    { "op": "countingSort", "args": [[1, -2, 3]], "error": "invalid" }
+  ]
+}

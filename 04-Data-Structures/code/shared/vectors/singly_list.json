@@ -1,0 +1,21 @@
+{
+  "name": "singly_linked_list_basic",
+  "structure": "SinglyLinkedList",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "pushFront", "args": [1], "expect": { "size": 1 } },
+    { "op": "pushFront", "args": [2], "expect": { "size": 2 } },
+    { "op": "pushBack", "args": [3], "expect": { "size": 3 } },
+    { "op": "toList", "expect": { "list": [2, 1, 3] } },
+    { "op": "popFront", "expect": { "value": 2, "size": 2 } },
+    { "op": "popFront", "expect": { "value": 1, "size": 1 } },
+    { "op": "toList", "expect": { "list": [3] } },
+    { "op": "pushBack", "args": [4], "expect": { "size": 2 } },
+    { "op": "pushBack", "args": [5], "expect": { "size": 3 } },
+    { "op": "toList", "expect": { "list": [3, 4, 5] } },
+    { "op": "popFront", "expect": { "value": 3, "size": 2 } },
+    { "op": "popFront", "expect": { "value": 4, "size": 1 } },
+    { "op": "popFront", "expect": { "value": 5, "size": 0 } },
+    { "op": "popFront", "error": "empty" }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "bellman-ford-negative-weights",
+  "algorithm": "bellman_ford",
+  "notes": "Args: [n, edges(u,v,w), src, directed]. Tolerates negative edges. When a negative cycle is reachable from src, 'dist' is reported as an all-null array rather than algorithm-order-dependent partial values.",
+  "ops": [
+    {
+      "op": "bellmanFord",
+      "args": [4, [[0, 1, 4], [0, 2, 5], [1, 2, -3], [2, 3, 4]], 0, true],
+      "expect": { "value": { "dist": [0, 4, 1, 5], "negativeCycle": false } }
+    },
+    {
+      "op": "bellmanFord",
+      "args": [3, [[0, 1, 1], [1, 2, -1], [2, 0, -1]], 0, true],
+      "expect": { "value": { "dist": [null, null, null], "negativeCycle": true } }
+    },
+    {
+      "op": "bellmanFord",
+      "args": [3, [[0, 1, 2]], 0, true],
+      "expect": { "value": { "dist": [0, 2, null], "negativeCycle": false } }
+    }
+  ]
+}

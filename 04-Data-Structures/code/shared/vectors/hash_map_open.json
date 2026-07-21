@@ -1,0 +1,29 @@
+{
+  "name": "open_addressing_hash_map_basic",
+  "structure": "OpenAddressingHashMap",
+  "notes": "Linear probing with tombstones on delete; keys() is always sorted so probe ordering is never observable. Identical op sequence to hash_map_chaining.json to prove semantic parity between the two map strategies.",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "set", "args": ["a", 1], "expect": { "size": 1 } },
+    { "op": "set", "args": ["b", 2], "expect": { "size": 2 } },
+    { "op": "set", "args": ["c", 3], "expect": { "size": 3 } },
+    { "op": "get", "args": ["a"], "expect": { "value": 1 } },
+    { "op": "get", "args": ["z"], "expect": { "value": null } },
+    { "op": "has", "args": ["b"], "expect": { "contains": true } },
+    { "op": "has", "args": ["z"], "expect": { "contains": false } },
+    { "op": "delete", "args": ["b"], "expect": { "value": true, "size": 2 } },
+    { "op": "delete", "args": ["z"], "expect": { "value": false, "size": 2 } },
+    { "op": "keys", "expect": { "list": ["a", "c"] } },
+    { "op": "set", "args": ["b", 20], "expect": { "size": 3 } },
+    { "op": "get", "args": ["b"], "expect": { "value": 20 } },
+    { "op": "set", "args": ["a", 100], "expect": { "size": 3 } },
+    { "op": "get", "args": ["a"], "expect": { "value": 100 } },
+    { "op": "keys", "expect": { "list": ["a", "b", "c"] } },
+    { "op": "set", "args": ["m", 5], "expect": { "size": 4 } },
+    { "op": "set", "args": ["n", 6], "expect": { "size": 5 } },
+    { "op": "set", "args": ["o", 7], "expect": { "size": 6 } },
+    { "op": "set", "args": ["p", 8], "expect": { "size": 7 } },
+    { "op": "keys", "expect": { "list": ["a", "b", "c", "m", "n", "o", "p"] } },
+    { "op": "size", "expect": { "value": 7 } }
+  ]
+}

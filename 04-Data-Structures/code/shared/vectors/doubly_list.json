@@ -1,0 +1,23 @@
+{
+  "name": "doubly_linked_list_both_ends",
+  "structure": "DoublyLinkedList",
+  "notes": "Internally sentinel-based; exercises pushFront/pushBack/popFront/popBack symmetry.",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "pushBack", "args": [1], "expect": { "size": 1 } },
+    { "op": "pushBack", "args": [2], "expect": { "size": 2 } },
+    { "op": "pushFront", "args": [0], "expect": { "size": 3 } },
+    { "op": "toList", "expect": { "list": [0, 1, 2] } },
+    { "op": "popBack", "expect": { "value": 2, "size": 2 } },
+    { "op": "popFront", "expect": { "value": 0, "size": 1 } },
+    { "op": "toList", "expect": { "list": [1] } },
+    { "op": "pushFront", "args": [5], "expect": { "size": 2 } },
+    { "op": "pushBack", "args": [6], "expect": { "size": 3 } },
+    { "op": "toList", "expect": { "list": [5, 1, 6] } },
+    { "op": "popFront", "expect": { "value": 5, "size": 2 } },
+    { "op": "popBack", "expect": { "value": 6, "size": 1 } },
+    { "op": "popBack", "expect": { "value": 1, "size": 0 } },
+    { "op": "popFront", "error": "empty" },
+    { "op": "popBack", "error": "empty" }
+  ]
+}

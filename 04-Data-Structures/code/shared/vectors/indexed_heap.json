@@ -1,0 +1,22 @@
+{
+  "name": "indexed_heap_decrease_key",
+  "structure": "IndexedHeap",
+  "notes": "Ids are opaque strings; priorities are distinct integers so pop order is unambiguous across implementations.",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "push", "args": ["a", 5], "expect": { "size": 1 } },
+    { "op": "push", "args": ["b", 3], "expect": { "size": 2 } },
+    { "op": "push", "args": ["c", 8], "expect": { "size": 3 } },
+    { "op": "push", "args": ["d", 1], "expect": { "size": 4 } },
+    { "op": "contains", "args": ["a"], "expect": { "contains": true } },
+    { "op": "contains", "args": ["z"], "expect": { "contains": false } },
+    { "op": "decreaseKey", "args": ["c", 0] },
+    { "op": "pop", "expect": { "value": "c", "size": 3 } },
+    { "op": "pop", "expect": { "value": "d", "size": 2 } },
+    { "op": "decreaseKey", "args": ["z", 1], "error": "missing" },
+    { "op": "pop", "expect": { "value": "b", "size": 1 } },
+    { "op": "pop", "expect": { "value": "a", "size": 0 } },
+    { "op": "pop", "error": "empty" },
+    { "op": "contains", "args": ["a"], "expect": { "contains": false } }
+  ]
+}

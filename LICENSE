@@ -1,0 +1,49 @@
+# Licensing
+
+Software Engineering Bible uses a dual-license model.
+
+## Educational Content — CC BY 4.0
+
+All educational prose, curriculum Markdown notes, diagrams expressed as Mermaid or other documentation graphics, exercises, interview questions, and explanatory documentation are licensed under the Creative Commons Attribution 4.0 International License.
+
+See [LICENSE-CONTENT](LICENSE-CONTENT).
+
+Covered examples:
+
+- Topic notes under `01-` … `20-`
+- Templates that define educational structure
+- Roadmaps, MOCs, references, and career guidance written as documentation
+- Mermaid diagrams and architectural explanations
+
+## Source Code — MIT
+
+All source code, executable examples, scripts, configuration intended for runtime use, and software implementations are licensed under the MIT License.
+
+See [LICENSE-CODE](LICENSE-CODE).
+
+Covered examples:
+
+- From-scratch implementations (for example HashMap, HTTP server, mini Redis)
+- Project application code under `Projects/` or capstone repositories
+- Scripts, IaC snippets intended as runnable examples, and test code
+
+## Boundary Rules
+
+1. If a file is primarily explanatory Markdown, treat it as educational content (CC BY 4.0).
+2. If a file is primarily executable source code, treat it as code (MIT).
+3. Fenced code blocks inside educational Markdown remain MIT-licensed when extracted and reused as code.
+4. When a directory mixes both, apply the license that matches each file’s primary purpose.
+5. Attribution for educational reuse should credit “Software Engineering Bible” and link to the repository when reasonably possible.
+6. If unclear, open an issue before reusing the material in a commercial product.
+
+## SPDX Hints
+
+Suggested headers:
+
+```text
+SPDX-License-Identifier: CC-BY-4.0
+```
+
+```text
+SPDX-License-Identifier: MIT
+```

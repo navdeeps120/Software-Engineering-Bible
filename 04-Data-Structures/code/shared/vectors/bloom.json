@@ -1,0 +1,18 @@
+{
+  "name": "bloom_filter_membership",
+  "structure": "BloomFilter",
+  "notes": "mBits=64, kHashes=3. Hash scheme (must match bit-for-bit across languages): h1 = FNV-1a-32(item); h2 = FNV-1a-32('\\u0000' + item); index_i = (h1 + i*h2) mod m for i in [0,k). Added items always report true (no false negatives); the not-added probes below were confirmed to land on unset bits for this exact (m,k) pair and item set.",
+  "ops": [
+    { "op": "construct", "args": [64, 3] },
+    { "op": "add", "args": ["apple"] },
+    { "op": "add", "args": ["banana"] },
+    { "op": "mightContain", "args": ["apple"], "expect": { "contains": true } },
+    { "op": "mightContain", "args": ["banana"], "expect": { "contains": true } },
+    { "op": "mightContain", "args": ["cherry"], "expect": { "contains": false } },
+    { "op": "mightContain", "args": ["date"], "expect": { "contains": false } },
+    { "op": "add", "args": ["cherry"] },
+    { "op": "mightContain", "args": ["cherry"], "expect": { "contains": true } },
+    { "op": "mightContain", "args": ["date"], "expect": { "contains": false } },
+    { "op": "mightContain", "args": ["egg"], "expect": { "contains": false } }
+  ]
+}

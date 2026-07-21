@@ -1,0 +1,21 @@
+{
+  "name": "huffman-coding-classic-example",
+  "algorithm": "huffman",
+  "notes": "Tie-break rule: leaves ordered alphabetically by symbol get order 0..n-1; each merge pops the two globally-smallest (freq,order) nodes and creates a new node with a fresh, always-larger order. First frequency set is the well-known Wikipedia Huffman example (weighted avg length 2.24 bits/symbol). Certificate isPrefixFree is also checked.",
+  "ops": [
+    {
+      "op": "huffman",
+      "args": [{ "a": 5, "b": 9, "c": 12, "d": 13, "e": 16, "f": 45 }],
+      "expect": { "value": { "a": "1100", "b": "1101", "c": "100", "d": "101", "e": "111", "f": "0" } }
+    },
+    { "op": "huffman", "args": [{ "a": 5 }], "expect": { "value": { "a": "0" } } },
+    { "op": "huffman", "args": [{ "x": 3, "y": 7 }], "expect": { "value": { "x": "0", "y": "1" } } },
+    {
+      "op": "huffman",
+      "args": [{ "a": 1, "b": 1, "c": 1, "d": 1 }],
+      "expect": { "value": { "a": "00", "b": "01", "c": "10", "d": "11" } }
+    },
+    { "op": "huffman", "args": [{}], "error": "invalid" },
+    { "op": "huffman", "args": [{ "a": 0, "b": 1 }], "error": "invalid" }
+  ]
+}

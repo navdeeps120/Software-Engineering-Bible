@@ -1,0 +1,17 @@
+{
+  "name": "prim-mst",
+  "algorithm": "prim",
+  "notes": "Args: [n, edges(u,v,w)]. Grows from the lowest-id unvisited vertex; ties broken by lower 'to' id then lower 'from' id. Restarts per component to cover disconnected graphs. Total weight matches Kruskal's on the same graph, but the specific edge list/order can differ between the two algorithms.",
+  "ops": [
+    {
+      "op": "prim",
+      "args": [5, [[0, 1, 4], [0, 2, 3], [1, 2, 1], [1, 3, 2], [2, 3, 4], [3, 4, 2]]],
+      "expect": { "value": { "weight": 8, "edges": [[0, 2, 3], [2, 1, 1], [1, 3, 2], [3, 4, 2]] } }
+    },
+    {
+      "op": "prim",
+      "args": [4, [[0, 1, 1], [2, 3, 1]]],
+      "expect": { "value": { "weight": 2, "edges": [[0, 1, 1], [2, 3, 1]] } }
+    }
+  ]
+}

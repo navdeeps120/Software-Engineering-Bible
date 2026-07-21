@@ -1,0 +1,24 @@
+{
+  "name": "trie_words_and_prefixes",
+  "structure": "Trie",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "insert", "args": ["cat"] },
+    { "op": "insert", "args": ["car"] },
+    { "op": "insert", "args": ["dog"] },
+    { "op": "contains", "args": ["cat"], "expect": { "contains": true } },
+    { "op": "contains", "args": ["ca"], "expect": { "contains": false } },
+    { "op": "startsWith", "args": ["ca"], "expect": { "contains": true } },
+    { "op": "startsWith", "args": ["do"], "expect": { "contains": true } },
+    { "op": "startsWith", "args": ["x"], "expect": { "contains": false } },
+    { "op": "delete", "args": ["cat"], "expect": { "contains": true } },
+    { "op": "contains", "args": ["cat"], "expect": { "contains": false } },
+    { "op": "contains", "args": ["car"], "expect": { "contains": true } },
+    { "op": "startsWith", "args": ["ca"], "expect": { "contains": true } },
+    { "op": "delete", "args": ["car"], "expect": { "contains": true } },
+    { "op": "startsWith", "args": ["ca"], "expect": { "contains": false } },
+    { "op": "delete", "args": ["dog"], "expect": { "contains": true } },
+    { "op": "delete", "args": ["dog"], "expect": { "contains": false } },
+    { "op": "startsWith", "args": [""], "expect": { "contains": true } }
+  ]
+}

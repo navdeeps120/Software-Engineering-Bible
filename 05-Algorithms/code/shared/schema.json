@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://software-engineering-bible/05-algorithms/shared/schema.json",
+  "title": "Algorithms Lab Vector",
+  "description": "A deterministic sequence of pure-function calls executed identically by the TypeScript and Python test suites against one algorithm family. Unlike the Data Structures labs, algorithms are stateless: there is no 'construct' step, and each op directly invokes a named function in the family with positional args, asserting its return value.",
+  "type": "object",
+  "required": ["name", "algorithm", "ops"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Unique, human-readable identifier for this vector."
+    },
+    "algorithm": {
+      "type": "string",
+      "description": "Name of the algorithm family adapter to dispatch through (must match a registered family in both language runners).",
+      "enum": [
+        "binary_search",
+        "binary_search_answer",
+        "quickselect",
+        "top_k",
+        "insertion_sort",
+        "merge_sort",
+        "quicksort",
+        "heapsort",
+        "counting_sort",
+        "radix_sort",
+        "interval_scheduling",
+        "huffman",
+        "knapsack",
+        "lcs",
+        "edit_distance",
+        "bfs",
+        "dfs",
+        "components",
+        "bipartite",
+        "cycle",
+        "topological",
+        "scc",
+        "dijkstra",
+        "bellman_ford",
+        "zero_one_bfs",
+        "floyd_warshall",
+        "kruskal",
+        "prim",
+        "bridges",
+        "max_flow",
+        "bipartite_matching",
+        "kmp",
+        "z_algorithm",
+        "rabin_karp",
+        "reservoir"
+      ]
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-text documentation, e.g. tie-breaking rules, predicate shape, or complexity assumptions."
+    },
+    "ops": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Each op invokes exactly one function within the algorithm family named by 'op', with positional 'args'. There is no shared mutable state between ops in the same vector (each op is an independent pure call), except where the family is explicitly documented as stateful (none currently are).",
+      "items": { "$ref": "#/definitions/op" }
+    }
+  },
+  "definitions": {
+    "op": {
+      "type": "object",
+      "required": ["op"],
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "type": "string",
+          "description": "Function name to invoke, e.g. binarySearch, lowerBound, mergeSort, dijkstra."
+        },
+        "args": {
+          "type": "array",
+          "description": "Positional arguments passed to the function, JSON-encodable only (functions/predicates are represented as small named registries resolved by the runner, e.g. binarySearchAnswer's predicate)."
+        },
+        "expect": {
+          "type": "object",
+          "description": "Asserted subset of the outcome. 'value' is deep-equal compared against the function's return value.",
+          "additionalProperties": false,
+          "properties": {
+            "value": {}
+          }
+        },
+        "error": {
+          "type": "string",
+          "description": "If present, the op is expected to throw/raise an error whose code matches this value.",
+          "enum": ["invalid", "index", "not_found", "cycle", "empty"]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "floyd-warshall-all-pairs",
+  "algorithm": "floyd_warshall",
+  "notes": "Args: [n, edges(u,v,w), directed]. O(V^3). Diagonal is always 0; unreachable pairs are null.",
+  "ops": [
+    {
+      "op": "floydWarshall",
+      "args": [4, [[0, 1, 3], [1, 2, 1], [0, 2, 10], [2, 3, 2]], true],
+      "expect": {
+        "value": [
+          [0, 3, 4, 6],
+          [null, 0, 1, 3],
+          [null, null, 0, 2],
+          [null, null, null, 0]
+        ]
+      }
+    },
+    {
+      "op": "floydWarshall",
+      "args": [2, [], false],
+      "expect": {
+        "value": [
+          [0, null],
+          [null, 0]
+        ]
+      }
+    }
+  ]
+}

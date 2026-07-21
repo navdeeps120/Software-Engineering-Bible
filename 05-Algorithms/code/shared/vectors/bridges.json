@@ -1,0 +1,14 @@
+{
+  "name": "bridges-tarjan",
+  "algorithm": "bridges",
+  "notes": "Args: [n, edges (unweighted, undirected)]. Each bridge reported as [min(u,v), max(u,v)]; overall list sorted ascending. Parallel edges between the same pair are never bridges.",
+  "ops": [
+    {
+      "op": "bridges",
+      "args": [5, [[0, 1], [1, 2], [2, 0], [1, 3], [3, 4]]],
+      "expect": { "value": [[1, 3], [3, 4]] }
+    },
+    { "op": "bridges", "args": [2, [[0, 1], [0, 1]]], "expect": { "value": [] } },
+    { "op": "bridges", "args": [3, [[0, 1], [1, 2]]], "expect": { "value": [[0, 1], [1, 2]] } }
+  ]
+}

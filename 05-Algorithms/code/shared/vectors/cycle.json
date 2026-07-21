@@ -1,0 +1,12 @@
+{
+  "name": "cycle-detection-directed-and-undirected",
+  "algorithm": "cycle",
+  "notes": "Args: [n, edges, directed]. Undirected detection accounts for parallel edges as a length-2 cycle; directed detection uses white/gray/black DFS coloring.",
+  "ops": [
+    { "op": "hasCycle", "args": [3, [[0, 1], [1, 2], [2, 0]], false], "expect": { "value": true } },
+    { "op": "hasCycle", "args": [4, [[0, 1], [1, 2], [1, 3]], false], "expect": { "value": false } },
+    { "op": "hasCycle", "args": [3, [[0, 1], [1, 2], [2, 0]], true], "expect": { "value": true } },
+    { "op": "hasCycle", "args": [3, [[0, 1], [1, 2], [0, 2]], true], "expect": { "value": false } },
+    { "op": "hasCycle", "args": [2, [[0, 1], [0, 1]], false], "expect": { "value": true } }
+  ]
+}

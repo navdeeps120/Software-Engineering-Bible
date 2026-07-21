@@ -1,0 +1,28 @@
+{
+  "name": "dynamic_array_growth_and_bounds",
+  "structure": "DynamicArray",
+  "notes": "Initial capacity 4, growth factor 2. Capacity only doubles once size would exceed the current backing array.",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "push", "args": [1], "expect": { "size": 1 } },
+    { "op": "push", "args": [2], "expect": { "size": 2 } },
+    { "op": "push", "args": [3], "expect": { "size": 3 } },
+    { "op": "push", "args": [4], "expect": { "size": 4 } },
+    { "op": "capacity", "expect": { "value": 4 } },
+    { "op": "push", "args": [5], "expect": { "size": 5 } },
+    { "op": "capacity", "expect": { "value": 8 } },
+    { "op": "get", "args": [0], "expect": { "value": 1 } },
+    { "op": "get", "args": [4], "expect": { "value": 5 } },
+    { "op": "set", "args": [0, 100], "expect": { "size": 5 } },
+    { "op": "get", "args": [0], "expect": { "value": 100 } },
+    { "op": "get", "args": [10], "error": "index" },
+    { "op": "set", "args": [-1, 0], "error": "index" },
+    { "op": "pop", "expect": { "value": 5, "size": 4 } },
+    { "op": "pop", "expect": { "value": 4, "size": 3 } },
+    { "op": "pop", "expect": { "value": 3, "size": 2 } },
+    { "op": "pop", "expect": { "value": 2, "size": 1 } },
+    { "op": "pop", "expect": { "value": 100, "size": 0 } },
+    { "op": "pop", "error": "empty" },
+    { "op": "toList", "expect": { "list": [] } }
+  ]
+}

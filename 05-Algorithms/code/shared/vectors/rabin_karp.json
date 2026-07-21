@@ -1,0 +1,10 @@
+{
+  "name": "rabin-karp-rolling-hash",
+  "algorithm": "rabin_karp",
+  "notes": "Fixed deterministic base=131, mod=1_000_000_007 rolling hash; every hash hit is verified with a direct substring comparison, so results exactly match kmp.json on the same inputs.",
+  "ops": [
+    { "op": "rabinKarp", "args": ["ababcabcabababd", "ababd"], "expect": { "value": [10] } },
+    { "op": "rabinKarp", "args": ["aaaaa", "aa"], "expect": { "value": [0, 1, 2, 3] } },
+    { "op": "rabinKarp", "args": ["abcdef", "xyz"], "expect": { "value": [] } }
+  ]
+}

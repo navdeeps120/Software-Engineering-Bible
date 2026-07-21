@@ -1,0 +1,15 @@
+{
+  "name": "deque_both_ends",
+  "structure": "Deque",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "pushBack", "args": [1], "expect": { "size": 1 } },
+    { "op": "pushFront", "args": [0], "expect": { "size": 2 } },
+    { "op": "pushBack", "args": [2], "expect": { "size": 3 } },
+    { "op": "popFront", "expect": { "value": 0, "size": 2 } },
+    { "op": "popBack", "expect": { "value": 2, "size": 1 } },
+    { "op": "popFront", "expect": { "value": 1, "size": 0 } },
+    { "op": "popFront", "error": "empty" },
+    { "op": "popBack", "error": "empty" }
+  ]
+}

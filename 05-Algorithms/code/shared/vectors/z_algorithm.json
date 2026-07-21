@@ -1,0 +1,10 @@
+{
+  "name": "z-algorithm-prefix-function",
+  "algorithm": "z_algorithm",
+  "notes": "z[0] is conventionally len(s).",
+  "ops": [
+    { "op": "zAlgorithm", "args": ["aabxaabxcaabxaabxay"], "expect": { "value": [19, 1, 0, 0, 4, 1, 0, 0, 0, 8, 1, 0, 0, 5, 1, 0, 0, 1, 0] } },
+    { "op": "zAlgorithm", "args": ["a"], "expect": { "value": [1] } },
+    { "op": "zAlgorithm", "args": [""], "expect": { "value": [] } }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "seb-ds-labs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TypeScript half of the paired Data Structures labs for the Software Engineering Bible.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.1"
+  }
+}

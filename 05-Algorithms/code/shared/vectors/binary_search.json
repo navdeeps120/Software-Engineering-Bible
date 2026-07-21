@@ -1,0 +1,14 @@
+{
+  "name": "binary-search-lower-upper-bound",
+  "algorithm": "binary_search",
+  "notes": "arr must be ascending-sorted for all three ops. lowerBound/upperBound return arr.length as the insertion point when no element qualifies.",
+  "ops": [
+    { "op": "binarySearch", "args": [[1, 3, 3, 5, 7, 9], 5], "expect": { "value": 3 } },
+    { "op": "binarySearch", "args": [[1, 3, 3, 5, 7, 9], 4], "expect": { "value": -1 } },
+    { "op": "binarySearch", "args": [[], 1], "expect": { "value": -1 } },
+    { "op": "lowerBound", "args": [[1, 3, 3, 5, 7, 9], 3], "expect": { "value": 1 } },
+    { "op": "upperBound", "args": [[1, 3, 3, 5, 7, 9], 3], "expect": { "value": 3 } },
+    { "op": "lowerBound", "args": [[1, 3, 3, 5, 7, 9], 10], "expect": { "value": 6 } },
+    { "op": "upperBound", "args": [[1, 3, 3, 5, 7, 9], 0], "expect": { "value": 0 } }
+  ]
+}

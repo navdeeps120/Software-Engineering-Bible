@@ -1,0 +1,17 @@
+{
+  "name": "mutex_map_guarded_access",
+  "structure": "MutexMap",
+  "notes": "Mutex-safe API: every method acquires and releases a single exclusive lock around the underlying map access. This lab drives it from one sequential caller (no real threads), which is sufficient to prove the API contract; the same guard would reject a reentrant call from a second thread.",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "set", "args": ["k1", "v1"], "expect": { "size": 1 } },
+    { "op": "set", "args": ["k2", "v2"], "expect": { "size": 2 } },
+    { "op": "get", "args": ["k1"], "expect": { "value": "v1" } },
+    { "op": "get", "args": ["k3"], "expect": { "value": null } },
+    { "op": "delete", "args": ["k1"], "expect": { "value": true, "size": 1 } },
+    { "op": "delete", "args": ["k1"], "expect": { "value": false, "size": 1 } },
+    { "op": "size", "expect": { "value": 1 } },
+    { "op": "set", "args": ["k3", "v3"], "expect": { "size": 2 } },
+    { "op": "get", "args": ["k3"], "expect": { "value": "v3" } }
+  ]
+}

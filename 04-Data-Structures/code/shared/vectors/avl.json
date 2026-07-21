@@ -1,0 +1,23 @@
+{
+  "name": "avl_rotations_and_delete",
+  "structure": "AVL",
+  "notes": "Insert sequence 10,20,30,40,50,25 forces a left rotation then a right-left double rotation, ending in a balanced tree rooted at 30 with height 3.",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "insert", "args": [10], "expect": { "size": 1 } },
+    { "op": "insert", "args": [20], "expect": { "size": 2 } },
+    { "op": "insert", "args": [30], "expect": { "size": 3 } },
+    { "op": "insert", "args": [40], "expect": { "size": 4 } },
+    { "op": "insert", "args": [50], "expect": { "size": 5 } },
+    { "op": "insert", "args": [25], "expect": { "size": 6 } },
+    { "op": "inorder", "expect": { "list": [10, 20, 25, 30, 40, 50] } },
+    { "op": "height", "expect": { "value": 3 } },
+    { "op": "contains", "args": [25], "expect": { "contains": true } },
+    { "op": "contains", "args": [35], "expect": { "contains": false } },
+    { "op": "delete", "args": [50], "expect": { "value": true, "size": 5 } },
+    { "op": "inorder", "expect": { "list": [10, 20, 25, 30, 40] } },
+    { "op": "delete", "args": [999], "expect": { "value": false, "size": 5 } },
+    { "op": "size", "expect": { "value": 5 } },
+    { "op": "height", "expect": { "value": 3 } }
+  ]
+}

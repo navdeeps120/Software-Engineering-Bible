@@ -1,0 +1,20 @@
+{
+  "name": "persistent_stack_structural_sharing",
+  "structure": "PersistentStack",
+  "notes": "push/pop never mutate the current version; the runner tracks a 'current' pointer plus named snapshots so vectors can prove old versions stay frozen after later mutation. snapshot(label) captures the current version; checkSnapshot(label) reads a captured version's toList() without altering 'current'.",
+  "ops": [
+    { "op": "construct", "args": [] },
+    { "op": "push", "args": [1], "expect": { "size": 1 } },
+    { "op": "push", "args": [2], "expect": { "size": 2 } },
+    { "op": "snapshot", "args": ["s1"] },
+    { "op": "push", "args": [3], "expect": { "size": 3 } },
+    { "op": "toList", "expect": { "list": [3, 2, 1] } },
+    { "op": "checkSnapshot", "args": ["s1"], "expect": { "list": [2, 1] } },
+    { "op": "pop", "expect": { "value": 3, "size": 2 } },
+    { "op": "toList", "expect": { "list": [2, 1] } },
+    { "op": "pop", "expect": { "value": 2, "size": 1 } },
+    { "op": "pop", "expect": { "value": 1, "size": 0 } },
+    { "op": "pop", "error": "empty" },
+    { "op": "checkSnapshot", "args": ["s1"], "expect": { "list": [2, 1] } }
+  ]
+}
