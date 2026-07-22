@@ -56,7 +56,7 @@ Status: complete
 
 ### Phase 3 — Databases and System Design
 
-- Complete [[08-Databases/README|Databases]] across relational, document, and caching systems
+- [x] Complete [[08-Databases/README|Databases]] across relational, document, and caching systems
 - Complete [[09-System-Design/README|System Design]] with capacity, consistency, and failure modes
 - Add reference architectures and trade-off matrices
 
@@ -91,7 +91,8 @@ Status: complete
 | M7 | Algorithms track includes complexity analysis, dual labs, exercises, and implementations | complete |
 | M8 | Node.js track includes complete notes, labs, practice, and projects | complete |
 | M9 | Backend track includes complete notes, labs, practice, and projects | complete |
-| M10 | Databases track includes storage engines, indexing, transactions, and modeling trade-offs | pending |
+| M10 | Databases track includes storage engines, indexing, transactions, and modeling trade-offs | complete |
+| M11 | System Design track includes capacity, consistency, partitioning, and failure modes | pending |
 
 ## Explicit Non-Goals for Phase 0
 

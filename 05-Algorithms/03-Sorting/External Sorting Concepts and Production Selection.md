@@ -20,7 +20,7 @@ updated: 2026-07-21
 
 **External sorting** orders datasets larger than RAM using **sequential I/O** and **multi-pass merge** of sorted **runs**. The algorithmic pattern is: chunk input → in-memory sort each chunk → write runs → **k-way merge** runs to output. Complexity is analyzed in the **I/O model**: minimize block transfers between disk and memory, not just CPU comparisons.
 
-This note covers **concepts and selection** for engineers choosing sort strategies. **Storage engine internals** (buffer pools, WAL, B-tree bulk load, query planner sort nodes) belong to [[08-Databases/README|Databases]]—referenced here as handoff, not duplicated.
+This note covers **concepts and selection** for engineers choosing sort strategies. **Storage engine internals** ([[08-Databases/01-Storage-and-Buffer-Pool/Buffer Pool vs OS Page Cache|buffer pools]], [[08-Databases/02-WAL-Durability-and-Recovery/Write-Ahead Logging Protocol|WAL]], B-tree bulk load, [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|query planner sort nodes]]) belong to [[08-Databases/README|Databases]]—referenced here as handoff, not duplicated.
 
 ## Learning Objectives
 
@@ -208,7 +208,7 @@ def make_runs(data: Iterable[int], chunk_size: int) -> List[List[int]]:
 An analytics job sorts 200GB CSV on a 16GB machine:
 
 - **Wrong**: `rows.sort()` after loading entire file → OOM kill.
-- **Right**: streaming run generation + k-way merge; or push `ORDER BY` to [[08-Databases/README|Databases]] with spill-aware planner.
+- **Right**: streaming run generation + k-way merge; or push `ORDER BY` to [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|query planner]] with spill-aware planner.
 - **Contract**: stable sort on `(date, eventId)` → stable merge or composite key in run sort.
 
 Observability: bytes read/written, merge depth, spill events (engine metrics—not reimplemented in app code).
@@ -277,7 +277,7 @@ Document sort selection flowchart in [[05-Algorithms/projects/Algorithm Workbenc
 - Stream runs; don't accumulate all run files in memory
 - Specify sort contract (stable, key fields) in job specs
 - Benchmark with **disk cold cache** realism
-- Hand off engine tuning to [[08-Databases/README|Databases]]
+- Hand off engine tuning to [[08-Databases/04-Query-Processing-and-Planning/Cost Models Statistics and Cardinality|Cost Models Statistics and Cardinality]]
 
 ## Summary
 
@@ -286,7 +286,7 @@ External sorting extends merge sort to the I/O model: sorted runs plus k-way mer
 ## Further Reading
 
 - [[00-References/Algorithms/README|Algorithms References]]
-- [[08-Databases/README|Databases Track]] — query execution, sort spill
+- [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|Parse Bind Plan Execute Pipeline]] — query execution, sort spill
 - Aggarwal & Vitter — I/O complexity survey (conceptual)
 
 ## Related Notes
@@ -296,7 +296,7 @@ External sorting extends merge sort to the I/O model: sorted runs plus k-way mer
 - [[05-Algorithms/03-Sorting/Sorting Contracts Stability and Adaptivity|Sorting Contracts Stability and Adaptivity]]
 - [[05-Algorithms/13-Production-Selection-and-Interview-Patterns/Algorithm Selection Decision Matrix|Algorithm Selection Decision Matrix]]
 - [[04-Data-Structures/06-Heaps-and-Priority-Queues/Priority Queue ADT|Priority Queue ADT]]
-- [[08-Databases/README|Databases Track]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Buffer Pool vs OS Page Cache|Buffer Pool vs OS Page Cache]]
 - [[05-Algorithms/README|Algorithms Track]]
 
 ## Progress Checklist

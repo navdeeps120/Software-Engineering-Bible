@@ -6,7 +6,7 @@ topic: parse-bind-plan-execute
 difficulty: intermediate
 status: active
 prerequisites:
-  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]"
+  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]"
   - "[[08-Databases/03-Indexing-on-Disk/B-Plus Trees as Page Structures|B-Plus Trees as Page Structures]]"
 tags: [databases, query-processing, planner, parser, executor, postgresql]
 created: 2026-07-22
@@ -17,7 +17,7 @@ updated: 2026-07-22
 
 ## Overview
 
-Every SQL statement traverses a **pipeline**: **parse** (text → syntax tree), **bind** (substitute parameters, resolve names/types), **plan** (choose access paths and join order), **execute** (run iterators against pages/buffers). Understanding this pipeline explains why identical-looking queries differ in latency, why prepared statements help, and why ORMs that emit dynamic SQL defeat plan caching.
+Every SQL statement traverses a **pipeline**: **parse** (text ↁEsyntax tree), **bind** (substitute parameters, resolve names/types), **plan** (choose access paths and join order), **execute** (run iterators against pages/buffers). Understanding this pipeline explains why identical-looking queries differ in latency, why prepared statements help, and why ORMs that emit dynamic SQL defeat plan caching.
 
 ## Learning Objectives
 
@@ -29,7 +29,7 @@ Every SQL statement traverses a **pipeline**: **parse** (text → syntax tree), 
 
 ## Prerequisites
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[08-Databases/03-Indexing-on-Disk/B-Plus Trees as Page Structures|B-Plus Trees as Page Structures]]
 
 ## Difficulty
@@ -66,9 +66,9 @@ Early relational systems parsed and executed immediately. As optimizers grew (Sy
 
 ```mermaid
 flowchart TD
-    SQL[SQL text or prepared stmt] --> Parse[Parse → query tree]
+    SQL[SQL text or prepared stmt] --> Parse[Parse ↁEquery tree]
     Parse --> Bind[Bind parameters + analyze types]
-    Bind --> Plan[Plan / optimize → plan tree]
+    Bind --> Plan[Plan / optimize ↁEplan tree]
     Plan --> Exec[Execute iterators]
     Exec --> Pages[Buffer pool + indexes + WAL visibility]
     Pages --> Result[Rows / status]
@@ -97,7 +97,7 @@ flowchart LR
     ExecStage --> Sort[Sort / Aggregate]
 ```
 
-### Sequence / Lifecycle — prepared statement
+### Sequence / Lifecycle  Eprepared statement
 
 ```mermaid
 sequenceDiagram
@@ -119,7 +119,7 @@ sequenceDiagram
 
 ## Examples
 
-### Minimal Example — observe parse vs execute
+### Minimal Example  Eobserve parse vs execute
 
 ```sql
 -- PostgreSQL 15+
@@ -130,13 +130,13 @@ FROM orders o
 JOIN customers c ON c.id = o.customer_id
 WHERE o.status = 'pending';
 
--- Repeat immediately — compare Total Time in EXPLAIN ANALYZE if enabled.
+-- Repeat immediately  Ecompare Total Time in EXPLAIN ANALYZE if enabled.
 ```
 
-### Production-Shaped Example — parameterized query from TypeScript
+### Production-Shaped Example  Eparameterized query from TypeScript
 
 ```typescript
-// Node 20+ / pg 8.x — bind parameters, reuse client, avoid string concat
+// Node 20+ / pg 8.x  Ebind parameters, reuse client, avoid string concat
 import pg from "pg";
 
 const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
@@ -158,20 +158,20 @@ export async function findOrdersByStatus(
   return rows.map((r) => ({ id: r.id, customerName: r.customer_name }));
 }
 
-// Anti-pattern (do NOT): `WHERE status = '${status}'` — parse/plan churn + injection
+// Anti-pattern (do NOT): `WHERE status = '${status}'`  Eparse/plan churn + injection
 ```
 
-### Educational TypeScript — toy pipeline sketch
+### Educational TypeScript  Etoy pipeline sketch
 
 ```typescript
-// Educational only — not a real SQL engine
+// Educational only  Enot a real SQL engine
 type BoundQuery = { table: string; filter: { col: string; paramIndex: number } };
 type PlanNode =
   | { kind: "seqScan"; table: string }
   | { kind: "indexScan"; table: string; index: string };
 
 function parse(sql: string): BoundQuery {
-  // lexer/parser → tree (omitted)
+  // lexer/parser ↁEtree (omitted)
   return { table: "orders", filter: { col: "status", paramIndex: 0 } };
 }
 
@@ -215,7 +215,7 @@ function execute(node: PlanNode, params: unknown[]): unknown[] {
 2. `PREPARE` a statement, `EXECUTE` with two vastly different parameter values; check if PostgreSQL chooses custom vs generic plan (`plan_cache_mode` experiment).
 3. Draw the iterator tree for a two-table nested-loop join plan from `EXPLAIN`.
 4. List three catalog changes that invalidate cached plans in PostgreSQL.
-5. Implement the toy `parse → plan → execute` functions for a single-table equality filter.
+5. Implement the toy `parse ↁEplan ↁEexecute` functions for a single-table equality filter.
 
 ## Mini Project
 
@@ -259,8 +259,8 @@ SQL processing is a pipeline: parse builds a tree, bind attaches types and param
 ## Further Reading
 
 - [[00-References/Databases/README|Databases References]]
-- PostgreSQL — Parser/Planner/Executor documentation
-- Graefe, "Volcano — An Extensible and Parallel Query Evaluation System"
+- PostgreSQL  EParser/Planner/Executor documentation
+- Graefe, "Volcano  EAn Extensible and Parallel Query Evaluation System"
 
 ## Related Notes
 

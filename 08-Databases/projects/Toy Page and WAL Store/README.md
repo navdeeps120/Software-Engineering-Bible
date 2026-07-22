@@ -1,5 +1,5 @@
 ---
-title: "Toy Page and WAL Store — README"
+title: "Toy Page and WAL Store  EREADME"
 aliases: []
 track: 08-Databases
 topic: toy-page-and-wal-store-readme
@@ -23,7 +23,7 @@ Implement a fixed-size page/slot store with a buffer pool, append-only WAL, chec
 
 ## Prerequisites
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Buffer Pool vs OS Page Cache|Buffer Pool vs OS Page Cache]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Tuple Layout and Oversized Values|Tuple Layout and Oversized Values]]
 - [[08-Databases/02-WAL-Durability-and-Recovery/Write-Ahead Logging Protocol|Write-Ahead Logging Protocol]]

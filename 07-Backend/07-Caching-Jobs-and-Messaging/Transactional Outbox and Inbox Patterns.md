@@ -246,7 +246,7 @@ Outbox ADR in [[07-Backend/projects/Backend Service Toolkit/README|Backend Servi
 ## Further Reading
 
 - [microservices.io Outbox pattern](https://microservices.io/patterns/data/transactional-outbox.html)
-- [[08-Databases/README|Databases]] — WAL and CDC
+- [[08-Databases/02-WAL-Durability-and-Recovery/Write-Ahead Logging Protocol|Write-Ahead Logging Protocol]] — WAL and CDC
 
 ## Related Notes
 

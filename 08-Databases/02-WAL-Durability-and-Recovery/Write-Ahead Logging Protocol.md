@@ -6,7 +6,7 @@ topic: write-ahead-logging-protocol
 difficulty: intermediate
 status: active
 prerequisites:
-  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]"
+  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]"
   - "[[08-Databases/00-Orientation/Database Failure Modes Corruption and Durability|Database Failure Modes Corruption and Durability]]"
 tags: [wal, durability, logging, recovery, lsn]
 created: 2026-07-22
@@ -31,7 +31,7 @@ This note defines the protocol connecting transactions, buffer pool dirty pages,
 
 ## Prerequisites
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[08-Databases/00-Orientation/Database Failure Modes Corruption and Durability|Database Failure Modes Corruption and Durability]]
 
 ## Difficulty
@@ -88,7 +88,7 @@ flowchart LR
     WALproto --> Rec[Recovery replay]
 ```
 
-### Sequence / Lifecycle — commit
+### Sequence / Lifecycle  Ecommit
 
 ```mermaid
 sequenceDiagram
@@ -106,7 +106,7 @@ sequenceDiagram
 
 ## Examples
 
-### Minimal Example — educational WAL append
+### Minimal Example  Eeducational WAL append
 
 ```typescript
 type WalRecord =
@@ -124,7 +124,7 @@ export class WalLog {
   }
 
   fsync(): void {
-    // durable — in lab, flush to disk file
+    // durable  Ein lab, flush to disk file
   }
 
   recordsAfter(lsn: bigint): WalRecord[] {
@@ -133,7 +133,7 @@ export class WalLog {
 }
 ```
 
-### Production-Shaped Example — Postgres WAL visibility
+### Production-Shaped Example  EPostgres WAL visibility
 
 ```sql
 -- Current WAL insert location
@@ -162,7 +162,7 @@ Lab: [[08-Databases/projects/Toy Page and WAL Store/README|Toy Page and WAL Stor
 | --- | --- | --- |
 | Crash recovery | Redo from log | Manual repair |
 | Write amplification | Log + page eventually | Page only |
-| Disk layout | Separate WAL volume recommended | — |
+| Disk layout | Separate WAL volume recommended |  E|
 | Latency | fsync bound | Lower if unsafe |
 
 ### When to Use

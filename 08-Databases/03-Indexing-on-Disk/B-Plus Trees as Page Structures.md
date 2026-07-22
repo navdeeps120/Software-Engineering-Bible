@@ -6,7 +6,7 @@ topic: b-plus-trees-as-page-structures
 difficulty: intermediate
 status: active
 prerequisites:
-  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]"
+  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]"
   - "[[04-Data-Structures/05-Trees-and-Ordered-Maps/B-Trees and B-Plus Trees Concepts|B-Trees and B-Plus Trees Concepts]]"
 tags: [b-plus-tree, index, pages, fanout, splits]
 created: 2026-07-22
@@ -31,7 +31,7 @@ On-disk **B+ trees** store keys in **sorted order** within **index pages**: inte
 
 ## Prerequisites
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[04-Data-Structures/05-Trees-and-Ordered-Maps/B-Trees and B-Plus Trees Concepts|B-Trees and B-Plus Trees Concepts]]
 
 ## Difficulty
@@ -72,7 +72,7 @@ flowchart TD
     Leaf1 -->|next| Leaf2
 ```
 
-Each **page** ≈ one DS node; fanout = floor(usable_bytes / key_entry_size).
+Each **page** ≁Eone DS node; fanout = floor(usable_bytes / key_entry_size).
 
 ## Mermaid Diagrams
 
@@ -86,7 +86,7 @@ flowchart LR
     Fanout --> DS[See Data Structures track]
 ```
 
-### Sequence / Lifecycle — index seek
+### Sequence / Lifecycle  Eindex seek
 
 ```mermaid
 sequenceDiagram
@@ -103,7 +103,7 @@ sequenceDiagram
 
 ## Examples
 
-### Minimal Example — height estimate
+### Minimal Example  Eheight estimate
 
 ```typescript
 const PAGE_SIZE = 8192;
@@ -124,7 +124,7 @@ export function estimateHeight(rowCount: number, fanout: number): number {
 console.log(estimateHeight(10_000_000, estimateFanout(8))); // ~4 for 8-byte keys
 ```
 
-### Production-Shaped Example — index DDL and split awareness
+### Production-Shaped Example  Eindex DDL and split awareness
 
 ```sql
 CREATE TABLE users (
@@ -136,7 +136,7 @@ CREATE TABLE users (
 CREATE INDEX users_email ON users (email);
 CREATE INDEX users_created ON users (created_at);
 
--- Random UUID PK causes scattered leaf splits — see heap/cluster note
+-- Random UUID PK causes scattered leaf splits  Esee heap/cluster note
 ```
 
 ```typescript
@@ -173,9 +173,9 @@ Lab: [[08-Databases/projects/Mini B-Plus Index Lab/README|Mini B-Plus Index Lab]
 
 ### When Not to Use
 
-- Pure equality on huge cardinal string → consider hash (module 03)
-- Full-text inverted → GIN (module 03)
-- Write-only time series append → BRIN/partition (Postgres module 08)
+- Pure equality on huge cardinal string ↁEconsider hash (module 03)
+- Full-text inverted ↁEGIN (module 03)
+- Write-only time series append ↁEBRIN/partition (Postgres module 08)
 
 ## Exercises
 
@@ -191,7 +191,7 @@ Build page-based B+ tree with split + WAL log record stub in TypeScript. Fanout 
 
 ## Portfolio Project
 
-[[08-Databases/projects/Mini B-Plus Index Lab/README|Mini B-Plus Index Lab]] — document page format diagram and DS cross-link.
+[[08-Databases/projects/Mini B-Plus Index Lab/README|Mini B-Plus Index Lab]]  Edocument page format diagram and DS cross-link.
 
 ## Interview Questions
 

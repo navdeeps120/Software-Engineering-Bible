@@ -17,7 +17,7 @@ updated: 2026-07-22
 
 ## Overview
 
-**N+1 query problem**: one query loads N parent rows, then N additional queries load each child—latency and load explode. **Query shape discipline** means designing repository methods and API responses knowing SQL cost: joins, batch `IN` queries, DataLoader batching, pagination limits. Index and planner tuning → [[08-Databases/README|Databases]]; this note is **application access patterns** in Express services.
+**N+1 query problem**: one query loads N parent rows, then N additional queries load each child—latency and load explode. **Query shape discipline** means designing repository methods and API responses knowing SQL cost: joins, batch `IN` queries, DataLoader batching, pagination limits. Index and planner tuning → [[08-Databases/03-Indexing-on-Disk/Secondary Covering and Partial Indexes|Secondary Covering and Partial Indexes]] and [[08-Databases/04-Query-Processing-and-Planning/Cost Models Statistics and Cardinality|Cost Models Statistics and Cardinality]]; this note is **application access patterns** in Express services.
 
 ## Learning Objectives
 
@@ -205,7 +205,7 @@ DataLoader utilities in [[07-Backend/projects/Backend Service Toolkit/README|Bac
 - Global DataLoader crossing requests (cache leak)
 - Unbounded `include` query param
 - COUNT + list as separate unoptimized patterns
-- Fixing N+1 without index on FK ([[08-Databases/README|Databases]])
+- Fixing N+1 without index on FK ([[08-Databases/03-Indexing-on-Disk/Secondary Covering and Partial Indexes|Secondary Covering and Partial Indexes]])
 
 ## Best Practices
 
@@ -221,7 +221,7 @@ DataLoader utilities in [[07-Backend/projects/Backend Service Toolkit/README|Bac
 
 ## Further Reading
 
-- [[08-Databases/README|Databases]] — indexes on foreign keys
+- [[08-Databases/03-Indexing-on-Disk/Secondary Covering and Partial Indexes|Secondary Covering and Partial Indexes]] — indexes on foreign keys
 - [[07-Backend/09-API-Observability-and-Testing/Distributed Tracing Across Handlers|Distributed Tracing Across Handlers]]
 
 ## Related Notes

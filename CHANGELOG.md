@@ -9,6 +9,11 @@ and this project intends to use [Semantic Versioning](https://semver.org/) once 
 
 ### Added
 
+- Complete [[08-Databases/README|Databases]] track (13 modules, 65 topic notes)
+- TypeScript educational engine labs under `08-Databases/code/` with Vitest (page store, buffer pool, WAL redo, B+ index pages, lock manager, MVCC visibility, cost-based planner, Redis dict + AOF replay, SQL fixture runner)
+- Module exercise sets and interview question sets under `08-Databases/_exercises/` and `_interview/`
+- Five Databases mini projects plus [[08-Databases/projects/Database Engines Workbench/README|Database Engines Workbench]] portfolio documentation
+- [[00-References/Databases/README|Databases References]] curation index
 - Complete [[07-Backend/README|Backend]] track (11 modules, 62 topic notes)
 - TypeScript Express mechanism labs under `07-Backend/code/` with Vitest (Express-lite router, problem+json validation, session/JWT auth, RBAC, timeouts/retries/idempotency, rate limiting, cache-aside, job queue/outbox, repository, OpenAPI contract checks)
 - Module exercise sets and interview question sets under `07-Backend/_exercises/` and `_interview/`

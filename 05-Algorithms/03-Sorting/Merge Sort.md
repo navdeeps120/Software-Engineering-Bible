@@ -18,7 +18,7 @@ updated: 2026-07-21
 
 ## Overview
 
-**Merge sort** is a divide-and-conquer comparison sort: recursively split the array in half, sort each half, then **merge** two sorted runs into one sorted run. It guarantees **O(n log n)** worst-case time, is **stable** when merge prefers left run on ties, and is the conceptual backbone of **external sorting** (hand off disk merge passes to [[08-Databases/README|Databases]]).
+**Merge sort** is a divide-and-conquer comparison sort: recursively split the array in half, sort each half, then **merge** two sorted runs into one sorted run. It guarantees **O(n log n)** worst-case time, is **stable** when merge prefers left run on ties, and is the conceptual backbone of **external sorting** (hand off disk merge passes to [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|query planner sort nodes]]).
 
 The price is **O(n) auxiliary space** for typical array implementations—though in-place merge variants exist with higher constant factors and complexity.
 

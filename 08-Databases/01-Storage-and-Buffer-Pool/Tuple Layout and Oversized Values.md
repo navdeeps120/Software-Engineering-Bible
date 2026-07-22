@@ -6,7 +6,7 @@ topic: tuple-layout-oversized-values
 difficulty: intermediate
 status: active
 prerequisites:
-  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]"
+  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]"
 tags: [tuple, row-format, toast, overflow, alignment]
 created: 2026-07-22
 updated: 2026-07-22
@@ -30,7 +30,7 @@ Understanding tuple layout explains update amplification, index-only scan limits
 
 ## Prerequisites
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Heap Tables vs Clustered Layouts|Heap Tables vs Clustered Layouts]]
 
 ## Difficulty
@@ -86,7 +86,7 @@ flowchart LR
     Toast --> Aux[Aux storage]
 ```
 
-### Sequence / Lifecycle — read wide column
+### Sequence / Lifecycle  Eread wide column
 
 ```mermaid
 sequenceDiagram
@@ -101,7 +101,7 @@ sequenceDiagram
 
 ## Examples
 
-### Minimal Example — educational tuple size
+### Minimal Example  Eeducational tuple size
 
 ```typescript
 type Varlena = { tag: "inline"; bytes: Buffer } | { tag: "external"; toastId: bigint };
@@ -125,7 +125,7 @@ export function tupleDiskBytes(t: Tuple): number {
 }
 ```
 
-### Production-Shaped Example — schema and TOAST policy
+### Production-Shaped Example  Eschema and TOAST policy
 
 ```sql
 CREATE TABLE articles (
@@ -144,12 +144,12 @@ ALTER TABLE articles ALTER COLUMN body SET STORAGE EXTENDED;  -- compress + inli
 ```
 
 ```typescript
-// API layer: avoid SELECT * on wide tables — Backend query shape
+// API layer: avoid SELECT * on wide tables  EBackend query shape
 const { rows } = await pool.query(
   "SELECT id, slug, title FROM articles WHERE slug = $1",
   [slug],
 );
-// body fetched only when needed — fewer TOAST trips
+// body fetched only when needed  Efewer TOAST trips
 ```
 
 N+1 and projection discipline: [[07-Backend/08-Data-Access-and-Persistence-Patterns/N-plus-1 and Query Shape Discipline|N-plus-1 and Query Shape Discipline]].
@@ -228,7 +228,7 @@ Tuples pack MVCC metadata and column bytes into page slots; oversized attributes
 
 ## Related Notes
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[08-Databases/03-Indexing-on-Disk/Index-Only Scans and Visibility Map Hooks|Index-Only Scans and Visibility Map Hooks]]
 - [[08-Databases/06-Concurrency-Internals/Vacuum Version GC and Bloat|Vacuum Version GC and Bloat]]
 - [[07-Backend/08-Data-Access-and-Persistence-Patterns/N-plus-1 and Query Shape Discipline|N-plus-1 and Query Shape Discipline]]

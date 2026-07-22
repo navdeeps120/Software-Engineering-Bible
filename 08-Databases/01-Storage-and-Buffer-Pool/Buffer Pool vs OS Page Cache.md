@@ -6,7 +6,7 @@ topic: buffer-pool-vs-os-page-cache
 difficulty: intermediate
 status: active
 prerequisites:
-  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]"
+  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]"
   - "[[01-Computer-Science/02-Machine-Model/Cache Hierarchy and Locality|Cache Hierarchy and Locality]]"
 tags: [buffer-pool, page-cache, shared-buffers, eviction, direct-io]
 created: 2026-07-22
@@ -31,7 +31,7 @@ This note explains why engines insist on their own cache, how hits are measured,
 
 ## Prerequisites
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[01-Computer-Science/02-Machine-Model/Cache Hierarchy and Locality|Cache Hierarchy and Locality]]
 - [[04-Data-Structures/11-Caches-and-Eviction/LRU via Hash Map and Doubly Linked List|LRU via Hash Map and Doubly Linked List]]
 
@@ -93,7 +93,7 @@ flowchart LR
     Pool --> WAL[Dirty tracking]
 ```
 
-### Sequence / Lifecycle — buffer miss
+### Sequence / Lifecycle  Ebuffer miss
 
 ```mermaid
 sequenceDiagram
@@ -117,7 +117,7 @@ sequenceDiagram
 
 ## Examples
 
-### Minimal Example — educational buffer pool
+### Minimal Example  Eeducational buffer pool
 
 ```typescript
 type Frame = { pageId: string; dirty: boolean; pinCount: number; bytes: Buffer };
@@ -143,7 +143,7 @@ export class BufferPool {
   }
 
   private evict() {
-    // clock/LRU stub — see DS cache modules
+    // clock/LRU stub  Esee DS cache modules
     const victim = [...this.frames.values()].find((x) => x.pinCount === 0 && !x.dirty);
     if (!victim) throw new Error("no evictable frame");
     this.frames.delete(victim.pageId);
@@ -151,7 +151,7 @@ export class BufferPool {
 }
 ```
 
-### Production-Shaped Example — Postgres memory knobs
+### Production-Shaped Example  EPostgres memory knobs
 
 ```sql
 SHOW shared_buffers;        -- engine buffer pool
@@ -163,7 +163,7 @@ FROM pg_statio_user_tables;
 ```
 
 ```typescript
-// Monitoring wrapper — interpret cautiously after restart
+// Monitoring wrapper  Einterpret cautiously after restart
 export function interpretHitRatio(ratio: number, uptimeSec: number): string {
   if (uptimeSec < 3600) return "warmup: hit ratio not stable yet";
   if (ratio < 0.99) return "investigate missing indexes or small shared_buffers";
@@ -183,7 +183,7 @@ Ops detail: [[08-Databases/12-Production-Database-Ops/Monitoring Checkpoints Lag
 | Checksums | Verified on read into pool | Depends on path |
 | Tuning | Needs explicit size | "Obvious" but opaque |
 
-Rule of thumb: Postgres often 25% RAM up to ~8–16 GB `shared_buffers`; set `effective_cache_size` ~50–75% RAM for planner.
+Rule of thumb: Postgres often 25% RAM up to ~8 E6 GB `shared_buffers`; set `effective_cache_size` ~50 E5% RAM for planner.
 
 ### When to Use
 
@@ -251,7 +251,7 @@ The **buffer pool** is the engine's authoritative in-memory copy of pages with d
 
 ## Related Notes
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[08-Databases/02-WAL-Durability-and-Recovery/Checkpoints and Dirty Page Flushing|Checkpoints and Dirty Page Flushing]]
 - [[08-Databases/12-Production-Database-Ops/Monitoring Checkpoints Lag Bloat Cache Hit|Monitoring Checkpoints Lag Bloat Cache Hit]]
 - [[04-Data-Structures/11-Caches-and-Eviction/LRU via Hash Map and Doubly Linked List|LRU via Hash Map and Doubly Linked List]]

@@ -21,7 +21,7 @@ A **persistent** data structure preserves previous versions after update. **Pure
 
 **Path copying** implements persistence on trees: copy nodes along the search/update path only; shared subtrees off-path remain identical in memory. Contrast with **full copy** O(n) and **mutable** in-place O(1) but no history.
 
-Disk-backed persistence (WAL, B-trees) is [[08-Databases/README|Databases]]. This note is in-memory functional persistence.
+Disk-backed persistence ([[08-Databases/02-WAL-Durability-and-Recovery/Write-Ahead Logging Protocol|WAL]], B-trees on disk) is [[08-Databases/README|Databases]]. This note is in-memory functional persistence.
 
 ## Learning Objectives
 

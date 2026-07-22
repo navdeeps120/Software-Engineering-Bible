@@ -62,8 +62,9 @@ describe("WriteAheadLog crash + recover", () => {
 
     wal.begin(2);
     wal.logInsert(2, 1, { name: "Grace" });
+    wal.flush(); // txn 2's begin+insert become durable...
     wal.commit(2);
-    // NOTE: no flush() before the crash — txn 2's commit never became durable.
+    // NOTE: no flush() after commit() — txn 2's commit record never became durable.
 
     wal.simulateCrash();
 

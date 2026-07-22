@@ -17,7 +17,7 @@ updated: 2026-07-22
 
 ## Overview
 
-Backend services **use** databases through repositories and transactions; **database engines** own storage formats, WAL, replication, isolation implementation, query planning, and index structures. This note defines the **handoff boundary**: what backend engineers must know to write correct SQL and operable services vs what to defer to [[08-Databases/README|Databases]] and [[09-System-Design/README|System Design]] (sharding, CAP trade-offs at scale).
+Backend services **use** databases through repositories and transactions; **database engines** own storage formats, [[08-Databases/02-WAL-Durability-and-Recovery/Write-Ahead Logging Protocol|WAL]], replication, [[08-Databases/05-Transactions-and-Isolation/Isolation Levels and Product Defaults|isolation implementation]], [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|query planning]], and index structures. This note defines the **handoff boundary**: what backend engineers must know to write correct SQL and operable services vs what to defer to [[08-Databases/README|Databases]] and [[09-System-Design/README|System Design]] (sharding, CAP trade-offs at scale).
 
 ## Learning Objectives
 
@@ -215,7 +215,7 @@ Cross-link map in portfolio Architecture.md.
 ## Best Practices
 
 - EXPLAIN in staging for new hot queries
-- Read replica for read-heavy routes—know replication lag ([[08-Databases/README|Databases]])
+- Read replica for read-heavy routes—know replication lag ([[08-Databases/07-Replication-Mechanics/Replica Lag and Read-Your-Writes at Connection Level|Replica Lag and Read-Your-Writes at Connection Level]])
 - Pool size = f(instances, max_connections)—coordinate with platform
 - Link don't duplicate in Related Notes
 - Escalate with reproducible query + volume metrics

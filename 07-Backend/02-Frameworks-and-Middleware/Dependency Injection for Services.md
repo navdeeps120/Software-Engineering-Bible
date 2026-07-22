@@ -162,7 +162,7 @@ export function buildApp(deps: AppDeps) {
 }
 ```
 
-Database pool creation details: [[08-Databases/README|Databases]]—Backend owns **wiring**, not engine internals.
+Database pool creation details: [[08-Databases/12-Production-Database-Ops/Connection Pooling at Engine and Proxy|Connection Pooling at Engine and Proxy]]—Backend owns **wiring**, not engine internals.
 
 ## Trade-offs
 

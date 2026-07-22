@@ -7,7 +7,7 @@ difficulty: intermediate
 status: active
 prerequisites:
   - "[[08-Databases/00-Orientation/Relational Document and KV Contracts|Relational Document and KV Contracts]]"
-  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]"
+  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]"
 tags: [mongodb, bson, wiredtiger, document, storage-engine, collection]
 created: 2026-07-22
 updated: 2026-07-22
@@ -32,7 +32,7 @@ This note explains **engine-level** document layout and WiredTiger behavior—no
 ## Prerequisites
 
 - [[08-Databases/00-Orientation/Relational Document and KV Contracts|Relational Document and KV Contracts]]
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 
 ## Difficulty
 
@@ -93,7 +93,7 @@ flowchart LR
     WT --> Journaling[Journal checkpoints]
 ```
 
-### Sequence / Lifecycle — insert document
+### Sequence / Lifecycle  Einsert document
 
 ```mermaid
 sequenceDiagram
@@ -110,10 +110,10 @@ sequenceDiagram
 
 ## Examples
 
-### Minimal Example — BSON types and document limits
+### Minimal Example  EBSON types and document limits
 
 ```javascript
-// mongosh — MongoDB 6+
+// mongosh  EMongoDB 6+
 db.products.insertOne({
   _id: ObjectId(),
   sku: "KB-001",
@@ -126,7 +126,7 @@ db.products.insertOne({
 // Max document size: 16 MB
 ```
 
-### Production-Shaped Example — TypeScript insert with schema validation at engine
+### Production-Shaped Example  ETypeScript insert with schema validation at engine
 
 ```typescript
 // Node 20+ / mongodb driver 6.x
@@ -183,7 +183,7 @@ await db.collection("orders").insertOne({
 
 ### When Not to Use
 
-- Heavy multi-entity constraints and reporting joins → Postgres
+- Heavy multi-entity constraints and reporting joins ↁEPostgres
 - Financial ledger requiring strict relational invariants without app discipline
 
 ## Exercises

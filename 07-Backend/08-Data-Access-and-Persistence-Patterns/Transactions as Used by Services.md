@@ -17,7 +17,7 @@ updated: 2026-07-22
 
 ## Overview
 
-A **database transaction** groups reads/writes into one atomic unit: **commit** persists all; **rollback** discards all. Backend **services** define transactional boundaries—typically one use case per transaction—not one transaction per HTTP middleware layer. Isolation levels, locks, and MVCC mechanics → [[08-Databases/README|Databases]]; here: **when** services begin/commit, how Express concurrency interacts, and pitfalls (long transactions, nested calls).
+A **database transaction** groups reads/writes into one atomic unit: **commit** persists all; **rollback** discards all. Backend **services** define transactional boundaries—typically one use case per transaction—not one transaction per HTTP middleware layer. Isolation levels, locks, and MVCC mechanics → [[08-Databases/05-Transactions-and-Isolation/Locking vs MVCC|Locking vs MVCC]] and [[08-Databases/05-Transactions-and-Isolation/Isolation Levels and Product Defaults|Isolation Levels and Product Defaults]]; here: **when** services begin/commit, how Express concurrency interacts, and pitfalls (long transactions, nested calls).
 
 ## Learning Objectives
 
@@ -227,7 +227,7 @@ Tx helper in [[07-Backend/projects/Backend Service Toolkit/README|Backend Servic
 - Lock order consistency to avoid deadlocks
 - Timeout statements (`SET statement_timeout`)
 - Log tx duration metrics
-- Hand isolation depth to [[08-Databases/README|Databases]] curriculum
+- Hand isolation depth to [[08-Databases/05-Transactions-and-Isolation/Isolation Levels and Product Defaults|Isolation Levels and Product Defaults]]
 
 ## Summary
 
@@ -235,7 +235,7 @@ Services own **transactional boundaries**: begin, work through repositories on o
 
 ## Further Reading
 
-- [[08-Databases/README|Databases]] — isolation and locking
+- [[08-Databases/05-Transactions-and-Isolation/Locking vs MVCC|Locking vs MVCC]] — isolation and locking
 - [[07-Backend/07-Caching-Jobs-and-Messaging/Transactional Outbox and Inbox Patterns|Transactional Outbox and Inbox Patterns]]
 
 ## Related Notes

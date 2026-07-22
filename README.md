@@ -35,7 +35,7 @@ If you cannot teach a concept, you do not yet understand it.
 | --- | --- |
 | [[00-Introduction/README\|Introduction]] | Onboarding and how to use this vault |
 | [[00-Introduction/Roadmap\|Master Roadmap]] | Canonical curriculum map |
-| [ROADMAP.md](ROADMAP.md) | Phased build plan for the repository (Phase 2 complete) |
+| [ROADMAP.md](ROADMAP.md) | Phased build plan for the repository (Phase 3 in progress — Databases complete) |
 | [[00-Templates/README\|Templates]] | Note and project templates |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Writing and contribution standards |
 | [CHANGELOG.md](CHANGELOG.md) | Release history |
@@ -72,7 +72,7 @@ flowchart TD
 5. [[05-Algorithms/README|Algorithms]] — complexity, correctness, dual-language labs, exercises, and projects (70 topics)
 6. [[06-NodeJS/README|Node.js]] — V8/libuv host runtime, streams, networking, workers, diagnostics, supply chain, and production Node (11 modules, 62 topics)
 7. [[07-Backend/README|Backend]] — HTTP/API contracts, Express middleware, auth, reliability, caching/jobs, data access, observability, and production services (11 modules, 62 topics)
-8. [[08-Databases/README|Databases]]
+8. [[08-Databases/README|Databases]] — storage engines, WAL, indexing, transactions, Postgres/Mongo/Redis depth, and production ops (13 modules, 65 topics)
 9. [[09-System-Design/README|System Design]]
 10. [[10-Linux/README|Linux]]
 11. [[11-AWS/README|AWS]]

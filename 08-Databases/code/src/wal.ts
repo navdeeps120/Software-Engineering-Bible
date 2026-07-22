@@ -79,6 +79,11 @@ interface DeleteRecord {
 
 export type WalRecord = BeginRecord | CommitRecord | InsertRecord | DeleteRecord;
 
+// `Omit<WalRecord, "lsn">` would collapse to only the fields common to every
+// variant (keyof a union is the intersection of each member's keys), losing
+// e.g. `pageId`. Omitting per-variant and re-joining preserves each shape.
+type WalRecordInput = Omit<BeginRecord, "lsn"> | Omit<CommitRecord, "lsn"> | Omit<InsertRecord, "lsn"> | Omit<DeleteRecord, "lsn">;
+
 export interface RecoveryResult {
   /** txnIds whose insert/delete records were redone (i.e. had a durable commit). */
   redoneTxnIds: number[];
@@ -124,7 +129,7 @@ export class WriteAheadLog {
     if (!this.openTxns.has(txnId)) throw new NoActiveTransactionError(txnId, action);
   }
 
-  private push(partial: Omit<WalRecord, "lsn">): number {
+  private push(partial: WalRecordInput): number {
     const lsn = this.nextLsn++;
     this.buffered.push({ ...partial, lsn } as WalRecord);
     return lsn;

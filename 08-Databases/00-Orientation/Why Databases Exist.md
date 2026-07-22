@@ -47,7 +47,7 @@ This note establishes the **storage contract** every later Databases topic assum
 
 ## History
 
-Early business systems stored ledgers on tape and card files. As multi-user OSes matured (1960s–1970s), three pressures converged:
+Early business systems stored ledgers on tape and card files. As multi-user OSes matured (1960s E970s), three pressures converged:
 
 1. **Durability under crash**: a power loss mid-write must not corrupt the ledger permanently.
 2. **Concurrent readers and writers**: many clerks (later, many app servers) touch the same records.
@@ -65,7 +65,7 @@ Modern engines (PostgreSQL, MongoDB WiredTiger, Redis with AOF) inherit the same
 | Two processes overwrite each other | Lock manager / MVCC (see [[08-Databases/05-Transactions-and-Isolation/Locking vs MVCC|Locking vs MVCC]]) |
 | Full-file scan for one row | On-disk indexes (see [[08-Databases/03-Indexing-on-Disk/B-Plus Trees as Page Structures|B-Plus Trees as Page Structures]]) |
 | No crash recovery story | Redo/undo from WAL (see [[08-Databases/02-WAL-Durability-and-Recovery/Crash Recovery Redo and Undo Concepts|Crash Recovery Redo and Undo Concepts]]) |
-| Unbounded memory for large datasets | Buffer pool + page-oriented I/O (see [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]) |
+| Unbounded memory for large datasets | Buffer pool + page-oriented I/O (see [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]) |
 
 Engines do **not** replace product design: idempotency keys, cache-aside, and multi-region failover live in [[07-Backend/README|Backend]] and [[09-System-Design/README|System Design]].
 
@@ -110,7 +110,7 @@ flowchart LR
     Access --> Idx[On-disk indexes]
 ```
 
-### Sequence / Lifecycle — commit path sketch
+### Sequence / Lifecycle  Ecommit path sketch
 
 ```mermaid
 sequenceDiagram
@@ -127,10 +127,10 @@ sequenceDiagram
 
 ## Examples
 
-### Minimal Example — why a file is not enough
+### Minimal Example  Ewhy a file is not enough
 
 ```typescript
-// Node 20+ / TypeScript 5+ — educational anti-pattern
+// Node 20+ / TypeScript 5+  Eeducational anti-pattern
 import { readFileSync, writeFileSync } from "node:fs";
 
 interface Account {
@@ -152,10 +152,10 @@ function transfer(accountsPath: string, from: string, to: string, amount: number
 
 No atomicity, no concurrent writers, no index on `id`, no recovery after partial write.
 
-### Production-Shaped Example — engine-backed transfer
+### Production-Shaped Example  Eengine-backed transfer
 
 ```typescript
-// Node 20+ / TypeScript 5+ with `pg` — durability/isolation delegated to engine
+// Node 20+ / TypeScript 5+ with `pg`  Edurability/isolation delegated to engine
 import pg from "pg";
 
 export async function transfer(
@@ -214,7 +214,7 @@ Repository patterns and ORM mapping belong to [[07-Backend/08-Data-Access-and-Pe
 ### When Not to Use
 
 - Immutable append-only logs where you only replay (specialized log stores)
-- Ephemeral cache data with explicit loss tolerance (Redis as cache — see module 10)
+- Ephemeral cache data with explicit loss tolerance (Redis as cache  Esee module 10)
 - Single-writer, replace-whole-file snapshots with acceptable RPO/RTO (some config)
 
 ## Exercises
@@ -267,17 +267,17 @@ Databases exist because applications need **shared, durable, structured state** 
 ## Further Reading
 
 - [[00-References/Databases/README|Databases References]]
-- Gray & Reuter — *Transaction Processing: Concepts and Techniques*
+- Gray & Reuter  E*Transaction Processing: Concepts and Techniques*
 - [[01-Computer-Science/06-IO-and-Persistence/Files Blocks and Directories|Files Blocks and Directories]]
 
 ## Related Notes
 
 - [[08-Databases/00-Orientation/Files vs Engines vs Services|Files vs Engines vs Services]]
 - [[08-Databases/00-Orientation/Database Failure Modes Corruption and Durability|Database Failure Modes Corruption and Durability]]
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[07-Backend/08-Data-Access-and-Persistence-Patterns/Handing Off to Database Engines|Handing Off to Database Engines]]
-- [[04-Data-Structures/README|Data Structures]] — in-memory structures vs on-disk pages
-- [[09-System-Design/README|System Design]] — multi-region and CAP product choices
+- [[04-Data-Structures/README|Data Structures]]  Ein-memory structures vs on-disk pages
+- [[09-System-Design/README|System Design]]  Emulti-region and CAP product choices
 
 ## Progress Checklist
 

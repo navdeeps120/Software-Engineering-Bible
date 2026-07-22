@@ -5,7 +5,7 @@ track: 08-Databases
 topic: storage-and-buffer-pool-interview
 difficulty: intermediate
 status: active
-prerequisites: ["[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]"]
+prerequisites: ["[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]"]
 tags: [interviews, databases, storage, buffer-pool]
 created: 2026-07-22
 updated: 2026-07-22
@@ -15,7 +15,7 @@ updated: 2026-07-22
 
 ## Linked Topic
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Heap Tables vs Clustered Layouts|Heap Tables vs Clustered Layouts]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Tuple Layout and Oversized Values|Tuple Layout and Oversized Values]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Buffer Pool vs OS Page Cache|Buffer Pool vs OS Page Cache]]
@@ -44,7 +44,7 @@ updated: 2026-07-22
 
 ## Layout and Access
 
-3. Heap vs clustered (index-organized) table — when does each win?
+3. Heap vs clustered (index-organized) table  Ewhen does each win?
 
    - Range scans on clustering key
    - Random updates and page splits
@@ -78,7 +78,7 @@ updated: 2026-07-22
    - FSM role after deletes
    - Bloat and vacuum linkage
 
-8. Sequential scan storm evicts OLTP hot set — mitigation options?
+8. Sequential scan storm evicts OLTP hot set  Emitigation options?
 
    - Replicas, resource groups, pool routing
    - `pg_prewarm`, buffer pool sizing
@@ -86,13 +86,13 @@ updated: 2026-07-22
 
 ## Debug and Production
 
-9. Buffer hit ratio dropped sharply — triage checklist.
+9. Buffer hit ratio dropped sharply  Etriage checklist.
 
    - Working set growth vs new scan pattern
    - Measurement tools
    - False comfort from OS cache
 
-10. Inserts slow despite "plenty of free space" on disk — explain FSM staleness.
+10. Inserts slow despite "plenty of free space" on disk  Eexplain FSM staleness.
 
     - Visibility of free space to inserter
     - Vacuum/FSM update
@@ -100,13 +100,13 @@ updated: 2026-07-22
 
 ## Staff-Level
 
-11. Size `shared_buffers` on a 64 GiB OLTP host — show your work.
+11. Size `shared_buffers` on a 64 GiB OLTP host  Eshow your work.
 
     - Heuristics vs measurement
     - SLIs during rollout
     - When more buffers hurt
 
-12. Design educational page store lab for new hires — learning outcomes?
+12. Design educational page store lab for new hires  Elearning outcomes?
 
     - Slot array, buffer pool LRU
     - Alignment with [[08-Databases/_exercises/Storage and Buffer Pool Exercises.md|Storage Exercises]]
@@ -118,7 +118,7 @@ updated: 2026-07-22
     - Migration ownership
     - Cross-team standards
 
-14. Compare Postgres page model to MongoDB WiredTiger cache/page — similarities?
+14. Compare Postgres page model to MongoDB WiredTiger cache/page  Esimilarities?
 
     - Document vs tuple packing
     - Cache pressure signals

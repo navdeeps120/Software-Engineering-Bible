@@ -6,7 +6,7 @@ topic: catalogs-system-tables-types
 difficulty: intermediate
 status: active
 prerequisites:
-  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]"
+  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]"
   - "[[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|Parse Bind Plan Execute Pipeline]]"
 tags: [postgresql, catalog, pg_catalog, types, oid, metadata]
 created: 2026-07-22
@@ -31,7 +31,7 @@ Understanding catalogs is how you reason about **type coercion**, **OID assignme
 
 ## Prerequisites
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|Parse Bind Plan Execute Pipeline]]
 
 ## Difficulty
@@ -50,10 +50,10 @@ Early Postgres inherited Ingres' catalog design: metadata as queryable relations
 
 ## Problem It Solves
 
-- **"Why can't I cast this?"** — answer lives in `pg_cast` and `pg_type`
-- **Orphan objects after failed migration** — trace `pg_depend`
-- **Extension uninstall order** — dependency graph in catalogs
-- **Mystery index/table bloat attribution** — `pg_class.reltuples`, `relkind`
+- **"Why can't I cast this?"**  Eanswer lives in `pg_cast` and `pg_type`
+- **Orphan objects after failed migration**  Etrace `pg_depend`
+- **Extension uninstall order**  Edependency graph in catalogs
+- **Mystery index/table bloat attribution**  E`pg_class.reltuples`, `relkind`
 
 ## Internal Implementation
 
@@ -93,7 +93,7 @@ flowchart LR
     pg_class --> pg_depend[pg_depend graph]
 ```
 
-### Sequence / Lifecycle — CREATE TABLE
+### Sequence / Lifecycle  ECREATE TABLE
 
 ```mermaid
 sequenceDiagram
@@ -112,7 +112,7 @@ sequenceDiagram
 
 ## Examples
 
-### Minimal Example — inspect a table's physical catalog rows
+### Minimal Example  Einspect a table's physical catalog rows
 
 ```sql
 -- PostgreSQL 15+
@@ -139,10 +139,10 @@ WHERE c.relname = 'orders'
 ORDER BY a.attnum;
 ```
 
-### Production-Shaped Example — TypeScript migration guard using catalog introspection
+### Production-Shaped Example  ETypeScript migration guard using catalog introspection
 
 ```typescript
-// Node 20+ / pg 8.x — verify column types before zero-downtime deploy
+// Node 20+ / pg 8.x  Everify column types before zero-downtime deploy
 import pg from "pg";
 
 type ColumnExpectation = { table: string; column: string; typname: string };

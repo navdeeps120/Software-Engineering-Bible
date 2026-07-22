@@ -60,6 +60,9 @@ flowchart LR
 - Backend interview drills: see [[07-Backend/_interview/README|Backend Interview Questions]]
 - Backend exercises for API contracts, auth, reliability, and caching patterns: see [[07-Backend/_exercises/README|Backend Exercises]]
 - Backend code labs for Express middleware, validation, auth, rate limits, cache-aside, outbox, and OpenAPI: see [[07-Backend/code/README|Backend code labs]]
+- Databases interview drills: see [[08-Databases/_interview/README|Databases Interview Questions]]
+- Databases exercises for storage, WAL, indexing, isolation, and ops practice: see [[08-Databases/_exercises/README|Databases Exercises]]
+- Databases code labs for page store, buffer pool, WAL, B+ indexes, lock manager, MVCC, planner, and Redis persistence: see [[08-Databases/code/README|Databases code labs]]
 - Additional career notes — planned
 
 ## Related Notes
@@ -73,4 +76,5 @@ flowchart LR
 - [[05-Algorithms/README|Algorithms]]
 - [[06-NodeJS/README|Node.js]]
 - [[07-Backend/README|Backend]]
+- [[08-Databases/README|Databases]]
 - [[00-Templates/Interview Questions Template|Interview Questions Template]]

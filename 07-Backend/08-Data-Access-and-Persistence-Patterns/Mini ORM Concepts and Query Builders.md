@@ -17,7 +17,7 @@ updated: 2026-07-22
 
 ## Overview
 
-**ORMs** map objects to relational rows (Prisma, TypeORM, Sequelize). **Query builders** compose SQL programmatically (Knex, Kysely, Drizzle SQL layer) without full object graph tracking. **Mini ORM concepts** for backend engineers: mapping boundaries, parameterized queries, migration integration, when **not** to abstract SQL. Planner, indexes, execution → [[08-Databases/README|Databases]]; repositories consume builders inside adapters ([[07-Backend/08-Data-Access-and-Persistence-Patterns/Repository and Unit of Work|Repository and Unit of Work]]).
+**ORMs** map objects to relational rows (Prisma, TypeORM, Sequelize). **Query builders** compose SQL programmatically (Knex, Kysely, Drizzle SQL layer) without full object graph tracking. **Mini ORM concepts** for backend engineers: mapping boundaries, parameterized queries, migration integration, when **not** to abstract SQL. Planner, indexes, execution → [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|Parse Bind Plan Execute Pipeline]]; repositories consume builders inside adapters ([[07-Backend/08-Data-Access-and-Persistence-Patterns/Repository and Unit of Work|Repository and Unit of Work]]).
 
 ## Learning Objectives
 
@@ -209,7 +209,7 @@ Repository adapters in [[07-Backend/projects/Backend Service Toolkit/README|Back
 
 - Repository boundary mandatory
 - Log slow query threshold
-- `EXPLAIN` handoff to DBAs ([[08-Databases/README|Databases]])
+- `EXPLAIN` handoff to DBAs ([[08-Databases/04-Query-Processing-and-Planning/EXPLAIN and EXPLAIN ANALYZE Literacy|EXPLAIN and EXPLAIN ANALYZE Literacy]])
 - Single pool per process
 - Version schema with migrations ([[07-Backend/08-Data-Access-and-Persistence-Patterns/Migrations as Operational Process|Migrations as Operational Process]])
 
@@ -219,7 +219,7 @@ Repository adapters in [[07-Backend/projects/Backend Service Toolkit/README|Back
 
 ## Further Reading
 
-- [[08-Databases/README|Databases]]
+- [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|Parse Bind Plan Execute Pipeline]]
 - Drizzle / Kysely documentation (tooling)
 
 ## Related Notes
@@ -227,7 +227,7 @@ Repository adapters in [[07-Backend/projects/Backend Service Toolkit/README|Back
 - [[07-Backend/08-Data-Access-and-Persistence-Patterns/Repository and Unit of Work|Repository and Unit of Work]]
 - [[07-Backend/08-Data-Access-and-Persistence-Patterns/N-plus-1 and Query Shape Discipline|N-plus-1 and Query Shape Discipline]]
 - [[07-Backend/08-Data-Access-and-Persistence-Patterns/Handing Off to Database Engines|Handing Off to Database Engines]]
-- [[08-Databases/README|Databases]]
+- [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|Parse Bind Plan Execute Pipeline]]
 
 ## Progress Checklist
 

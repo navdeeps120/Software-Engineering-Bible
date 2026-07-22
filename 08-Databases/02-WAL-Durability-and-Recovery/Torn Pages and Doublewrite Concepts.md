@@ -7,7 +7,7 @@ difficulty: advanced
 status: active
 prerequisites:
   - "[[08-Databases/02-WAL-Durability-and-Recovery/Write-Ahead Logging Protocol|Write-Ahead Logging Protocol]]"
-  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]"
+  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]"
 tags: [torn-pages, doublewrite, checksum, full-page-writes, corruption]
 created: 2026-07-22
 updated: 2026-07-22
@@ -32,7 +32,7 @@ This note covers physical corruption prevention—distinct from logical bugs or 
 ## Prerequisites
 
 - [[08-Databases/02-WAL-Durability-and-Recovery/Write-Ahead Logging Protocol|Write-Ahead Logging Protocol]]
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 
 ## Difficulty
 
@@ -89,7 +89,7 @@ flowchart LR
     Torn --> CRC[Data checksums]
 ```
 
-### Sequence / Lifecycle — torn write recovery
+### Sequence / Lifecycle  Etorn write recovery
 
 ```mermaid
 sequenceDiagram
@@ -109,7 +109,7 @@ sequenceDiagram
 
 ## Examples
 
-### Minimal Example — simulate torn detection
+### Minimal Example  Esimulate torn detection
 
 ```typescript
 import { createHash } from "node:crypto";
@@ -131,7 +131,7 @@ export function verifyPage(bytes: Buffer, expected: string): boolean {
 }
 ```
 
-### Production-Shaped Example — Postgres settings
+### Production-Shaped Example  EPostgres settings
 
 ```sql
 SHOW full_page_writes;     -- on in production typically

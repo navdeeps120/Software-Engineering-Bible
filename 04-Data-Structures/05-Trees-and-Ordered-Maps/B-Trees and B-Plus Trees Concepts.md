@@ -20,7 +20,7 @@ updated: 2026-07-21
 
 A **B-tree** is a self-balancing search tree optimized for **block-oriented storage**: each node holds up to **M−1 keys** and **M children**, keeping height low via high **fanout**. Disk reads happen in **page-sized** units (often 4–16 KiB); a B-tree node maps to one page, so one I/O touches thousands of keys.
 
-A **B+ tree** variant stores all records in **leaf nodes** linked for sequential scan; internal nodes hold only **routing keys**. Database indexes (InnoDB, PostgreSQL) use B+ trees; this note teaches **invariants and fanout reasoning**. Page formats, WAL, and buffer pools belong to [[08-Databases/README|Databases]].
+A **B+ tree** variant stores all records in **leaf nodes** linked for sequential scan; internal nodes hold only **routing keys**. Database indexes (InnoDB, PostgreSQL) use B+ trees; this note teaches **invariants and fanout reasoning**. Page formats, [[08-Databases/02-WAL-Durability-and-Recovery/Write-Ahead Logging Protocol|WAL]], and [[08-Databases/01-Storage-and-Buffer-Pool/Buffer Pool vs OS Page Cache|buffer pools]] belong to [[08-Databases/03-Indexing-on-Disk/B-Plus Trees as Page Structures|B-Plus Trees as Page Structures]].
 
 ## Learning Objectives
 
@@ -217,7 +217,7 @@ SSD **write amplification** from splits is a database tuning topic; B-tree shape
 
 ## Portfolio Project
 
-Link calculator to [[08-Databases/README|Databases]] index design exercise when available.
+Link calculator to [[08-Databases/03-Indexing-on-Disk/B-Plus Trees as Page Structures|B-Plus Trees as Page Structures]] index design exercise.
 
 ## Interview Questions
 
@@ -253,7 +253,7 @@ B-trees and B+ trees minimize height through high fanout aligned to storage page
 ## Further Reading
 
 - [[00-References/Data Structures/README|Data Structures References]]
-- [[08-Databases/README|Databases Track]]
+- [[08-Databases/03-Indexing-on-Disk/B-Plus Trees as Page Structures|B-Plus Trees as Page Structures]]
 - Comer — "The Ubiquitous B-Tree"
 
 ## Related Notes
@@ -262,7 +262,7 @@ B-trees and B+ trees minimize height through high fanout aligned to storage page
 - [[04-Data-Structures/05-Trees-and-Ordered-Maps/Binary Search Trees|Binary Search Trees]]
 - [[04-Data-Structures/04-Hash-Tables-and-Sets/Ordered Maps via Trees vs Hashing|Ordered Maps via Trees vs Hashing]]
 - [[01-Computer-Science/02-Machine-Model/Cache Hierarchy and Locality|Cache Hierarchy and Locality]]
-- [[08-Databases/README|Databases Track]]
+- [[08-Databases/03-Indexing-on-Disk/B-Plus Trees as Page Structures|B-Plus Trees as Page Structures]]
 
 ## Progress Checklist
 

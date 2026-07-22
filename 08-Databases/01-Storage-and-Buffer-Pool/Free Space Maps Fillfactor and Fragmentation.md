@@ -6,7 +6,7 @@ topic: free-space-maps-fillfactor-fragmentation
 difficulty: intermediate
 status: active
 prerequisites:
-  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]"
+  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]"
   - "[[08-Databases/01-Storage-and-Buffer-Pool/Tuple Layout and Oversized Values|Tuple Layout and Oversized Values]]"
 tags: [fsm, fillfactor, fragmentation, bloat, vacuum]
 created: 2026-07-22
@@ -31,7 +31,7 @@ This note connects physical space management to insert/update performance and au
 
 ## Prerequisites
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Tuple Layout and Oversized Values|Tuple Layout and Oversized Values]]
 
 ## Difficulty
@@ -46,7 +46,7 @@ This note connects physical space management to insert/update performance and au
 
 ## History
 
-Early heaps appended until full. Update-heavy OLTP needed **reserved space** to keep modified rows on the same page (**HOT**). Postgres FSM (8 KiB tree of categories) quickly finds pages with ≥ threshold free bytes. Without space management, every update chases new pages → index bloat → scan reads mostly empty blocks.
+Early heaps appended until full. Update-heavy OLTP needed **reserved space** to keep modified rows on the same page (**HOT**). Postgres FSM (8 KiB tree of categories) quickly finds pages with ≥ threshold free bytes. Without space management, every update chases new pages ↁEindex bloat ↁEscan reads mostly empty blocks.
 
 ## Problem It Solves
 
@@ -85,7 +85,7 @@ flowchart LR
     Frag --> Vac[Vacuum module 06]
 ```
 
-### Sequence / Lifecycle — insert targeting
+### Sequence / Lifecycle  Einsert targeting
 
 ```mermaid
 sequenceDiagram
@@ -105,7 +105,7 @@ sequenceDiagram
 
 ## Examples
 
-### Minimal Example — educational free space tracker
+### Minimal Example  Eeducational free space tracker
 
 ```typescript
 type PageInfo = { pageId: number; freeBytes: number };
@@ -126,7 +126,7 @@ export class FreeSpaceMap {
 }
 ```
 
-### Production-Shaped Example — fillfactor and bloat check
+### Production-Shaped Example  Efillfactor and bloat check
 
 ```sql
 -- Update-heavy lookup table: leave room for HOT
@@ -150,7 +150,7 @@ WHERE relname = 'sessions';
 ```
 
 ```typescript
-// Alert hook — ops
+// Alert hook  Eops
 export function shouldVacuumAlert(deadRatio: number, threshold = 0.2): boolean {
   return deadRatio > threshold;
 }
@@ -165,7 +165,7 @@ Vacuum depth: [[08-Databases/06-Concurrency-Internals/Vacuum Version GC and Bloa
 | Updates same page | More HOT opportunities | More page splits/churn |
 | Storage | More pages for same rows | Dense packing |
 | Seq scan | More pages to read | Fewer pages |
-| Index size | Unchanged by fillfactor alone | — |
+| Index size | Unchanged by fillfactor alone |  E|
 
 ### When to Use
 
@@ -233,7 +233,7 @@ Pages are not uniformly full: FSM finds insert targets, fillfactor reserves upda
 
 ## Related Notes
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Heap Tables vs Clustered Layouts|Heap Tables vs Clustered Layouts]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Buffer Pool vs OS Page Cache|Buffer Pool vs OS Page Cache]]
 - [[08-Databases/06-Concurrency-Internals/Vacuum Version GC and Bloat|Vacuum Version GC and Bloat]]

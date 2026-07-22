@@ -83,9 +83,11 @@ Backend begins at [[07-Backend/00-Orientation/Why Backend Services Exist|Why Bac
 
 ### 5. Databases
 
-- [[08-Databases/README|Databases]]
+- [[08-Databases/README|Databases]] — **complete curriculum available**
 
 Outcome: storage engines, indexing, transactions, and data modeling trade-offs.
+
+Databases begins at [[08-Databases/00-Orientation/Why Databases Exist|Why Databases Exist]] and progresses through pages and buffer pools, WAL and crash recovery, on-disk indexes, query planning, transactions and isolation, concurrency internals, replication mechanics, PostgreSQL / MongoDB / Redis engine depth, modeling for access paths, and production database operations. Use [[08-Databases/code/README|Databases code labs]] for TypeScript educational engine implementations (page store, buffer pool, WAL redo, B+ index pages, lock manager, MVCC visibility, cost-based planner, Redis dict + AOF replay, SQL fixture runner). Practice with module exercises and interview sets under `08-Databases/_exercises/` and `_interview/`, five mini projects, and the [[08-Databases/projects/Database Engines Workbench/README|Database Engines Workbench]] portfolio.
 
 ### 6. System Design
 

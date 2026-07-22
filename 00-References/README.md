@@ -31,8 +31,8 @@ Curated sources that support curriculum notes. References are not a substitute f
 - [[00-References/Algorithms/README|Algorithms]] — active
 - [[00-References/NodeJS/README|Node.js]] — active
 - [[00-References/Backend/README|Backend]] — active
+- [[00-References/Databases/README|Databases]] — active
 - Other language specifications and internals — planned
-- Databases and storage engines — planned
 - Distributed systems and system design — planned
 - Linux and networking — planned
 - Cloud provider architecture docs — planned
@@ -63,5 +63,7 @@ Curated sources that support curriculum notes. References are not a substitute f
 - [[07-Backend/README|Backend]]
 - [[00-References/NodeJS/README|Node.js References]]
 - [[00-References/Backend/README|Backend References]]
+- [[00-References/Databases/README|Databases References]]
+- [[08-Databases/README|Databases]]
 - [[00-Introduction/Roadmap|Master Roadmap]]
 - [[00-Introduction/README|Introduction]]

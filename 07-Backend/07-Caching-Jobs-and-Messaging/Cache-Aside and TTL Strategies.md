@@ -17,7 +17,7 @@ updated: 2026-07-22
 
 ## Overview
 
-**Cache-aside** (lazy loading): application reads cache first; on miss, loads from database, populates cache, returns. Writes update database then **invalidate** or update cache. **TTL** (time-to-live) bounds staleness when invalidation is missed. This note covers **application caching patterns**—Redis/memory engine semantics, eviction, and clustering live in [[08-Databases/README|Databases]] and [[09-System-Design/README|System Design]].
+**Cache-aside** (lazy loading): application reads cache first; on miss, loads from database, populates cache, returns. Writes update database then **invalidate** or update cache. **TTL** (time-to-live) bounds staleness when invalidation is missed. This note covers **application caching patterns**—Redis/memory engine semantics, eviction, and clustering live in [[08-Databases/10-Redis-and-In-Memory-Engines/RDB Snapshots and AOF|RDB Snapshots and AOF]] and [[09-System-Design/README|System Design]].
 
 ## Learning Objectives
 
@@ -234,7 +234,7 @@ Caching module in [[07-Backend/projects/Backend Service Toolkit/README|Backend S
 - Log cache hit/miss at debug; metric at info
 - Fail open on cache outage for non-critical reads if documented
 - Pair with stampede protection ([[07-Backend/07-Caching-Jobs-and-Messaging/Cache Stampede and Soft Expiry|Cache Stampede and Soft Expiry]])
-- Engine details → [[08-Databases/README|Databases]]
+- Engine details → [[08-Databases/10-Redis-and-In-Memory-Engines/RDB Snapshots and AOF|RDB Snapshots and AOF]]
 
 ## Summary
 
@@ -242,7 +242,7 @@ Cache-aside puts the application in control: **read cache, fill on miss, invalid
 
 ## Further Reading
 
-- [[08-Databases/README|Databases]] — Redis data structures and persistence
+- [[08-Databases/10-Redis-and-In-Memory-Engines/RDB Snapshots and AOF|RDB Snapshots and AOF]] — Redis data structures and persistence
 - [[09-System-Design/README|System Design]] — CDN and multi-tier caching
 
 ## Related Notes

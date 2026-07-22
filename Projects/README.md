@@ -108,6 +108,15 @@ Every important system should leave behind:
 - [[07-Backend/projects/API Contract and Reliability Harness/README|API Contract and Reliability Harness]]
 - [[07-Backend/projects/Backend Service Toolkit/README|Backend Service Toolkit]] (portfolio)
 
+### Databases — storage engines and production ops
+
+- [[08-Databases/projects/Toy Page and WAL Store/README|Toy Page and WAL Store]]
+- [[08-Databases/projects/Mini B-Plus Index Lab/README|Mini B-Plus Index Lab]]
+- [[08-Databases/projects/Isolation Anomaly Clinic/README|Isolation Anomaly Clinic]]
+- [[08-Databases/projects/Mini Redis Persistence Lab/README|Mini Redis Persistence Lab]]
+- [[08-Databases/projects/EXPLAIN Literacy Workbench/README|EXPLAIN Literacy Workbench]]
+- [[08-Databases/projects/Database Engines Workbench/README|Database Engines Workbench]] (portfolio)
+
 ## Related Notes
 
 - [[00-Templates/Project/README|Project templates]]

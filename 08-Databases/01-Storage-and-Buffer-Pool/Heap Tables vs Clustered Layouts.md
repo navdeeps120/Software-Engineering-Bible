@@ -6,7 +6,7 @@ topic: heap-tables-vs-clustered-layouts
 difficulty: intermediate
 status: active
 prerequisites:
-  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]"
+  - "[[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]"
 tags: [heap, clustered, index-organized, layout, access-path]
 created: 2026-07-22
 updated: 2026-07-22
@@ -30,7 +30,7 @@ Layout choice determines whether primary-key lookup is one index hop or index-pl
 
 ## Prerequisites
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 
 ## Difficulty
 
@@ -50,7 +50,7 @@ Early relational heaps matched file-of-records simplicity. OLTP workloads with P
 
 | Access pattern | Heap disadvantage | Clustered advantage |
 | --- | --- | --- |
-| PK point read | Index → heap TID fetch (2 hops) | Row in leaf (often 1 hop) |
+| PK point read | Index ↁEheap TID fetch (2 hops) | Row in leaf (often 1 hop) |
 | PK range scan | Random heap pages | Sequential leaf pages |
 | Secondary index read | Always heap fetch | May still need PK lookup |
 | Random UUID inserts | Heap OK; index bloat | Leaf page splits scattered |
@@ -89,7 +89,7 @@ flowchart LR
     Clu --> Inno[InnoDB model]
 ```
 
-### Sequence / Lifecycle — secondary index lookup on heap
+### Sequence / Lifecycle  Esecondary index lookup on heap
 
 ```mermaid
 sequenceDiagram
@@ -104,7 +104,7 @@ sequenceDiagram
 
 ## Examples
 
-### Minimal Example — two-hop vs one-hop mental model
+### Minimal Example  Etwo-hop vs one-hop mental model
 
 ```typescript
 type Tid = { pageId: number; slot: number };
@@ -125,7 +125,7 @@ function lookupClustered(leaves: ClusteredLeaf[], key: string): Row {
 }
 ```
 
-### Production-Shaped Example — schema choices
+### Production-Shaped Example  Eschema choices
 
 ```sql
 -- Postgres: heap table; PK creates B-tree index to TID
@@ -226,7 +226,7 @@ ADR in [[08-Databases/projects/Database Engines Workbench/README|Database Engine
 
 ## Related Notes
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[08-Databases/03-Indexing-on-Disk/Secondary Covering and Partial Indexes|Secondary Covering and Partial Indexes]]
 - [[08-Databases/04-Query-Processing-and-Planning/Access Paths Seq Scan vs Index|Access Paths Seq Scan vs Index]]
 - [[04-Data-Structures/05-Trees-and-Ordered-Maps/B-Trees and B-Plus Trees Concepts|B-Trees and B-Plus Trees Concepts]]

@@ -17,7 +17,7 @@ Reason about pages as I/O units, tuple layout on disk, heap vs clustered organiz
 
 ## Linked Topic
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Heap Tables vs Clustered Layouts|Heap Tables vs Clustered Layouts]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Tuple Layout and Oversized Values|Tuple Layout and Oversized Values]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Buffer Pool vs OS Page Cache|Buffer Pool vs OS Page Cache]]
@@ -25,15 +25,15 @@ Reason about pages as I/O units, tuple layout on disk, heap vs clustered organiz
 
 ## Progression
 
-**Understand → Implement → Optimize → Debug → Production Scenario**
+**Understand ↁEImplement ↁEOptimize ↁEDebug ↁEProduction Scenario**
 
 ## Understand
 
-### Problem 1 — `beginner`
+### Problem 1  E`beginner`
 
 **Prompt:** Draw a page diagram with header, line pointers, and tuple slots. Label how a heap insert finds space and what happens when the page is full.
 
-**Hint:** [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]].
+**Hint:** [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]].
 
 **Acceptance criteria:**
 
@@ -41,7 +41,7 @@ Reason about pages as I/O units, tuple layout on disk, heap vs clustered organiz
 - [ ] Insert path through free space map sketched
 - [ ] Cross-link to [[04-Data-Structures/00-Orientation-and-Contracts/Memory Layout Locality and Allocation Patterns|Memory Layout Locality]]
 
-### Problem 2 — `intermediate`
+### Problem 2  E`intermediate`
 
 **Prompt:** Contrast heap-organized tables with clustered (index-organized) layouts for a time-series events table. Which access patterns favor each?
 
@@ -55,7 +55,7 @@ Reason about pages as I/O units, tuple layout on disk, heap vs clustered organiz
 
 ## Implement
 
-### Problem 1 — `beginner`
+### Problem 1  E`beginner`
 
 **Prompt:** In [[08-Databases/code/README|code labs]], implement a fixed-size page with slot array: insert tuple, read by slot id, delete leaving tombstone hole.
 
@@ -65,7 +65,7 @@ Reason about pages as I/O units, tuple layout on disk, heap vs clustered organiz
 - [ ] Insert returns slot id; delete marks slot dead
 - [ ] Unit tests for full-page rejection
 
-### Problem 2 — `intermediate`
+### Problem 2  E`intermediate`
 
 **Prompt:** Implement an LRU buffer pool over page ids: pin/unpin, dirty tracking, eviction of unpinned clean pages only.
 
@@ -79,7 +79,7 @@ Reason about pages as I/O units, tuple layout on disk, heap vs clustered organiz
 
 ## Optimize
 
-### Problem 1 — `intermediate`
+### Problem 1  E`intermediate`
 
 **Prompt:** A table with wide JSON payloads causes excessive TOAST/off-page storage. Propose tuple layout changes and measure I/O per row read.
 
@@ -91,7 +91,7 @@ Reason about pages as I/O units, tuple layout on disk, heap vs clustered organiz
 - [ ] Before/after pages-read estimate for typical query
 - [ ] Migration strategy without rewrite downtime fantasy
 
-### Problem 2 — `advanced`
+### Problem 2  E`advanced`
 
 **Prompt:** Tune `fillfactor` and FSM maintenance for a table with 70% update-in-place vs 30% append-only inserts. Predict fragmentation and vacuum pressure.
 
@@ -103,7 +103,7 @@ Reason about pages as I/O units, tuple layout on disk, heap vs clustered organiz
 
 ## Debug
 
-### Problem 1 — `intermediate`
+### Problem 1  E`intermediate`
 
 **Prompt:** Buffer pool hit ratio drops from 99% to 60% after a deployment. Write a debug brief separating working-set growth from sequential scan storm.
 
@@ -113,7 +113,7 @@ Reason about pages as I/O units, tuple layout on disk, heap vs clustered organiz
 - [ ] Three hypotheses with pg_buffercache or lab equivalent
 - [ ] Links to [[01-Computer-Science/02-Machine-Model/Cache Hierarchy and Locality|Cache Hierarchy and Locality]]
 
-### Problem 2 — `advanced`
+### Problem 2  E`advanced`
 
 **Prompt:** Inserts suddenly slow on a "small" table. Investigation shows every insert allocates a new page despite deletes. Diagnose FSM staleness vs fillfactor mismatch.
 
@@ -125,7 +125,7 @@ Reason about pages as I/O units, tuple layout on disk, heap vs clustered organiz
 
 ## Production Scenario
 
-### Problem 1 — `intermediate`
+### Problem 1  E`intermediate`
 
 **Prompt:** Platform defaults `shared_buffers` to 128 MiB on 64 GiB RAM hosts. Draft sizing guidance with measurement protocol before change.
 
@@ -135,7 +135,7 @@ Reason about pages as I/O units, tuple layout on disk, heap vs clustered organiz
 - [ ] Rollout plan with cache-hit and latency SLIs
 - [ ] Rollback if working set exceeds pool
 
-### Problem 2 — `advanced`
+### Problem 2  E`advanced`
 
 **Prompt:** A analytics workload runs sequential scans that evict OLTP hot pages from the buffer pool. Propose isolation without separate hardware—connection pools, extensions, or storage tiering.
 

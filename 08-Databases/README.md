@@ -49,14 +49,14 @@ flowchart TD
 
 | This track owns | Handoff |
 | --- | --- |
-| Pages, buffer pools, tuple layout, free space | — |
-| WAL, fsync, checkpoints, crash recovery | — |
-| B+ *page* structures, secondary/covering indexes | B-tree *fanout/invariants* pedagogy → [[04-Data-Structures/README\|Data Structures]] |
-| Query planning, cost models, join algorithms, EXPLAIN | External sort *algorithms* → [[05-Algorithms/README\|Algorithms]] |
-| Isolation, MVCC, locks, vacuum/bloat | Transactions *as service boundaries* → [[07-Backend/README\|Backend]] |
-| Replication *mechanics*, lag, promote/split-brain | Multi-region capacity/CAP product design → [[09-System-Design/README\|System Design]] |
-| Postgres / Mongo / Redis as *engines* | Cache-aside, outbox, Mini ORM, repos → Backend |
-| Backups, PITR, pooling, DB roles/TLS | Containers/CI platforms → [[16-DevOps/README\|DevOps]] |
+| Pages, buffer pools, tuple layout, free space |  E|
+| WAL, fsync, checkpoints, crash recovery |  E|
+| B+ *page* structures, secondary/covering indexes | B-tree *fanout/invariants* pedagogy ↁE[[04-Data-Structures/README\|Data Structures]] |
+| Query planning, cost models, join algorithms, EXPLAIN | External sort *algorithms* ↁE[[05-Algorithms/README\|Algorithms]] |
+| Isolation, MVCC, locks, vacuum/bloat | Transactions *as service boundaries* ↁE[[07-Backend/README\|Backend]] |
+| Replication *mechanics*, lag, promote/split-brain | Multi-region capacity/CAP product design ↁE[[09-System-Design/README\|System Design]] |
+| Postgres / Mongo / Redis as *engines* | Cache-aside, outbox, Mini ORM, repos ↁEBackend |
+| Backups, PITR, pooling, DB roles/TLS | Containers/CI platforms ↁE[[16-DevOps/README\|DevOps]] |
 
 ## Prerequisites
 
@@ -90,7 +90,7 @@ flowchart TD
 
 ## Topics
 
-### 00 — Orientation
+### 00  EOrientation
 
 - [[08-Databases/00-Orientation/Why Databases Exist|Why Databases Exist]]
 - [[08-Databases/00-Orientation/Files vs Engines vs Services|Files vs Engines vs Services]]
@@ -98,15 +98,15 @@ flowchart TD
 - [[08-Databases/00-Orientation/Backend Databases and System Design Boundaries|Backend Databases and System Design Boundaries]]
 - [[08-Databases/00-Orientation/Database Failure Modes Corruption and Durability|Database Failure Modes Corruption and Durability]]
 
-### 01 — Storage and Buffer Pool
+### 01  EStorage and Buffer Pool
 
-- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and I/O Units|Pages Blocks and I/O Units]]
+- [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Heap Tables vs Clustered Layouts|Heap Tables vs Clustered Layouts]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Tuple Layout and Oversized Values|Tuple Layout and Oversized Values]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Buffer Pool vs OS Page Cache|Buffer Pool vs OS Page Cache]]
 - [[08-Databases/01-Storage-and-Buffer-Pool/Free Space Maps Fillfactor and Fragmentation|Free Space Maps Fillfactor and Fragmentation]]
 
-### 02 — WAL Durability and Recovery
+### 02  EWAL Durability and Recovery
 
 - [[08-Databases/02-WAL-Durability-and-Recovery/Write-Ahead Logging Protocol|Write-Ahead Logging Protocol]]
 - [[08-Databases/02-WAL-Durability-and-Recovery/fsync Group Commit and Durability Levels|fsync Group Commit and Durability Levels]]
@@ -114,7 +114,7 @@ flowchart TD
 - [[08-Databases/02-WAL-Durability-and-Recovery/Crash Recovery Redo and Undo Concepts|Crash Recovery Redo and Undo Concepts]]
 - [[08-Databases/02-WAL-Durability-and-Recovery/Torn Pages and Doublewrite Concepts|Torn Pages and Doublewrite Concepts]]
 
-### 03 — Indexing on Disk
+### 03  EIndexing on Disk
 
 - [[08-Databases/03-Indexing-on-Disk/B-Plus Trees as Page Structures|B-Plus Trees as Page Structures]]
 - [[08-Databases/03-Indexing-on-Disk/Secondary Covering and Partial Indexes|Secondary Covering and Partial Indexes]]
@@ -122,7 +122,7 @@ flowchart TD
 - [[08-Databases/03-Indexing-on-Disk/GIN GiST and Bitmap Index Concepts|GIN GiST and Bitmap Index Concepts]]
 - [[08-Databases/03-Indexing-on-Disk/Index-Only Scans and Visibility Map Hooks|Index-Only Scans and Visibility Map Hooks]]
 
-### 04 — Query Processing and Planning
+### 04  EQuery Processing and Planning
 
 - [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|Parse Bind Plan Execute Pipeline]]
 - [[08-Databases/04-Query-Processing-and-Planning/Cost Models Statistics and Cardinality|Cost Models Statistics and Cardinality]]
@@ -130,7 +130,7 @@ flowchart TD
 - [[08-Databases/04-Query-Processing-and-Planning/Join Algorithms Nested Loop Hash Merge|Join Algorithms Nested Loop Hash Merge]]
 - [[08-Databases/04-Query-Processing-and-Planning/EXPLAIN and EXPLAIN ANALYZE Literacy|EXPLAIN and EXPLAIN ANALYZE Literacy]]
 
-### 05 — Transactions and Isolation
+### 05  ETransactions and Isolation
 
 - [[08-Databases/05-Transactions-and-Isolation/ACID as Engine Contracts|ACID as Engine Contracts]]
 - [[08-Databases/05-Transactions-and-Isolation/Anomalies Dirty Nonrepeatable Phantom Serialization|Anomalies Dirty Nonrepeatable Phantom Serialization]]
@@ -138,7 +138,7 @@ flowchart TD
 - [[08-Databases/05-Transactions-and-Isolation/Isolation Levels and Product Defaults|Isolation Levels and Product Defaults]]
 - [[08-Databases/05-Transactions-and-Isolation/Snapshot Isolation and SSI Concepts|Snapshot Isolation and SSI Concepts]]
 
-### 06 — Concurrency Internals
+### 06  EConcurrency Internals
 
 - [[08-Databases/06-Concurrency-Internals/Latches Locks and Lock Managers|Latches Locks and Lock Managers]]
 - [[08-Databases/06-Concurrency-Internals/Hot Rows Write Skew and Contention|Hot Rows Write Skew and Contention]]
@@ -146,7 +146,7 @@ flowchart TD
 - [[08-Databases/06-Concurrency-Internals/Long Transactions and Snapshot Horizons|Long Transactions and Snapshot Horizons]]
 - [[08-Databases/06-Concurrency-Internals/Advisory Locks as Engine Primitives|Advisory Locks as Engine Primitives]]
 
-### 07 — Replication Mechanics
+### 07  EReplication Mechanics
 
 - [[08-Databases/07-Replication-Mechanics/Physical vs Logical Replication|Physical vs Logical Replication]]
 - [[08-Databases/07-Replication-Mechanics/Synchronous vs Asynchronous Durability|Synchronous vs Asynchronous Durability]]
@@ -154,7 +154,7 @@ flowchart TD
 - [[08-Databases/07-Replication-Mechanics/Failover Promote and Split-Brain Mechanics|Failover Promote and Split-Brain Mechanics]]
 - [[08-Databases/07-Replication-Mechanics/Replica Lag and Read-Your-Writes at Connection Level|Replica Lag and Read-Your-Writes at Connection Level]]
 
-### 08 — PostgreSQL Engine
+### 08  EPostgreSQL Engine
 
 - [[08-Databases/08-PostgreSQL-Engine/Catalogs System Tables and Types|Catalogs System Tables and Types]]
 - [[08-Databases/08-PostgreSQL-Engine/PostgreSQL MVCC and Autovacuum|PostgreSQL MVCC and Autovacuum]]
@@ -162,7 +162,7 @@ flowchart TD
 - [[08-Databases/08-PostgreSQL-Engine/Extensions and Procedural Surfaces Concepts|Extensions and Procedural Surfaces Concepts]]
 - [[08-Databases/08-PostgreSQL-Engine/Online DDL Costs vs Migration Process|Online DDL Costs vs Migration Process]]
 
-### 09 — Document Engines MongoDB
+### 09  EDocument Engines MongoDB
 
 - [[08-Databases/09-Document-Engines-MongoDB/Document Model and Storage Engines|Document Model and Storage Engines]]
 - [[08-Databases/09-Document-Engines-MongoDB/Indexes on Documents and Multikey Behavior|Indexes on Documents and Multikey Behavior]]
@@ -170,7 +170,7 @@ flowchart TD
 - [[08-Databases/09-Document-Engines-MongoDB/Write Concern and Journaling Mechanics|Write Concern and Journaling Mechanics]]
 - [[08-Databases/09-Document-Engines-MongoDB/When Document Engines Win or Lose|When Document Engines Win or Lose]]
 
-### 10 — Redis and In-Memory Engines
+### 10  ERedis and In-Memory Engines
 
 - [[08-Databases/10-Redis-and-In-Memory-Engines/Redis Data Structures as Persistence API|Redis Data Structures as Persistence API]]
 - [[08-Databases/10-Redis-and-In-Memory-Engines/RDB Snapshots and AOF|RDB Snapshots and AOF]]
@@ -178,7 +178,7 @@ flowchart TD
 - [[08-Databases/10-Redis-and-In-Memory-Engines/Single-Threaded Execution and Persistence Trade-offs|Single-Threaded Execution and Persistence Trade-offs]]
 - [[08-Databases/10-Redis-and-In-Memory-Engines/Redis as Cache vs Primary Store|Redis as Cache vs Primary Store]]
 
-### 11 — Modeling and Engine Selection
+### 11  EModeling and Engine Selection
 
 - [[08-Databases/11-Modeling-and-Engine-Selection/Normalization vs Denormalization at Storage|Normalization vs Denormalization at Storage]]
 - [[08-Databases/11-Modeling-and-Engine-Selection/Keys Cardinality and Access Paths|Keys Cardinality and Access Paths]]
@@ -186,7 +186,7 @@ flowchart TD
 - [[08-Databases/11-Modeling-and-Engine-Selection/PostgreSQL vs MongoDB vs Redis Decision Matrix|PostgreSQL vs MongoDB vs Redis Decision Matrix]]
 - [[08-Databases/11-Modeling-and-Engine-Selection/Handoff Back to Backend Repositories|Handoff Back to Backend Repositories]]
 
-### 12 — Production Database Ops
+### 12  EProduction Database Ops
 
 - [[08-Databases/12-Production-Database-Ops/Connection Pooling at Engine and Proxy|Connection Pooling at Engine and Proxy]]
 - [[08-Databases/12-Production-Database-Ops/Backups PITR and Restore Drills|Backups PITR and Restore Drills]]
@@ -199,7 +199,7 @@ flowchart TD
 1. Orientation (00) and Storage (01) before WAL
 2. WAL (02) and Indexing (03) before Planner (04)
 3. Transactions (05) before Concurrency (06) and Replication (07)
-4. Engine deep-dives (08–10) after core mechanics
+4. Engine deep-dives (08 E0) after core mechanics
 5. Modeling/Selection (11) and Ops (12) as synthesis
 
 ## Mini Projects
@@ -224,15 +224,15 @@ Module sets live under [[08-Databases/_interview/README|Databases Interview Ques
 
 ## Implementation Checklist
 
-- [ ] Page/slot store + buffer pool eviction
-- [ ] WAL append + crash recovery redo
-- [ ] B+ tree leaf/page split (engine-facing)
-- [ ] Lock manager + deadlock detect
-- [ ] MVCC snapshot visibility sketch
-- [ ] Cost-based access-path chooser
-- [ ] Mini Redis dict + AOF replay
-- [ ] SQL fixture runner (SELECT/INSERT/UPDATE/DELETE subset)
-- [ ] Five mini projects + Database Engines Workbench
+- [x] Page/slot store + buffer pool eviction
+- [x] WAL append + crash recovery redo
+- [x] B+ tree leaf/page split (engine-facing)
+- [x] Lock manager + deadlock detect
+- [x] MVCC snapshot visibility sketch
+- [x] Cost-based access-path chooser
+- [x] Mini Redis dict + AOF replay
+- [x] SQL fixture runner (SELECT/INSERT/UPDATE/DELETE subset)
+- [x] Five mini projects + Database Engines Workbench
 
 ## Code Labs
 
