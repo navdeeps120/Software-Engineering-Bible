@@ -46,10 +46,13 @@ Status: complete
 
 ### Phase 2 — Data Structures, Algorithms, Node.js, Backend
 
+Status: complete
+
 - [x] Complete [[04-Data-Structures/README|Data Structures]] with from-scratch implementations, dual labs, exercises, interviews, and projects
 - [x] Complete [[05-Algorithms/README|Algorithms]] with complexity analysis, dual labs, exercises, interviews, and projects
-- Build [[06-NodeJS/README|Node.js]] and [[07-Backend/README|Backend]] production tracks
-- Document ADRs for major backend choices
+- [x] Complete [[06-NodeJS/README|Node.js]] production track (host runtime, streams, networking, workers, diagnostics, supply chain, production ops)
+- [x] Complete [[07-Backend/README|Backend]] production track (HTTP/API contracts, Express, auth, reliability, caching/jobs, data access, observability, production services)
+- [x] Document ADRs for major backend choices ([[07-Backend/projects/Backend Service Toolkit/ADR/ADR-001 Express as Teaching Default|Backend Service Toolkit ADRs]])
 
 ### Phase 3 — Databases and System Design
 
@@ -86,7 +89,9 @@ Status: complete
 | M5 | Python track includes complete notes, labs, practice, and projects | complete |
 | M6 | Data Structures track includes complete notes, dual labs, practice, and projects | complete |
 | M7 | Algorithms track includes complexity analysis, dual labs, exercises, and implementations | complete |
-| M8 | Node.js track includes complete notes, labs, practice, and projects | pending |
+| M8 | Node.js track includes complete notes, labs, practice, and projects | complete |
+| M9 | Backend track includes complete notes, labs, practice, and projects | complete |
+| M10 | Databases track includes storage engines, indexing, transactions, and modeling trade-offs | pending |
 
 ## Explicit Non-Goals for Phase 0
 

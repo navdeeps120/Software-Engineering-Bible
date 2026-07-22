@@ -9,6 +9,16 @@ and this project intends to use [Semantic Versioning](https://semver.org/) once 
 
 ### Added
 
+- Complete [[07-Backend/README|Backend]] track (11 modules, 62 topic notes)
+- TypeScript Express mechanism labs under `07-Backend/code/` with Vitest (Express-lite router, problem+json validation, session/JWT auth, RBAC, timeouts/retries/idempotency, rate limiting, cache-aside, job queue/outbox, repository, OpenAPI contract checks)
+- Module exercise sets and interview question sets under `07-Backend/_exercises/` and `_interview/`
+- Five Backend mini projects plus [[07-Backend/projects/Backend Service Toolkit/README|Backend Service Toolkit]] portfolio documentation
+- [[00-References/Backend/README|Backend References]] curation index
+- Complete [[06-NodeJS/README|Node.js]] track (11 modules, 62 topic notes)
+- TypeScript Node mechanism labs under `06-NodeJS/code/` with Vitest (event-loop ordering, stream backpressure, pipeline errors, thin HTTP server, worker pool, graceful shutdown, path safety, perf sampling)
+- Module exercise sets and interview question sets under `06-NodeJS/_exercises/` and `_interview/`
+- Five Node.js mini projects plus [[06-NodeJS/projects/Node Runtime Toolkit/README|Node Runtime Toolkit]] portfolio documentation
+- [[00-References/NodeJS/README|Node.js References]] curation index
 - Complete [[05-Algorithms/README|Algorithms]] track (14 modules, 70 topic notes)
 - Paired TypeScript and Python algorithm labs under `05-Algorithms/code/` with shared JSON test vectors
 - Module exercise sets and interview question sets under `05-Algorithms/_exercises/` and `_interview/`

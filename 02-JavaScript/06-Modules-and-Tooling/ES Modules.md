@@ -19,7 +19,7 @@ updated: 2026-07-21
 
 **ECMAScript Modules (ESM)** are the standardized module system built into the language specification (ES2015+). A module is a source file with its own **top-level scope** whose bindings are private unless explicitly `export`ed, and which pulls in other modules' bindings via `import`. Unlike ad-hoc `<script>` globals or the runtime-defined [[02-JavaScript/06-Modules-and-Tooling/CommonJS and Interoperability|CommonJS]] `require`, ESM is a **language-level construct** with static structure: imports and exports are analyzable *before any code runs*.
 
-This static shape is the whole point. Because the module graph is knowable at parse time, engines and tools can build a dependency graph, detect cycles, deduplicate instances, enable [[02-JavaScript/06-Modules-and-Tooling/Bundling Tree Shaking and Code Splitting|tree shaking]], and support asynchronous loading in browsers—all without executing user code. ESM is the *contract* between a source file and the world; how that contract is located on disk is [[02-JavaScript/06-Modules-and-Tooling/Module Resolution and Package Exports|Module Resolution]], and how a runtime like Node executes it is a host concern covered in [[06-NodeJS/README|Node.js]].
+This static shape is the whole point. Because the module graph is knowable at parse time, engines and tools can build a dependency graph, detect cycles, deduplicate instances, enable [[02-JavaScript/06-Modules-and-Tooling/Bundling Tree Shaking and Code Splitting|tree shaking]], and support asynchronous loading in browsers—all without executing user code. ESM is the *contract* between a source file and the world; how that contract is located on disk is [[02-JavaScript/06-Modules-and-Tooling/Module Resolution and Package Exports|Module Resolution]], and how a runtime like Node executes it is a host concern covered in [[06-NodeJS/03-Modules-and-Loading/CJS and ESM Execution in Node|CJS and ESM Execution in Node]].
 
 ## Learning Objectives
 
@@ -272,7 +272,7 @@ ES Modules are the language's native, statically analyzable module system. Their
 - [[02-JavaScript/06-Modules-and-Tooling/CommonJS and Interoperability|CommonJS and Interoperability]]
 - [[02-JavaScript/06-Modules-and-Tooling/Bundling Tree Shaking and Code Splitting|Bundling Tree Shaking and Code Splitting]]
 - [[02-JavaScript/code/README|JavaScript code labs]]
-- [[06-NodeJS/README|Node.js]]
+- [[06-NodeJS/03-Modules-and-Loading/CJS and ESM Execution in Node|CJS and ESM Execution in Node]] · [[06-NodeJS/README|Node.js]]
 - [[02-JavaScript/README|JavaScript Track]]
 
 ## Progress Checklist

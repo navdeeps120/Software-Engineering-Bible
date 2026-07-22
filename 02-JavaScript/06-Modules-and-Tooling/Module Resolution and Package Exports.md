@@ -19,7 +19,7 @@ updated: 2026-07-21
 
 **Module resolution** is the algorithm that turns a *specifier*—the string in `import x from "specifier"`—into a concrete file on disk (or a URL). The specifier is a **contract**; resolution is the **lookup**. This is one of the least understood yet most consequential parts of the JavaScript ecosystem, because a single package can present entirely different files depending on who is importing it, in which format, on which runtime.
 
-Modern resolution is governed by the package's **`exports` field**, a declarative map that lets a package define its **public entry points** and hide internals, while selecting different files per **condition** (`import` vs `require`, `node` vs `browser`, `development` vs `production`). Understanding resolution is what separates "it works on my machine" from reliably shipping libraries. This note covers the *language/package contract* layer; runtime-specific flags and loader hooks are a [[06-NodeJS/README|Node.js]] concern, and how bundlers reinterpret these fields belongs to [[02-JavaScript/06-Modules-and-Tooling/Bundling Tree Shaking and Code Splitting|Bundling]].
+Modern resolution is governed by the package's **`exports` field**, a declarative map that lets a package define its **public entry points** and hide internals, while selecting different files per **condition** (`import` vs `require`, `node` vs `browser`, `development` vs `production`). Understanding resolution is what separates "it works on my machine" from reliably shipping libraries. This note covers the *language/package contract* layer; runtime-specific flags and loader hooks are covered in [[06-NodeJS/03-Modules-and-Loading/Custom Loaders and Module Hooks|Custom Loaders and Module Hooks]] and [[06-NodeJS/03-Modules-and-Loading/node_modules Resolution in Practice|node_modules Resolution in Practice]]; how bundlers reinterpret these fields belongs to [[02-JavaScript/06-Modules-and-Tooling/Bundling Tree Shaking and Code Splitting|Bundling]].
 
 ## Learning Objectives
 
@@ -283,7 +283,7 @@ Module resolution maps a specifier string to a real file, and the `exports`/`imp
 - [[02-JavaScript/06-Modules-and-Tooling/ES Modules|ES Modules]]
 - [[02-JavaScript/06-Modules-and-Tooling/CommonJS and Interoperability|CommonJS and Interoperability]]
 - [[02-JavaScript/code/README|JavaScript code labs]]
-- [[06-NodeJS/README|Node.js]]
+- [[06-NodeJS/03-Modules-and-Loading/package.json type exports and Dual Package Hazard|package.json type exports and Dual Package Hazard]] · [[06-NodeJS/README|Node.js]]
 - [[07-Backend/README|Backend]]
 - [[02-JavaScript/README|JavaScript Track]]
 

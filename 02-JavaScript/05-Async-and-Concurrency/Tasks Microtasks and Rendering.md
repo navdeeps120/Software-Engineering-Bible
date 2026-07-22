@@ -18,7 +18,7 @@ updated: 2026-07-21
 
 The event loop has more structure than "run callbacks." Work is split into **tasks (macrotasks)**—timers, events, I/O, each taken **one at a time**—and **microtasks (ECMAScript jobs)**—promise reactions and `queueMicrotask`, which are **drained completely** after every task and after certain host checkpoints. In the browser, wedged between these is the **rendering pipeline**: style, layout, paint, and composite, ideally hitting ~60fps (a **~16.6ms frame budget**) via **`requestAnimationFrame`**.
 
-Understanding the exact ordering—task → drain microtasks → (maybe) rAF callbacks → style/layout/paint → next task—is what separates smooth UIs from janky ones, and correct code from subtle ordering bugs. This note deepens [[02-JavaScript/05-Async-and-Concurrency/Run to Completion and Event Loop|Run to Completion and Event Loop]] with the **browser** rendering perspective and precisely places `requestAnimationFrame`, `requestIdleCallback`, and microtask starvation. Node has no rendering step; its phase model is handed to [[06-NodeJS/README|Node.js]].
+Understanding the exact ordering—task → drain microtasks → (maybe) rAF callbacks → style/layout/paint → next task—is what separates smooth UIs from janky ones, and correct code from subtle ordering bugs. This note deepens [[02-JavaScript/05-Async-and-Concurrency/Run to Completion and Event Loop|Run to Completion and Event Loop]] with the **browser** rendering perspective and precisely places `requestAnimationFrame`, `requestIdleCallback`, and microtask starvation. Node has no rendering step; its phase model is handed to [[06-NodeJS/02-Event-Loop-and-libuv/Event Loop Phases|Event Loop Phases]].
 
 ## Learning Objectives
 
@@ -251,7 +251,7 @@ The browser event loop runs one task, drains all microtasks, and periodically re
 - [[02-JavaScript/05-Async-and-Concurrency/Promises Internals|Promises Internals]]
 - [[02-JavaScript/05-Async-and-Concurrency/Async and Await|Async and Await]]
 - [[02-JavaScript/07-Production-JavaScript/Measuring and Optimizing Performance|Measuring and Optimizing Performance]]
-- [[06-NodeJS/README|Node.js]] for loop phases
+- [[06-NodeJS/02-Event-Loop-and-libuv/Event Loop Phases|Event Loop Phases]] · [[06-NodeJS/README|Node.js]]
 
 ## Progress Checklist
 

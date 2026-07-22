@@ -44,12 +44,12 @@ Python is easy to start and hard to operate correctly. Production failures come 
 | Language semantics and data model | — |
 | Descriptors, metaclasses, MRO, typing | CS type-systems primer for foundations |
 | CPython bytecode, adaptive interpreter, refcount/GC | [[01-Computer-Science/README\|Computer Science]] foundations |
-| asyncio, threads, processes, free-threading trade-offs | [[07-Backend/README\|Backend]] for service architecture |
+| asyncio, threads, processes, free-threading trade-offs | [[07-Backend/07-Caching-Jobs-and-Messaging/Background Jobs and Workers\|Background Jobs and Workers]] · [[07-Backend/README\|Backend]] |
 | Packaging, imports, venvs, wheels, lockfiles | DevOps/deploy pipelines later |
 | Testing, debug, perf, security, observability of Python processes | [[18-Security/README\|Security]], [[16-DevOps/README\|DevOps]] for platforms |
 | Collections as language protocols | [[04-Data-Structures/README\|Data Structures]] for DS design |
 | Algorithmic problem-solving | [[05-Algorithms/README\|Algorithms]] |
-| Web frameworks, ORMs, HTTP product APIs | [[07-Backend/README\|Backend]] |
+| Web frameworks, ORMs, HTTP product APIs | [[07-Backend/02-Frameworks-and-Middleware/Express Application and Router Internals\|Express Application and Router Internals]] · [[07-Backend/README\|Backend]] |
 
 ## Prerequisites
 

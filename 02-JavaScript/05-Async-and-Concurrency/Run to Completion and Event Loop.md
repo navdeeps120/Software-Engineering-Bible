@@ -95,7 +95,7 @@ flowchart LR
 ### Browser vs. Node (high level; internals handed to Node track)
 
 - **Browser**: one conceptual loop per agent; between tasks it may run `requestAnimationFrame` callbacks and rendering. Detailed in [[02-JavaScript/05-Async-and-Concurrency/Tasks Microtasks and Rendering|Tasks Microtasks and Rendering]].
-- **Node**: libuv runs distinct **phases** (timers → pending → poll → check → close), draining microtasks (with `process.nextTick` before other microtasks) between callbacks. The phase machinery, thread pool, and I/O specifics belong to [[06-NodeJS/README|Node.js]]; here we only need "one task, then drain jobs."
+- **Node**: libuv runs distinct **phases** (timers → pending → poll → check → close), draining microtasks (with `process.nextTick` before other microtasks) between callbacks. The phase machinery, thread pool, and I/O specifics belong to [[06-NodeJS/02-Event-Loop-and-libuv/Event Loop Phases|Event Loop Phases]] and [[06-NodeJS/02-Event-Loop-and-libuv/Thread Pool and Blocking Work|Thread Pool and Blocking Work]]; here we only need "one task, then drain jobs."
 
 ### Why `setTimeout(fn, 0)` isn't immediate
 
@@ -241,7 +241,7 @@ JavaScript concurrency rests on run-to-completion plus an event loop: each turn 
 - [[02-JavaScript/05-Async-and-Concurrency/Promises Internals|Promises Internals]]
 - [[02-JavaScript/05-Async-and-Concurrency/Async and Await|Async and Await]]
 - [[02-JavaScript/04-Engines-and-Memory/Host Environments and Web APIs|Host Environments and Web APIs]]
-- [[06-NodeJS/README|Node.js]] for libuv loop phases
+- [[06-NodeJS/02-Event-Loop-and-libuv/Event Loop Phases|Event Loop Phases]] · [[06-NodeJS/README|Node.js]]
 
 ## Progress Checklist
 

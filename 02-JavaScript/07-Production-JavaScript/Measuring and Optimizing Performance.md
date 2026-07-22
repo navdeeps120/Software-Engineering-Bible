@@ -269,7 +269,7 @@ Performance is a measurement discipline: profile to find the dominant bottleneck
 - [[02-JavaScript/04-Engines-and-Memory/Deoptimization and Performance Cliffs|Deoptimization and Performance Cliffs]]
 - [[02-JavaScript/07-Production-JavaScript/Debugging JavaScript|Debugging JavaScript]]
 - [[02-JavaScript/code/README|JavaScript code labs]]
-- [[06-NodeJS/README|Node.js]] · [[07-Backend/README|Backend]] · [[16-DevOps/README|DevOps]]
+- [[06-NodeJS/08-Diagnostics-and-Performance/perf_hooks and Event Loop Delay|perf_hooks and Event Loop Delay]] · [[06-NodeJS/08-Diagnostics-and-Performance/Flamegraphs Bottlenecks and Production Profiling Discipline|Flamegraphs Bottlenecks and Production Profiling Discipline]] · [[06-NodeJS/README|Node.js]] · [[07-Backend/README|Backend]] · [[16-DevOps/README|DevOps]]
 - [[02-JavaScript/README|JavaScript Track]]
 
 ## Progress Checklist

@@ -8,7 +8,7 @@ status: active
 prerequisites: []
 tags: [meta, references]
 created: 2026-07-21
-updated: 2026-07-21
+updated: 2026-07-22
 ---
 
 # 00 References
@@ -29,6 +29,8 @@ Curated sources that support curriculum notes. References are not a substitute f
 - [[00-References/Python/README|Python]] — active
 - [[00-References/Data Structures/README|Data Structures]] — active
 - [[00-References/Algorithms/README|Algorithms]] — active
+- [[00-References/NodeJS/README|Node.js]] — active
+- [[00-References/Backend/README|Backend]] — active
 - Other language specifications and internals — planned
 - Databases and storage engines — planned
 - Distributed systems and system design — planned
@@ -57,5 +59,9 @@ Curated sources that support curriculum notes. References are not a substitute f
 - [[03-Python/README|Python]]
 - [[04-Data-Structures/README|Data Structures]]
 - [[05-Algorithms/README|Algorithms]]
+- [[06-NodeJS/README|Node.js]]
+- [[07-Backend/README|Backend]]
+- [[00-References/NodeJS/README|Node.js References]]
+- [[00-References/Backend/README|Backend References]]
 - [[00-Introduction/Roadmap|Master Roadmap]]
 - [[00-Introduction/README|Introduction]]

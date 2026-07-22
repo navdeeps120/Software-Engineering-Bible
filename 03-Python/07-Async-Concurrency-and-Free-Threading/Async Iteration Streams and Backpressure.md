@@ -19,7 +19,7 @@ updated: 2026-07-21
 
 **Async iteration** (`async for`) consumes objects implementing `__aiter__`/`__anext__`—including **async generators** (`async def` with `yield`). **`asyncio.StreamReader`/`StreamWriter`** expose buffered socket IO. **Backpressure** ensures producers do not overwhelm consumers or memory when production outpaces consumption.
 
-Without backpressure, services buffer unbounded queues, OOM, and tail latency explode. Kafka partition lag and CDN buffering are [[07-Backend/README|Backend]]/platform topics; this note owns **Python async iteration protocols and asyncio stream flow control**.
+Without backpressure, services buffer unbounded queues, OOM, and tail latency explode. Kafka partition lag and CDN buffering are [[07-Backend/07-Caching-Jobs-and-Messaging/Message Queue Client Patterns|Message Queue Client Patterns]]/platform topics; this note owns **Python async iteration protocols and asyncio stream flow control**.
 
 ## Learning Objectives
 

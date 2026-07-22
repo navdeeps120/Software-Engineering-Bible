@@ -198,7 +198,7 @@ def fetch_user(user_id: int, *, include_meta: bool = False) -> dict[str, object]
     ...
 ```
 
-**Handoff**: distributed cache invalidation and Redis TTL policies belong in [[07-Backend/README|Backend]]—generics here preserve **local call-site types**.
+**Handoff**: distributed cache invalidation and Redis TTL policies belong in [[07-Backend/07-Caching-Jobs-and-Messaging/Cache-Aside and TTL Strategies|Cache-Aside and TTL Strategies]]—generics here preserve **local call-site types**.
 
 See [[03-Python/code/README|Python code labs]] for generic container implementations.
 

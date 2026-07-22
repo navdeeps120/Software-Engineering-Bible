@@ -19,7 +19,7 @@ updated: 2026-07-21
 
 Testing is the practice of writing executable specifications that verify code behaves as intended and *keeps* behaving that way as it changes. A test is fundamentally a **controlled experiment**: arrange a known state, act on the system, and assert an observable outcome. In JavaScript, testing carries extra weight because the language's dynamic typing and implicit coercion allow whole classes of bugs that a compiler would catch elsewhere—tests are your primary safety net (complemented by [[02-JavaScript/07-Production-JavaScript/TypeScript Interoperability|TypeScript]]).
 
-Effective testing is not about coverage percentages; it is about **confidence per unit of maintenance cost**. The goal is a suite that catches real regressions, runs fast, and doesn't break on every refactor. This requires deliberate choices about test *level* (unit, integration, end-to-end), what to mock, and how to keep tests deterministic despite time, randomness, and async. This note is about testing *JavaScript code and packages*; testing running servers and databases extends into [[07-Backend/README|Backend]], and CI execution is a [[16-DevOps/README|DevOps]] concern.
+Effective testing is not about coverage percentages; it is about **confidence per unit of maintenance cost**. The goal is a suite that catches real regressions, runs fast, and doesn't break on every refactor. This requires deliberate choices about test *level* (unit, integration, end-to-end), what to mock, and how to keep tests deterministic despite time, randomness, and async. This note is about testing *JavaScript code and packages*; testing running servers and databases extends into [[07-Backend/09-API-Observability-and-Testing/Contract Integration and Load Testing|Contract Integration and Load Testing]] and [[07-Backend/01-HTTP-APIs-and-Contracts/OpenAPI as Executable Contract|OpenAPI as Executable Contract]], and CI execution is a [[16-DevOps/README|DevOps]] concern.
 
 ## Learning Objectives
 
@@ -281,7 +281,7 @@ Testing is executable specification that provides confidence to change code safe
 - [[02-JavaScript/07-Production-JavaScript/Error Design and Exception Safety|Error Design and Exception Safety]]
 - [[02-JavaScript/07-Production-JavaScript/API Design and Defensive Programming|API Design and Defensive Programming]]
 - [[02-JavaScript/code/README|JavaScript code labs]]
-- [[06-NodeJS/README|Node.js]] · [[07-Backend/README|Backend]] · [[16-DevOps/README|DevOps]]
+- [[06-NodeJS/10-Production-Node/Testing Node Servers Integration and Contract Tests|Testing Node Servers Integration and Contract Tests]] · [[06-NodeJS/README|Node.js]] · [[07-Backend/09-API-Observability-and-Testing/Contract Integration and Load Testing|Contract Integration and Load Testing]] · [[07-Backend/README|Backend]] · [[16-DevOps/README|DevOps]]
 - [[02-JavaScript/README|JavaScript Track]]
 
 ## Progress Checklist

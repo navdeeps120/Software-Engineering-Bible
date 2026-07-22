@@ -144,7 +144,7 @@ sequenceDiagram
     Note over Caller: unhandled rejection = process crash risk
 ```
 
-A rejected promise that is never awaited/caught triggers `unhandledRejection`. Always attach a handler or `await` inside `try`/`catch`; register a last-resort `process.on("unhandledRejection")` to log and exit cleanly (see [[06-NodeJS/README|Node.js]]).
+A rejected promise that is never awaited/caught triggers `unhandledRejection`. Always attach a handler or `await` inside `try`/`catch`; register a last-resort `process.on("unhandledRejection")` to log and exit cleanly (see [[06-NodeJS/01-Process-and-Runtime/unhandledRejection uncaughtException and Fatal Errors|unhandledRejection uncaughtException and Fatal Errors]]).
 
 ## Mermaid Diagrams
 
@@ -303,7 +303,7 @@ Robust JavaScript treats errors as designed contracts: throw only `Error` subcla
 - [[02-JavaScript/05-Async-and-Concurrency/Errors Across Async Boundaries|Errors Across Async Boundaries]]
 - [[02-JavaScript/07-Production-JavaScript/Debugging JavaScript|Debugging JavaScript]]
 - [[02-JavaScript/code/README|JavaScript code labs]]
-- [[06-NodeJS/README|Node.js]] · [[07-Backend/README|Backend]] · [[18-Security/README|Security]]
+- [[06-NodeJS/01-Process-and-Runtime/unhandledRejection uncaughtException and Fatal Errors|unhandledRejection uncaughtException and Fatal Errors]] · [[06-NodeJS/README|Node.js]] · [[07-Backend/03-Validation-Errors-and-Versioning/Problem Details and Error Envelopes|Problem Details and Error Envelopes]] · [[07-Backend/README|Backend]] · [[18-Security/README|Security]]
 - [[02-JavaScript/README|JavaScript Track]]
 
 ## Progress Checklist

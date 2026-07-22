@@ -19,7 +19,7 @@ updated: 2026-07-21
 
 Some data doesn't arrive all at once—it arrives **over time and in pieces**: rows from a paginated API, bytes from a network socket, lines from a huge file, events from a sensor. Loading it all into memory is wasteful or impossible. **Async iteration** (`Symbol.asyncIterator`, `for await...of`, async generators) and **streams** (the WHATWG **Web Streams** API: `ReadableStream`, `WritableStream`, `TransformStream`) are JavaScript's answer: pull or push data incrementally, process it as it flows, and apply **backpressure** so a fast producer can't overwhelm a slow consumer.
 
-This note explains the **async iteration protocol**, how **async generators** make producing streams ergonomic, and how **Web Streams** add backpressure and piping. It connects the language-level protocol to the host-level stream APIs, and hands **Node's own `stream` module** internals to [[06-NodeJS/README|Node.js]] (Node streams predate and differ from Web Streams, though they now interoperate). Backpressure theory lives in [[01-Computer-Science/05-Concurrency-Fundamentals/Backpressure and Resource Contention|Backpressure and Resource Contention]].
+This note explains the **async iteration protocol**, how **async generators** make producing streams ergonomic, and how **Web Streams** add backpressure and piping. It connects the language-level protocol to the host-level stream APIs, and hands **Node's own `stream` module** internals to [[06-NodeJS/04-Buffers-Streams-and-IO/Readable Writable and Duplex Streams|Readable Writable and Duplex Streams]] and [[06-NodeJS/04-Buffers-Streams-and-IO/pipeline and Finished|pipeline and Finished]] (Node streams predate and differ from Web Streams, though they now interoperate). Backpressure theory lives in [[01-Computer-Science/05-Concurrency-Fundamentals/Backpressure and Resource Contention|Backpressure and Resource Contention]].
 
 ## Learning Objectives
 
@@ -112,7 +112,7 @@ flowchart LR
 ### Web Streams vs. Node streams (handoff)
 
 - **Web Streams** (`ReadableStream`, etc.): the cross-platform standard; async-iterable; built-in backpressure via queuing strategy.
-- **Node streams** (`stream.Readable/Writable/Transform`, `.pipe`, `highWaterMark`, object mode): older, event-based (`data`, `end`, `drain`), Node-specific. Interop via `Readable.toWeb()`/`Readable.fromWeb()`. **Node stream internals and `pipeline()` belong to** [[06-NodeJS/README|Node.js]]; here we focus on the language protocol and Web Streams.
+- **Node streams** (`stream.Readable/Writable/Transform`, `.pipe`, `highWaterMark`, object mode): older, event-based (`data`, `end`, `drain`), Node-specific. Interop via `Readable.toWeb()`/`Readable.fromWeb()`. **Node stream internals and `pipeline()` belong to** [[06-NodeJS/04-Buffers-Streams-and-IO/Readable Writable and Duplex Streams|Readable Writable and Duplex Streams]], [[06-NodeJS/04-Buffers-Streams-and-IO/Backpressure and HighWaterMark|Backpressure and HighWaterMark]], and [[06-NodeJS/04-Buffers-Streams-and-IO/pipeline and Finished|pipeline and Finished]]; here we focus on the language protocol and Web Streams.
 
 ## Mermaid Diagrams
 
@@ -268,7 +268,7 @@ Async iteration (`Symbol.asyncIterator`, `for await...of`, async generators) pro
 - [[02-JavaScript/03-Objects-and-Metaprogramming/Iterators and Generators|Iterators and Generators]]
 - [[02-JavaScript/05-Async-and-Concurrency/Concurrency Control and Backpressure|Concurrency Control and Backpressure]]
 - [[02-JavaScript/05-Async-and-Concurrency/Cancellation Timeouts and AbortController|Cancellation Timeouts and AbortController]]
-- [[06-NodeJS/README|Node.js]] for Node stream internals
+- [[06-NodeJS/04-Buffers-Streams-and-IO/Readable Writable and Duplex Streams|Readable Writable and Duplex Streams]] · [[06-NodeJS/04-Buffers-Streams-and-IO/pipeline and Finished|pipeline and Finished]] · [[06-NodeJS/README|Node.js]]
 
 ## Progress Checklist
 

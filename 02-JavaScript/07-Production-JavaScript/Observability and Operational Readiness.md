@@ -19,7 +19,7 @@ updated: 2026-07-21
 
 **Observability** is the property of a system that lets you understand its internal state from its external outputs—without shipping new code to answer new questions. It is distinct from **monitoring**, which watches known failure modes with predefined dashboards and alerts: monitoring tells you *that* something is wrong; observability lets you ask *why*, including for failures you never anticipated. The three classic **signals** are **logs** (discrete events), **metrics** (aggregatable numbers over time), and **traces** (causal request paths across components), increasingly unified under **OpenTelemetry**.
 
-**Operational readiness** is the broader discipline of ensuring software can be run reliably in production: it adds health checks, graceful shutdown, structured error reporting, SLOs, alerting, and runbooks. This note covers the *JavaScript/application-level instrumentation* that produces these signals and the operational contracts your code must uphold; the platforms that store and visualize them (Prometheus, Grafana, Datadog) and infrastructure concerns live in [[16-DevOps/README|DevOps]], while service architecture is [[07-Backend/README|Backend]]. It consumes [[02-JavaScript/07-Production-JavaScript/Error Design and Exception Safety|error design]], [[02-JavaScript/07-Production-JavaScript/Measuring and Optimizing Performance|performance metrics]], and [[02-JavaScript/06-Modules-and-Tooling/Source Maps and Debug Builds|source-map symbolication]].
+**Operational readiness** is the broader discipline of ensuring software can be run reliably in production: it adds health checks, graceful shutdown, structured error reporting, SLOs, alerting, and runbooks. This note covers the *JavaScript/application-level instrumentation* that produces these signals and the operational contracts your code must uphold; the platforms that store and visualize them (Prometheus, Grafana, Datadog) and infrastructure concerns live in [[16-DevOps/README|DevOps]], while service-level SLIs and API observability live in [[07-Backend/09-API-Observability-and-Testing/RED Metrics and SLIs for APIs|RED Metrics and SLIs for APIs]]. It consumes [[02-JavaScript/07-Production-JavaScript/Error Design and Exception Safety|error design]], [[02-JavaScript/07-Production-JavaScript/Measuring and Optimizing Performance|performance metrics]], and [[02-JavaScript/06-Modules-and-Tooling/Source Maps and Debug Builds|source-map symbolication]].
 
 ## Learning Objectives
 
@@ -316,7 +316,7 @@ Observability turns a running JavaScript system from a black box into something 
 - [[02-JavaScript/07-Production-JavaScript/Error Design and Exception Safety|Error Design and Exception Safety]]
 - [[02-JavaScript/06-Modules-and-Tooling/Source Maps and Debug Builds|Source Maps and Debug Builds]]
 - [[02-JavaScript/code/README|JavaScript code labs]]
-- [[06-NodeJS/README|Node.js]] · [[07-Backend/README|Backend]] · [[16-DevOps/README|DevOps]] · [[18-Security/README|Security]]
+- [[06-NodeJS/08-Diagnostics-and-Performance/perf_hooks and Event Loop Delay|perf_hooks and Event Loop Delay]] · [[06-NodeJS/10-Production-Node/Structured Logging and Correlation IDs|Structured Logging and Correlation IDs]] · [[06-NodeJS/README|Node.js]] · [[07-Backend/09-API-Observability-and-Testing/RED Metrics and SLIs for APIs|RED Metrics and SLIs for APIs]] · [[07-Backend/README|Backend]] · [[16-DevOps/README|DevOps]] · [[18-Security/README|Security]]
 - [[02-JavaScript/README|JavaScript Track]]
 
 ## Progress Checklist

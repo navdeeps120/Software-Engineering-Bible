@@ -19,7 +19,7 @@ updated: 2026-07-21
 
 The ECMAScript specification defines a surprisingly small language: syntax, types, objects, functions, `JSON`, `Math`, `Promise`, and the abstract **job queue** mechanism. It defines **no** `setTimeout`, **no** `fetch`, **no** `console`, **no** file system, **no** DOM. Every one of those is provided by a **host environment**—the browser, Node.js, Deno, Bun, a service worker, or an embedded engine. The **engine** (V8, SpiderMonkey, JavaScriptCore) executes ECMAScript; the **host** supplies the outside world through APIs and drives the **event loop**.
 
-Getting this boundary right is essential: it explains why the same JavaScript behaves differently in a browser vs. Node, why `window`/`document` don't exist server-side, why `setTimeout` isn't "part of JavaScript," and where portability ends. This note maps the engine↔host contract, surveys the major **Web APIs**, and draws the line to [[06-NodeJS/README|Node.js]] for server-specific internals (libuv, streams, `fs`)—which this JavaScript track deliberately hands off.
+Getting this boundary right is essential: it explains why the same JavaScript behaves differently in a browser vs. Node, why `window`/`document` don't exist server-side, why `setTimeout` isn't "part of JavaScript," and where portability ends. This note maps the engine↔host contract, surveys the major **Web APIs**, and draws the line to [[06-NodeJS/02-Event-Loop-and-libuv/libuv Architecture Overview|libuv Architecture Overview]] and [[06-NodeJS/README|Node.js]] for server-specific internals (libuv, streams, `fs`)—which this JavaScript track deliberately hands off.
 
 ## Learning Objectives
 
@@ -95,14 +95,14 @@ flowchart LR
 
 - **Timers & scheduling**: `setTimeout`, `setInterval`, `queueMicrotask`, `requestAnimationFrame` (browser), `setImmediate`/`process.nextTick` (Node).
 - **Network**: `fetch`, `WebSocket`, `EventSource`, `XMLHttpRequest` (browser); `fetch`, `http`/`net` (Node).
-- **Storage/FS**: `localStorage`, `IndexedDB`, `Cache` (browser); `fs` (Node — handed to [[06-NodeJS/README|Node.js]]).
+- **Storage/FS**: `localStorage`, `IndexedDB`, `Cache` (browser); `fs` (Node — handed to [[06-NodeJS/04-Buffers-Streams-and-IO/fs Promises Sync and Streaming|fs Promises Sync and Streaming]]).
 - **DOM/UI**: `document`, `window`, events (browser only).
 - **Concurrency**: `Worker`, `MessageChannel`, `SharedArrayBuffer` (see [[02-JavaScript/05-Async-and-Concurrency/Web Workers Shared Memory and Atomics|Web Workers Shared Memory and Atomics]]).
 - **Encoding/URL**: `TextEncoder`, `URL`, `structuredClone`, `crypto.subtle` — increasingly standardized across hosts (WinterCG).
 
 ### Handoff to Node internals
 
-This JavaScript track covers the **event loop as an ECMAScript + host concept** and the *shape* of Web APIs. The concrete Node machinery—**libuv**, the phases of Node's loop (timers, pending, poll, check, close), thread pool, `fs`/`net`/streams internals—is intentionally deferred to [[06-NodeJS/README|Node.js]]. Browser-specific rendering/timing details live with [[02-JavaScript/05-Async-and-Concurrency/Tasks Microtasks and Rendering|Tasks Microtasks and Rendering]].
+This JavaScript track covers the **event loop as an ECMAScript + host concept** and the *shape* of Web APIs. The concrete Node machinery—**libuv**, the phases of Node's loop (timers, pending, poll, check, close), thread pool, `fs`/`net`/streams internals—is intentionally deferred to [[06-NodeJS/02-Event-Loop-and-libuv/libuv Architecture Overview|libuv Architecture Overview]], [[06-NodeJS/02-Event-Loop-and-libuv/Event Loop Phases|Event Loop Phases]], and [[06-NodeJS/04-Buffers-Streams-and-IO/fs Promises Sync and Streaming|fs Promises Sync and Streaming]]. Browser-specific rendering/timing details live with [[02-JavaScript/05-Async-and-Concurrency/Tasks Microtasks and Rendering|Tasks Microtasks and Rendering]].
 
 ## Mermaid Diagrams
 
@@ -199,7 +199,7 @@ This **ports-and-adapters** style keeps business logic testable and portable; ho
 2. Write a snippet that runs identically in Node and the browser using only standard APIs.
 3. Demonstrate the cross-realm `instanceof` pitfall using an iframe or Node `vm`.
 4. Replace an `isNode` check with capability detection and explain the benefit.
-5. Identify which parts of Node's event loop belong in [[06-NodeJS/README|Node.js]], not here.
+5. Identify which parts of Node's event loop belong in [[06-NodeJS/02-Event-Loop-and-libuv/Event Loop Phases|Event Loop Phases]], not here.
 
 ## Mini Project
 
@@ -240,7 +240,7 @@ Build a **runtime capability explorer**: a page/CLI that probes the current host
 
 ## Summary
 
-ECMAScript defines the language and its job/microtask mechanism; **host environments** (browser, Node, Deno, Bun, workers) embed an engine and supply everything that touches the outside world—timers, networking, DOM, storage—and drive the event loop. Knowing this boundary explains portability, async behavior, realms, and security. Write core logic against standard or injected APIs, isolate host specifics behind adapters, and hand runtime-specific internals like libuv and `fs` to the [[06-NodeJS/README|Node.js]] track.
+ECMAScript defines the language and its job/microtask mechanism; **host environments** (browser, Node, Deno, Bun, workers) embed an engine and supply everything that touches the outside world—timers, networking, DOM, storage—and drive the event loop. Knowing this boundary explains portability, async behavior, realms, and security. Write core logic against standard or injected APIs, isolate host specifics behind adapters, and hand runtime-specific internals like libuv and `fs` to [[06-NodeJS/02-Event-Loop-and-libuv/libuv Architecture Overview|libuv Architecture Overview]] and [[06-NodeJS/README|Node.js]].
 
 ## Further Reading
 
@@ -255,7 +255,7 @@ ECMAScript defines the language and its job/microtask mechanism; **host environm
 - [[02-JavaScript/05-Async-and-Concurrency/Run to Completion and Event Loop|Run to Completion and Event Loop]]
 - [[02-JavaScript/05-Async-and-Concurrency/Tasks Microtasks and Rendering|Tasks Microtasks and Rendering]]
 - [[02-JavaScript/05-Async-and-Concurrency/Web Workers Shared Memory and Atomics|Web Workers Shared Memory and Atomics]]
-- [[06-NodeJS/README|Node.js]]
+- [[06-NodeJS/02-Event-Loop-and-libuv/Event Loop Phases|Event Loop Phases]] · [[06-NodeJS/06-Concurrency-and-Scaling/worker_threads Model|worker_threads Model]] · [[06-NodeJS/README|Node.js]]
 
 ## Progress Checklist
 

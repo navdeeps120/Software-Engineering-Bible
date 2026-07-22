@@ -8,7 +8,7 @@ status: active
 prerequisites: ["[[00-Introduction/README|Introduction]]"]
 tags: [career, interviews]
 created: 2026-07-21
-updated: 2026-07-21
+updated: 2026-07-22
 ---
 
 # Career
@@ -54,6 +54,12 @@ flowchart LR
 - Algorithms interview drills: see [[05-Algorithms/_interview/README|Algorithms Interview Questions]]
 - Algorithms exercises for implementation practice: see [[05-Algorithms/_exercises/README|Algorithms Exercises]]
 - Algorithms pattern catalog and complexity communication: see [[05-Algorithms/13-Production-Selection-and-Interview-Patterns/Interview Pattern Catalog and Complexity Communication|Interview Pattern Catalog and Complexity Communication]]
+- Node.js interview drills: see [[06-NodeJS/_interview/README|Node.js Interview Questions]]
+- Node.js exercises for runtime mechanism practice: see [[06-NodeJS/_exercises/README|Node.js Exercises]]
+- Node.js code labs for event loop, streams, HTTP, workers, shutdown, and diagnostics: see [[06-NodeJS/code/README|Node.js code labs]]
+- Backend interview drills: see [[07-Backend/_interview/README|Backend Interview Questions]]
+- Backend exercises for API contracts, auth, reliability, and caching patterns: see [[07-Backend/_exercises/README|Backend Exercises]]
+- Backend code labs for Express middleware, validation, auth, rate limits, cache-aside, outbox, and OpenAPI: see [[07-Backend/code/README|Backend code labs]]
 - Additional career notes — planned
 
 ## Related Notes
@@ -65,4 +71,6 @@ flowchart LR
 - [[03-Python/README|Python]]
 - [[04-Data-Structures/README|Data Structures]]
 - [[05-Algorithms/README|Algorithms]]
+- [[06-NodeJS/README|Node.js]]
+- [[07-Backend/README|Backend]]
 - [[00-Templates/Interview Questions Template|Interview Questions Template]]

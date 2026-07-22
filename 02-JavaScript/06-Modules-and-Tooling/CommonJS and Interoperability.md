@@ -19,7 +19,7 @@ updated: 2026-07-21
 
 **CommonJS (CJS)** is the module system Node.js shipped in 2009, built from a runtime function `require()` and a mutable `module.exports` object. Unlike [[02-JavaScript/06-Modules-and-Tooling/ES Modules|ES Modules]], CommonJS is **not part of the ECMAScript language**—it is a *runtime convention* implemented by wrapping each file in a function and injecting `require`, `module`, `exports`, `__filename`, and `__dirname`. Because `require` is an ordinary synchronous function call, module loading in CJS is **imperative and dynamic**: you can `require` conditionally, compute specifiers at runtime, and mutate exports after the fact.
 
-For a decade CJS *was* the JavaScript module ecosystem, and npm is saturated with CJS packages. The central production challenge today is **interoperability**: making CJS and ESM coexist in one codebase without duplicate instances, broken default imports, or `ERR_REQUIRE_ESM` errors. This note explains the CJS model from first principles and then the precise rules and pitfalls of ESM↔CJS interop. How Node locates these files is [[02-JavaScript/06-Modules-and-Tooling/Module Resolution and Package Exports|Module Resolution]]; runtime specifics belong to [[06-NodeJS/README|Node.js]].
+For a decade CJS *was* the JavaScript module ecosystem, and npm is saturated with CJS packages. The central production challenge today is **interoperability**: making CJS and ESM coexist in one codebase without duplicate instances, broken default imports, or `ERR_REQUIRE_ESM` errors. This note explains the CJS model from first principles and then the precise rules and pitfalls of ESM↔CJS interop. How Node locates these files is [[02-JavaScript/06-Modules-and-Tooling/Module Resolution and Package Exports|Module Resolution]]; runtime specifics belong to [[06-NodeJS/03-Modules-and-Loading/CJS and ESM Execution in Node|CJS and ESM Execution in Node]].
 
 ## Learning Objectives
 
@@ -285,7 +285,7 @@ CommonJS is a runtime module convention—`require` plus a mutable `module.expor
 - [[02-JavaScript/06-Modules-and-Tooling/ES Modules|ES Modules]]
 - [[02-JavaScript/06-Modules-and-Tooling/Package JSON and Semantic Versioning|Package JSON and Semantic Versioning]]
 - [[02-JavaScript/code/README|JavaScript code labs]]
-- [[06-NodeJS/README|Node.js]]
+- [[06-NodeJS/03-Modules-and-Loading/CJS and ESM Execution in Node|CJS and ESM Execution in Node]] · [[06-NodeJS/README|Node.js]]
 - [[02-JavaScript/README|JavaScript Track]]
 
 ## Progress Checklist

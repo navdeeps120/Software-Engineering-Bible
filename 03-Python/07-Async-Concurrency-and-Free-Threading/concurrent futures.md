@@ -21,7 +21,7 @@ updated: 2026-07-21
 
 asyncio integrates via `loop.run_in_executor`, bridging sync blocking code and coroutines. This module is the pragmatic default for parallelizing blocking calls without managing raw `threading.Thread` or `multiprocessing.Process` lifecycle.
 
-Distributed job queues (Celery, RQ, SQS workers) are [[07-Backend/README|Backend]]—`concurrent.futures` owns **in-process** pool semantics.
+Distributed job queues (Celery, RQ, SQS workers) are [[07-Backend/07-Caching-Jobs-and-Messaging/Background Jobs and Workers|Background Jobs and Workers]] and [[07-Backend/07-Caching-Jobs-and-Messaging/Transactional Outbox and Inbox Patterns|Transactional Outbox and Inbox Patterns]]—`concurrent.futures` owns **in-process** pool semantics.
 
 ## Learning Objectives
 

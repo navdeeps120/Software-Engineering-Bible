@@ -8,7 +8,7 @@ status: active
 prerequisites: ["[[00-Introduction/README|Introduction]]"]
 tags: [projects, portfolio]
 created: 2026-07-21
-updated: 2026-07-21
+updated: 2026-07-22
 ---
 
 # Projects
@@ -89,6 +89,24 @@ Every important system should leave behind:
 - [[05-Algorithms/projects/Network Connectivity and MST Lab/README|Network Connectivity and MST Lab]]
 - [[05-Algorithms/projects/Text Search Toolkit/README|Text Search Toolkit]]
 - [[05-Algorithms/projects/Algorithm Workbench/README|Algorithm Workbench]] (portfolio)
+
+### Node.js — host runtime and production ops
+
+- [[06-NodeJS/projects/HTTP Server From Scratch/README|HTTP Server From Scratch]]
+- [[06-NodeJS/projects/Stream Pipeline Toolkit/README|Stream Pipeline Toolkit]]
+- [[06-NodeJS/projects/Worker Pool Lab/README|Worker Pool Lab]]
+- [[06-NodeJS/projects/Graceful Shutdown Harness/README|Graceful Shutdown Harness]]
+- [[06-NodeJS/projects/Module Resolution and Exports Clinic/README|Module Resolution and Exports Clinic]]
+- [[06-NodeJS/projects/Node Runtime Toolkit/README|Node Runtime Toolkit]] (portfolio)
+
+### Backend — product HTTP services
+
+- [[07-Backend/projects/Express Clone/README|Express Clone]]
+- [[07-Backend/projects/Authentication Server/README|Authentication Server]]
+- [[07-Backend/projects/URL Shortener API/README|URL Shortener API]]
+- [[07-Backend/projects/Job Worker and Outbox Lab/README|Job Worker and Outbox Lab]]
+- [[07-Backend/projects/API Contract and Reliability Harness/README|API Contract and Reliability Harness]]
+- [[07-Backend/projects/Backend Service Toolkit/README|Backend Service Toolkit]] (portfolio)
 
 ## Related Notes
 

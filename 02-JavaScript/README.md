@@ -35,11 +35,11 @@ JavaScript is deceptively accessible: syntax is easy, but production failures em
 | ECMAScript syntax and semantics | — |
 | Values, coercion, functions, objects, prototypes | — |
 | Engine pipeline, JIT, GC, optimization behavior | [[01-Computer-Science/README\|Computer Science]] foundations |
-| Event loop and async semantics across hosts | [[06-NodeJS/README\|Node.js]] for libuv/Node operations |
+| Event loop and async semantics across hosts | [[06-NodeJS/02-Event-Loop-and-libuv/Event Loop Phases\|Event Loop Phases]] and [[06-NodeJS/README\|Node.js]] for libuv/Node operations |
 | ESM, CommonJS concepts, package/tooling contracts | Node.js for server deployment; frontend tracks for UI tooling |
 | DOM/Web API boundary as a host concept | Future frontend/React material for browser application architecture |
 | TypeScript interoperability principles | TypeScript usage inside projects; not a separate type-theory replacement |
-| API/backend architecture | [[07-Backend/README\|Backend]] |
+| API/backend architecture | [[07-Backend/02-Frameworks-and-Middleware/Express Application and Router Internals\|Express Application and Router Internals]] · [[07-Backend/README\|Backend]] |
 
 ## Prerequisites
 

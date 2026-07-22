@@ -270,7 +270,7 @@ JavaScript's collector reclaims **unreachable** objects starting from roots. Mod
 - [[02-JavaScript/04-Engines-and-Memory/Memory Leaks and Retention|Memory Leaks and Retention]]
 - [[02-JavaScript/03-Objects-and-Metaprogramming/Map Set WeakMap and WeakSet|Map Set WeakMap and WeakSet]]
 - [[01-Computer-Science/03-Memory-and-Addressing/Memory Safety Fundamentals|Memory Safety Fundamentals]]
-- [[06-NodeJS/README|Node.js]] for server heap tuning (`--max-old-space-size`)
+- [[06-NodeJS/08-Diagnostics-and-Performance/Memory Limits and Heap Flags|Memory Limits and Heap Flags]] · [[06-NodeJS/README|Node.js]]
 
 ## Progress Checklist
 

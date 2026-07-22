@@ -198,7 +198,7 @@ def _type_name(t: object) -> str:
     return getattr(t, "__name__", repr(t))
 ```
 
-**Scope boundary**: OpenAPI schema generation and HTTP validation wiring are [[07-Backend/README|Backend]] concerns—this note covers **when and how** annotations materialize in CPython.
+**Scope boundary**: OpenAPI schema generation and HTTP validation wiring are [[07-Backend/01-HTTP-APIs-and-Contracts/OpenAPI as Executable Contract|OpenAPI as Executable Contract]] and [[07-Backend/03-Validation-Errors-and-Versioning/Schema Validation at the Edge|Schema Validation at the Edge]] concerns—this note covers **when and how** annotations materialize in CPython.
 
 See [[03-Python/code/README|Python code labs]] for PEP 649 introspection drills.
 

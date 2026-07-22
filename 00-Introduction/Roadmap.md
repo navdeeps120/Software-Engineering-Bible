@@ -8,7 +8,7 @@ status: active
 prerequisites: ["[[00-Introduction/README|Introduction]]"]
 tags: [meta, roadmap]
 created: 2026-07-21
-updated: 2026-07-21
+updated: 2026-07-22
 ---
 
 # Master Roadmap
@@ -72,10 +72,14 @@ Algorithms begins at [[05-Algorithms/00-Foundations-and-Correctness/Why Algorith
 
 ### 4. Backend
 
-- [[06-NodeJS/README|Node.js]]
-- [[07-Backend/README|Backend]]
+- [[06-NodeJS/README|Node.js]] — **complete curriculum available**
+- [[07-Backend/README|Backend]] — **complete curriculum available**
 
 Outcome: HTTP servers, auth, APIs, reliability patterns, and operational concerns.
+
+Node.js begins at [[06-NodeJS/00-Orientation/Why Node.js Exists|Why Node.js Exists]] and progresses through process lifecycle, libuv event-loop phases, module execution, buffers and streams, thin `http`/`net` servers, workers and clustering, diagnostics, supply-chain security, and production process readiness. Use [[06-NodeJS/code/README|Node.js code labs]] for TypeScript mechanism implementations (event-loop ordering, backpressure, pipeline errors, HTTP server, worker pool, graceful shutdown, path safety, perf sampling).
+
+Backend begins at [[07-Backend/00-Orientation/Why Backend Services Exist|Why Backend Services Exist]] and progresses through REST/OpenAPI contracts, Express middleware pipelines, authentication and authorization, validation and versioning, reliability and abuse resistance, cache-aside and outbox patterns, repository/data-access discipline, API observability, and production service readiness. Use [[07-Backend/code/README|Backend code labs]] for TypeScript Express mechanism implementations (Express-lite router, problem+json validation, session/JWT auth, RBAC, timeouts/retries/idempotency, rate limiting, cache-aside, job queue/outbox, repository, OpenAPI contract checks).
 
 ### 5. Databases
 
