@@ -221,7 +221,8 @@ Blocking I/O trades thread simplicity for scalability limits. Nonblocking I/O re
 - [[01-Computer-Science/05-Concurrency-Fundamentals/Backpressure and Resource Contention|Backpressure and Resource Contention]]
 - [[01-Computer-Science/code/README|code labs]]
 - [[06-NodeJS/README|Node.js]] — event-loop runtime
-- [[10-Linux/README|Linux]] — epoll tuning and strace
+- [[10-Linux/08-Observability-Tracing-and-Profiling/strace and lsof First-Aid Tracing|strace and lsof First-Aid Tracing]] — epoll tuning and strace
+- [[10-Linux/05-Networking-Stack-and-Host-Firewall/TCP UDP Sockets ss and Conntrack|TCP UDP Sockets ss and Conntrack]]
 
 ## Progress Checklist
 

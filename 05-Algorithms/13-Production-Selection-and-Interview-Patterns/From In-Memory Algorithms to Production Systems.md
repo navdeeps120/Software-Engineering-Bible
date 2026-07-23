@@ -66,7 +66,7 @@ Many outages come not from missing Big-O knowledge but from running textbook alg
 | Adjacency storage | Uses DS ADT | [[04-Data-Structures/README\|Data Structures]] |
 | HTTP API, auth | — | [[07-Backend/README\|Backend]] |
 | Disk index, WAL | — | [[08-Databases/03-Indexing-on-Disk/B-Plus Trees as Page Structures\|B-Plus Trees as Page Structures]], [[08-Databases/02-WAL-Durability-and-Recovery/Write-Ahead Logging Protocol\|Write-Ahead Logging Protocol]] |
-| Sharding, consensus | — | [[09-System-Design/README\|System Design]] |
+| Sharding, consensus | — | [[09-System-Design/04-Partitioning-Sharding-and-Placement/Partition Keys Hotspots and Skew\|Partition Keys Hotspots and Skew]] / [[09-System-Design/08-Coordination-Consensus-and-Locks/Consensus Intuition Raft and Paxos for Designers\|Consensus Intuition]] |
 
 ### Production controls
 

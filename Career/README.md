@@ -8,7 +8,7 @@ status: active
 prerequisites: ["[[00-Introduction/README|Introduction]]"]
 tags: [career, interviews]
 created: 2026-07-21
-updated: 2026-07-22
+updated: 2026-07-23
 ---
 
 # Career
@@ -63,6 +63,14 @@ flowchart LR
 - Databases interview drills: see [[08-Databases/_interview/README|Databases Interview Questions]]
 - Databases exercises for storage, WAL, indexing, isolation, and ops practice: see [[08-Databases/_exercises/README|Databases Exercises]]
 - Databases code labs for page store, buffer pool, WAL, B+ indexes, lock manager, MVCC, planner, and Redis persistence: see [[08-Databases/code/README|Databases code labs]]
+- System Design interview drills: see [[09-System-Design/_interview/README|System Design Interview Questions]]
+- System Design exercises for capacity, consistency, partitioning, multi-region, and failure practice: see [[09-System-Design/_exercises/README|System Design Exercises]]
+- System Design code labs for capacity, LB, quorum, partition skew, cache stampede, queue lag, failover policy, and fencing: see [[09-System-Design/code/README|System Design code labs]]
+- Planned `Career/System-Design-Drills/` timed whiteboard sets — seed from [[09-System-Design/_interview/README|System Design Interview Questions]] and [[09-System-Design/11-Reference-Architectures/URL Shortener Design End-to-End|reference architectures]]
+- Linux interview drills: see [[10-Linux/_interview/README|Linux Interview Questions]]
+- Linux exercises for processes, filesystems, networking, systemd, cgroups, and host triage: see [[10-Linux/_exercises/README|Linux Exercises]]
+- Linux code labs for procfs, permissions, signals/rlimits, OOM, mounts, sockets, cgroups, systemd, and journal: see [[10-Linux/code/README|Linux code labs]]
+- Planned `Career/Linux-Ops-Drills/` timed host-triage sets — seed from [[10-Linux/_interview/README|Linux Interview Questions]] and [[10-Linux/12-Incidents-Runbooks-and-Portfolio/Host Incident Triage Order CPU Mem Disk Net|Host Incident Triage Order]]
 - Additional career notes — planned
 
 ## Related Notes
@@ -77,4 +85,6 @@ flowchart LR
 - [[06-NodeJS/README|Node.js]]
 - [[07-Backend/README|Backend]]
 - [[08-Databases/README|Databases]]
+- [[09-System-Design/README|System Design]]
+- [[10-Linux/README|Linux]]
 - [[00-Templates/Interview Questions Template|Interview Questions Template]]

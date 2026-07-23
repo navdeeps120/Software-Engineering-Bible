@@ -52,8 +52,8 @@ flowchart TD
 | REST/OpenAPI contracts, versioning, error envelopes | HTTP-as-protocol framing → [[01-Computer-Science/README\|Computer Science]] |
 | Sessions, JWT, OAuth/OIDC *application* flows | Crypto/threat curriculum depth → [[18-Security/README\|Security]] |
 | RBAC/ABAC, resource ownership, app tenancy | Cross-org IdP federation at scale → [[09-System-Design/README\|System Design]] |
-| Timeouts, retries, rate limits, circuit breakers | Multi-region capacity and consistency → System Design |
-| Cache-aside, jobs, outbox *patterns* | Redis/Kafka *engines* → [[08-Databases/README\|Databases]] / System Design |
+| Timeouts, retries, rate limits, circuit breakers | Multi-region capacity and consistency → [[09-System-Design/01-Capacity-Latency-and-Bottlenecks/Back-of-Envelope Capacity Estimation\|Back-of-Envelope Capacity Estimation]] / [[09-System-Design/03-Consistency-Models-and-CAP/CAP and PACELC as Product Constraints\|CAP and PACELC]] |
+| Cache-aside, jobs, outbox *patterns* | Redis/Kafka *engines* → [[08-Databases/README\|Databases]] / [[09-System-Design/06-Messaging-Streams-and-Async-Topologies/Queue vs Log vs Pub-Sub Topology Choice\|Queue vs Log vs Pub-Sub]] |
 | Repository, UoW, migrations *as process*, Mini ORM | Indexes, WAL, isolation, planners → Databases |
 | API SLIs, tracing, contract/load tests | Container/CI platforms → [[16-DevOps/README\|DevOps]] |
 

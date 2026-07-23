@@ -259,7 +259,7 @@ Observability: compare exact vs sketch in shadow mode before cutover.
 
 - Sort every event on infinite stream
 - Quickselect on immutable shared arrays without copy
-- Exact median on distributed shards without merge plan—see [[09-System-Design/README|System Design]]
+- Exact median on distributed shards without merge plan—see [[09-System-Design/04-Partitioning-Sharding-and-Placement/Partition Keys Hotspots and Skew|Partition Keys Hotspots and Skew]]
 
 ## Exercises
 

@@ -246,7 +246,7 @@ Production backend failures are contract failures: wrong status, duplicate side 
 
 - [[07-Backend/06-Reliability-and-Abuse-Resistance/Retries Jitter and Idempotent Handlers|Retries Jitter and Idempotent Handlers]]
 - [[07-Backend/09-API-Observability-and-Testing/RED Metrics and SLIs for APIs|RED Metrics and SLIs for APIs]]
-- [[09-System-Design/README|System Design]] — cascading failure and bulkheads
+- [[09-System-Design/09-Failure-Modes-at-Product-Scale/Cascading Multi-Service Failure|Cascading Multi-Service Failure]] — cascading failure and bulkheads
 
 ## Related Notes
 

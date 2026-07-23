@@ -20,7 +20,7 @@ updated: 2026-07-21
 
 **Profiling** measures time and memory on representative inputs; **correctness gates** assert postconditions and certificates before trusting speedups. **Regression gates** block merges when outputs diverge from shared vectors or latency exceeds budgets vs baseline. Fast wrong algorithms are production incidents—this note integrates measurement with invariant testing from foundations modules.
 
-Product APM and infra monitoring → [[09-System-Design/README|System Design]]; this note covers algorithm-lab and service-local gates.
+Product APM and infra monitoring → [[09-System-Design/10-Observability-and-Control-Planes/SLIs SLOs Error Budgets for Multi-Service Systems|SLIs SLOs Error Budgets for Multi-Service Systems]]; this note covers algorithm-lab and service-local gates.
 
 ## Learning Objectives
 

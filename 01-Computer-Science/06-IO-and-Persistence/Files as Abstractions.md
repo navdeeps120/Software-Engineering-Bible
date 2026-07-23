@@ -196,7 +196,7 @@ Files are kernel objects exposing byte streams through descriptors. Pathnames re
 
 - Linux `man 2 open`, `man 7 inode`, `man 2 rename`
 - *Operating Systems: Three Easy Pieces*, persistence chapters
-- [[10-Linux/README|Linux]] track for ext4/XFS ops
+- [[10-Linux/04-Filesystems-Disks-and-IO/ext4 and XFS Operational Differences|ext4 and XFS Operational Differences]] for ext4/XFS ops
 
 ## Related Notes
 

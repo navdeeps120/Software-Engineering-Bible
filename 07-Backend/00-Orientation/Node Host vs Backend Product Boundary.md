@@ -102,7 +102,7 @@ flowchart TD
 | JWT verification policy | No | Yes |
 | `process.on('SIGTERM')` drain | Yes ([[06-NodeJS/10-Production-Node/Graceful Shutdown and Drain|Graceful Shutdown]]) | In-flight request policy above drain |
 | Connection pool to Postgres | Driver (host-adjacent) | Repository patterns and transactions |
-| Multi-region active-active | No | Hand off to System Design |
+| Multi-region active-active | No | Hand off to [[09-System-Design/07-Multi-Region-and-Geo/Multi-Region Active-Passive Active-Active Patterns|Multi-Region Active-Passive Active-Active Patterns]] |
 
 ## Mermaid Diagrams
 

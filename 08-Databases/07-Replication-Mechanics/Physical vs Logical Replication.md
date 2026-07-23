@@ -168,7 +168,7 @@ export async function fetchPhysicalReplicaStats(pool: pg.Pool): Promise<ReplStat
 
 - Do not use logical replication alone as HA without orchestration
 - Do not expect physical replica for per-table warehouse without overload
-- Multi-region CAP product design → [[09-System-Design/README|System Design]]
+- Multi-region CAP product design → [[09-System-Design/03-Consistency-Models-and-CAP/CAP and PACELC as Product Constraints|CAP and PACELC as Product Constraints]]
 
 ## Exercises
 

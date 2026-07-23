@@ -17,7 +17,7 @@ updated: 2026-07-22
 
 ## Overview
 
-**Chaos engineering** proactively injects failures—latency, errors, dependency outage—to verify resilience mechanisms work. At the **service edge** (Express layer), inject via middleware flags, Toxiproxy between API and dependencies, or test hooks—not production random kills without blast radius control. Validates breakers, timeouts, retries ([[07-Backend/06-Reliability-and-Abuse-Resistance|Reliability module]]). Large-scale platform chaos → [[09-System-Design/README|System Design]] / [[16-DevOps/README|DevOps]].
+**Chaos engineering** proactively injects failures—latency, errors, dependency outage—to verify resilience mechanisms work. At the **service edge** (Express layer), inject via middleware flags, Toxiproxy between API and dependencies, or test hooks—not production random kills without blast radius control. Validates breakers, timeouts, retries ([[07-Backend/06-Reliability-and-Abuse-Resistance|Reliability module]]). Large-scale platform chaos → [[09-System-Design/09-Failure-Modes-at-Product-Scale/Chaos Blast Radius and Dependency Failure|Chaos Blast Radius and Dependency Failure]] / [[16-DevOps/README|DevOps]].
 
 ## Learning Objectives
 
@@ -226,7 +226,7 @@ Game-day runbook in [[07-Backend/projects/Backend Service Toolkit/README|Backend
 
 ## Further Reading
 
-- [[09-System-Design/README|System Design]]
+- [[09-System-Design/09-Failure-Modes-at-Product-Scale/Chaos Blast Radius and Dependency Failure|Chaos Blast Radius and Dependency Failure]]
 - [[16-DevOps/README|DevOps]]
 - Principles of Chaos Engineering (principlesofchaos.org)
 

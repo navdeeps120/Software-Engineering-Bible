@@ -55,7 +55,7 @@ flowchart TD
 | String matching (KMP, Z, rolling hash) | Tries as structures → DS |
 | Complexity techniques beyond the CS primer | Vocabulary primer → [[01-Computer-Science/08-Languages-and-Computation/Computational Complexity Primer\|Computational Complexity Primer]] |
 | Interview pattern catalogs and complexity storytelling | Career practice framing → [[Career/README\|Career]] |
-| In-memory algorithmic choice and measurement | Distributed consensus → [[09-System-Design/README\|System Design]] |
+| In-memory algorithmic choice and measurement | Distributed consensus → [[09-System-Design/08-Coordination-Consensus-and-Locks/Consensus Intuition Raft and Paxos for Designers\|Consensus Intuition Raft and Paxos for Designers]] |
 | — | Query planners, WAL, disk sorts at engine scale → [[08-Databases/README\|Databases]] |
 | — | HTTP APIs, product caches → [[07-Backend/README\|Backend]] |
 

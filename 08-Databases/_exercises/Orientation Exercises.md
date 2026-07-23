@@ -98,7 +98,7 @@ Separate files from engines from services, map relational/document/KV contracts,
 **Acceptance criteria:**
 
 - [ ] Tenancy and backup requirements explicit
-- [ ] Handoff to [[09-System-Design/README|System Design]] for multi-region noted
+- [ ] Handoff to [[09-System-Design/07-Multi-Region-and-Geo/Multi-Region Active-Passive Active-Active Patterns|Multi-Region Active-Passive Active-Active Patterns]] for multi-region noted
 - [ ] Rollback path if wrong engine chosen early
 
 ## Debug

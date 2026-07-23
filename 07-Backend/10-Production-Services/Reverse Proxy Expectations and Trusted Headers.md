@@ -17,7 +17,7 @@ updated: 2026-07-22
 
 ## Overview
 
-Production Express apps sit behind **reverse proxies** (nginx, Envoy, AWS ALB, Kubernetes Ingress)—TLS termination, load balancing, buffering. Proxies add **forwarded headers**: `X-Forwarded-For`, `X-Forwarded-Proto`, `X-Forwarded-Host`, `X-Request-Id`. Express must **`trust proxy`** hop count to interpret `req.ip`, `req.secure`, and host correctly—misconfiguration enables IP spoofing for rate limits ([[07-Backend/06-Reliability-and-Abuse-Resistance/Rate Limiting and Quotas|Rate Limiting and Quotas]]) or insecure cookie policies. Container/proxy deployment → [[16-DevOps/README|DevOps]].
+Production Express apps sit behind **reverse proxies** (nginx, Envoy, AWS ALB, Kubernetes Ingress)—TLS termination, load balancing, buffering. Proxies add **forwarded headers**: `X-Forwarded-For`, `X-Forwarded-Proto`, `X-Forwarded-Host`, `X-Request-Id`. Express must **`trust proxy`** hop count to interpret `req.ip`, `req.secure`, and host correctly—misconfiguration enables IP spoofing for rate limits ([[07-Backend/06-Reliability-and-Abuse-Resistance/Rate Limiting and Quotas|Rate Limiting and Quotas]]) or insecure cookie policies. Container/proxy deployment → [[16-DevOps/README|DevOps]]; L4 vs L7 LB *topology* → [[09-System-Design/02-Load-Balancing-and-Edge-Entry/Load Balancer Roles L4 vs L7|Load Balancer Roles L4 vs L7]].
 
 ## Learning Objectives
 

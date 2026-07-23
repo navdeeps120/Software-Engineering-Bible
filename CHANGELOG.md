@@ -9,6 +9,16 @@ and this project intends to use [Semantic Versioning](https://semver.org/) once 
 
 ### Added
 
+- Complete [[10-Linux/README|Linux]] track (13 modules, 65 topic notes)
+- TypeScript host-ops simulation labs under `10-Linux/code/` with Vitest (procfs, permissions/ACL, signals/rlimits, page-cache/OOM, mounts/ENOSPC, sockets, cgroup v2 budgets, namespace isolation, systemd unit graphs, journal rate limits)
+- Module exercise sets and interview question sets under `10-Linux/_exercises/` and `_interview/`
+- Five Linux mini projects plus [[10-Linux/projects/Linux Host Workbench/README|Linux Host Workbench]] portfolio documentation
+- [[00-References/Linux/README|Linux References]] curation index
+- Complete [[09-System-Design/README|System Design]] track (13 modules, 65 topic notes)
+- TypeScript distributed-systems simulation labs under `09-System-Design/code/` with Vitest (capacity, latency percentiles, consistent hash, load balancer health/drain, quorum N/R/W, partition skew, cache stampede, queue lag, multi-region failover policy, fencing tokens)
+- Module exercise sets and interview question sets under `09-System-Design/_exercises/` and `_interview/`
+- Five System Design mini projects plus [[09-System-Design/projects/Distributed Systems Workbench/README|Distributed Systems Workbench]] portfolio documentation
+- [[00-References/System Design/README|System Design References]] curation index
 - Complete [[08-Databases/README|Databases]] track (13 modules, 65 topic notes)
 - TypeScript educational engine labs under `08-Databases/code/` with Vitest (page store, buffer pool, WAL redo, B+ index pages, lock manager, MVCC visibility, cost-based planner, Redis dict + AOF replay, SQL fixture runner)
 - Module exercise sets and interview question sets under `08-Databases/_exercises/` and `_interview/`

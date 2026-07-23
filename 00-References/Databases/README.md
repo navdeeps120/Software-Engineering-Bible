@@ -8,7 +8,7 @@ status: active
 prerequisites: ["[[08-Databases/README|Databases]]"]
 tags: [reference, databases, postgresql, mongodb, redis, wal, storage-engines, transactions]
 created: 2026-07-22
-updated: 2026-07-22
+updated: 2026-07-23
 ---
 
 # Databases References
@@ -32,7 +32,7 @@ Primary and high-signal sources for the [[08-Databases/README|Databases]] track.
 | [PostgreSQL  EContinuous Archiving and PITR](https://www.postgresql.org/docs/current/continuous-archiving.html) | Base backups, WAL archive, restore drills | [[08-Databases/12-Production-Database-Ops/Backups PITR and Restore Drills\|Backups PITR and Restore Drills]] |
 | [PostgreSQL  EMonitoring Statistics](https://www.postgresql.org/docs/current/monitoring-stats.html) | Cache hit, checkpoints, bloat signals | [[08-Databases/12-Production-Database-Ops/Monitoring Checkpoints Lag Bloat Cache Hit\|Monitoring Checkpoints Lag Bloat Cache Hit]] |
 
-Application repository patterns and Express wiring hand off to [[07-Backend/README|Backend]]; multi-region CAP product design to [[09-System-Design/README|System Design]].
+Application repository patterns and Express wiring hand off to [[07-Backend/README|Backend]]; multi-region CAP product design to [[09-System-Design/03-Consistency-Models-and-CAP/CAP and PACELC as Product Constraints|CAP and PACELC as Product Constraints]].
 
 ## MongoDB WiredTiger
 

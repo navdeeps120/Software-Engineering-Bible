@@ -8,7 +8,7 @@ status: active
 prerequisites: []
 tags: [meta, references]
 created: 2026-07-21
-updated: 2026-07-22
+updated: 2026-07-23
 ---
 
 # 00 References
@@ -32,9 +32,9 @@ Curated sources that support curriculum notes. References are not a substitute f
 - [[00-References/NodeJS/README|Node.js]] — active
 - [[00-References/Backend/README|Backend]] — active
 - [[00-References/Databases/README|Databases]] — active
+- [[00-References/System Design/README|System Design]] — active
+- [[00-References/Linux/README|Linux]] — active
 - Other language specifications and internals — planned
-- Distributed systems and system design — planned
-- Linux and networking — planned
 - Cloud provider architecture docs — planned
 - Security and threat modeling — planned
 - AI systems and evaluation — planned
@@ -65,5 +65,9 @@ Curated sources that support curriculum notes. References are not a substitute f
 - [[00-References/Backend/README|Backend References]]
 - [[00-References/Databases/README|Databases References]]
 - [[08-Databases/README|Databases]]
+- [[00-References/System Design/README|System Design References]]
+- [[09-System-Design/README|System Design]]
+- [[00-References/Linux/README|Linux References]]
+- [[10-Linux/README|Linux]]
 - [[00-Introduction/Roadmap|Master Roadmap]]
 - [[00-Introduction/README|Introduction]]

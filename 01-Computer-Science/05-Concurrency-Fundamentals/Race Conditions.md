@@ -74,7 +74,7 @@ flowchart TD
     W2 -.-> Bug
 ```
 
-**TOCTOU** (time-of-check-time-of-use): check permission on path, attacker swaps file, use opens wrong target—classic race across syscalls ([[10-Linux/README|Linux]] security ops extend this).
+**TOCTOU** (time-of-check-time-of-use): check permission on path, attacker swaps file, use opens wrong target—classic race across syscalls ([[10-Linux/09-Security-Primitives-on-the-Host/File Integrity and Permission Drift|File Integrity and Permission Drift]] security ops extend this).
 
 ## Mermaid Diagrams
 

@@ -194,7 +194,7 @@ Add hybrid timestamps to workbench distributed simulation; inject NTP step and m
 
 ## Summary
 
-Physical clocks measure civil time and drift; monotonic clocks measure elapsed intervals on one machine; logical clocks capture causality across machines. Production bugs arise when code conflates them — especially in timeouts, logging, and distributed coordination. Deeper distributed time and consistency live in [[09-System-Design/README|System Design]]; database snapshot isolation in [[08-Databases/README|Databases]].
+Physical clocks measure civil time and drift; monotonic clocks measure elapsed intervals on one machine; logical clocks capture causality across machines. Production bugs arise when code conflates them — especially in timeouts, logging, and distributed coordination. Deeper distributed time and consistency live in [[09-System-Design/08-Coordination-Consensus-and-Locks/Clocks Skew Ordering and Happens-Before|Clocks Skew Ordering and Happens-Before]]; database snapshot isolation in [[08-Databases/README|Databases]].
 
 ## Further Reading
 

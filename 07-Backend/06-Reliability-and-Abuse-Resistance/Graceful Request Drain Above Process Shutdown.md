@@ -18,7 +18,7 @@ updated: 2026-07-22
 
 ## Overview
 
-**Node** owns SIGTERM, `server.close()`, and connection tracking ([[06-NodeJS/10-Production-Node/Graceful Shutdown and Drain|Graceful Shutdown and Drain]]). The **backend product layer** owns what happens *above* that: flip **readiness** so load balancers stop sending traffic, reject **new HTTP work** with 503, finish **in-flight Express requests**, drain **background job acceptors**, and coordinate **dependency-heavy handlers** (long transactions, SSE). This note bridges Express application semantics to orchestrator rolling deploys in [[16-DevOps/README|DevOps]].
+**Node** owns SIGTERM, `server.close()`, and connection tracking ([[06-NodeJS/10-Production-Node/Graceful Shutdown and Drain|Graceful Shutdown and Drain]]). The **backend product layer** owns what happens *above* that: flip **readiness** so load balancers stop sending traffic, reject **new HTTP work** with 503, finish **in-flight Express requests**, drain **background job acceptors**, and coordinate **dependency-heavy handlers** (long transactions, SSE). This note bridges Express application semantics to orchestrator rolling deploys in [[16-DevOps/README|DevOps]] and LB health/drain contracts in [[09-System-Design/02-Load-Balancing-and-Edge-Entry/Health Checks Drain and Connection Management|Health Checks Drain and Connection Management]].
 
 ## Learning Objectives
 

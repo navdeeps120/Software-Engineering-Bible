@@ -89,7 +89,7 @@ flowchart LR
     Domain --> Response[Response Mapping]
 ```
 
-Thin socket parsing and event-loop behavior belong to [[06-NodeJS/05-Networking/http and https Platform Servers|http and https Platform Servers]]. Index selection and WAL semantics belong to [[08-Databases/README|Databases]]. Multi-region failover belongs to [[09-System-Design/README|System Design]].
+Thin socket parsing and event-loop behavior belong to [[06-NodeJS/05-Networking/http and https Platform Servers|http and https Platform Servers]]. Index selection and WAL semantics belong to [[08-Databases/README|Databases]]. Multi-region failover belongs to [[09-System-Design/07-Multi-Region-and-Geo/Failover RPO RTO and Split-Brain Product Policy|Failover RPO RTO and Split-Brain Product Policy]].
 
 ## Mermaid Diagrams
 

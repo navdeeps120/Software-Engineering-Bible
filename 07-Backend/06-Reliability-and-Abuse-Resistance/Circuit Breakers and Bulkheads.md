@@ -18,7 +18,7 @@ updated: 2026-07-22
 
 ## Overview
 
-A **circuit breaker** stops calling a failing dependency after error rate or latency exceeds thresholds—**open** circuit fails fast instead of piling timeouts. After a cooling period it **half-opens** to probe recovery. **Bulkheads** isolate resource pools (connection limits, semaphores, separate thread/worker pools) so one slow dependency cannot exhaust capacity for the entire service. Together they implement **failure containment** at the application layer—distinct from multi-region design in [[09-System-Design/README|System Design]].
+A **circuit breaker** stops calling a failing dependency after error rate or latency exceeds thresholds—**open** circuit fails fast instead of piling timeouts. After a cooling period it **half-opens** to probe recovery. **Bulkheads** isolate resource pools (connection limits, semaphores, separate thread/worker pools) so one slow dependency cannot exhaust capacity for the entire service. Together they implement **failure containment** at the application layer—distinct from multi-region design in [[09-System-Design/07-Multi-Region-and-Geo/Multi-Region Active-Passive Active-Active Patterns|Multi-Region Active-Passive Active-Active Patterns]].
 
 ## Learning Objectives
 
@@ -288,7 +288,7 @@ Circuit breakers **fail fast** when dependencies are unhealthy; bulkheads **cap 
 ## Further Reading
 
 - Michael Nygard, *Release It!* — Stability patterns
-- [[09-System-Design/README|System Design]] — cascading failure at scale
+- [[09-System-Design/09-Failure-Modes-at-Product-Scale/Cascading Multi-Service Failure|Cascading Multi-Service Failure]] — cascading failure at scale
 
 ## Related Notes
 

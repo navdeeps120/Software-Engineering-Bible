@@ -19,7 +19,7 @@ updated: 2026-07-21
 
 **Interprocess communication (IPC)** lets isolated processes exchange data and synchronize without sharing arbitrary memory unsafely. Mechanisms include pipes, message queues, shared memory (with explicit synchronization), signals, and sockets. Each trades copying cost, latency, durability, and cross-machine reach differently.
 
-This note teaches **IPC as a CS model**—semantics, ordering, and failure modes. Message brokers, gRPC, and service meshes in [[07-Backend/README|Backend]] build on these primitives; Unix domain socket ops and `ipcs` tooling live in [[10-Linux/README|Linux]].
+This note teaches **IPC as a CS model**—semantics, ordering, and failure modes. Message brokers, gRPC, and service meshes in [[07-Backend/README|Backend]] build on these primitives; Unix domain socket ops and `ss`/`conntrack` tooling live in [[10-Linux/05-Networking-Stack-and-Host-Firewall/TCP UDP Sockets ss and Conntrack|TCP UDP Sockets ss and Conntrack]].
 
 ## Learning Objectives
 
@@ -211,7 +211,7 @@ Extend [[01-Computer-Science/projects/Concurrent Runtime and Protocol Workbench/
 - Use explicit message framing and schema versioning
 - Apply timeouts and max buffer limits on all IPC reads
 - Pass `FD_CLOEXEC` and least-privilege credentials for child processes
-- For production service IPC patterns, continue to [[07-Backend/README|Backend]]; for socket tuning [[10-Linux/README|Linux]]
+- For production service IPC patterns, continue to [[07-Backend/README|Backend]]; for socket tuning [[10-Linux/05-Networking-Stack-and-Host-Firewall/TCP UDP Sockets ss and Conntrack|TCP UDP Sockets ss and Conntrack]]
 
 ## Summary
 
@@ -229,7 +229,7 @@ IPC channels let processes cooperate while preserving isolation: kernel-mediated
 - [[01-Computer-Science/04-Processes-and-Execution/System Calls|System Calls]]
 - [[01-Computer-Science/05-Concurrency-Fundamentals/Semaphores and Condition Variables|Semaphores and Condition Variables]]
 - [[07-Backend/README|Backend]]
-- [[10-Linux/README|Linux]]
+- [[10-Linux/05-Networking-Stack-and-Host-Firewall/TCP UDP Sockets ss and Conntrack|TCP UDP Sockets ss and Conntrack]]
 - [[01-Computer-Science/code/README|code labs]]
 
 ## Progress Checklist

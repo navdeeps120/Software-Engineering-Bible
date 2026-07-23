@@ -217,7 +217,7 @@ export async function transferFunds(
 - Document durability contract per environment (sync, replicas, backups)
 - Keep financial invariants in constraints where possible
 - Service orchestration patterns → [[07-Backend/08-Data-Access-and-Persistence-Patterns/Transactions as Used by Services|Transactions as Used by Services]]
-- Multi-region CAP trade-offs → [[09-System-Design/README|System Design]]
+- Multi-region CAP trade-offs → [[09-System-Design/03-Consistency-Models-and-CAP/CAP and PACELC as Product Constraints|CAP and PACELC as Product Constraints]]
 
 ## Summary
 

@@ -19,7 +19,7 @@ updated: 2026-07-22
 
 Before TCP connects, hostnames must resolve to IP addresses. Node's **`dns` module** wraps **`getaddrinfo`** (and resolver APIs) often on the **libuv thread pool**—blocking from JavaScript's perspective but off the main poll loop. **`dns.lookup`** respects OS resolver behavior (including `/etc/hosts`); **`dns.resolve*`** talks to DNS servers directly. **Happy Eyeballs** (RFC 8305) races **IPv6 vs IPv4** connection attempts to reduce dual-stack latency penalties—implemented in **`net.createConnection`**, **`http.request`**, and modern **`fetch`**.
 
-This note covers **Node host resolution behavior**, not CDN DNS product design ([[09-System-Design/README|System Design]]).
+This note covers **Node host resolution behavior**, not CDN DNS product design ([[09-System-Design/05-Caching-at-Product-Scale/Cache Hierarchies CDN Edge Regional App|Cache Hierarchies CDN Edge Regional App]] / [[09-System-Design/02-Load-Balancing-and-Edge-Entry/Edge Admission Control and Global Traffic Steering|Edge Admission Control]]).
 
 ## Learning Objectives
 

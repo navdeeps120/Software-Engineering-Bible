@@ -78,7 +78,7 @@ flowchart TD
 
 **Engine**: buffer pool, lock/MVCC, WAL, heap/index files, background workers (checkpointer, autovacuum).
 
-**Service**: multi-AZ, read replicas, PITR UI, IAM, connection limits—see [[09-System-Design/README|System Design]] for when multi-region *product* design needs more than one replica.
+**Service**: multi-AZ, read replicas, PITR UI, IAM, connection limits—see [[09-System-Design/07-Multi-Region-and-Geo/Multi-Region Active-Passive Active-Active Patterns|Multi-Region Active-Passive Active-Active Patterns]] for when multi-region *product* design needs more than one replica.
 
 ## Mermaid Diagrams
 

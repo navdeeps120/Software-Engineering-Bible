@@ -219,7 +219,7 @@ Add a thread-pool stage to [[01-Computer-Science/projects/Concurrency Zoo/README
 - Prefer bounded pools; expose queue depth metrics
 - Minimize shared mutable state; use message passing where practical
 - Document thread-safety of libraries you call from worker threads
-- For Linux ops (limits, `ulimit`, thread counts in `ps`), hand off to [[10-Linux/README|Linux]]
+- For Linux ops (limits, `ulimit`, thread counts in `ps`), hand off to [[10-Linux/02-Processes-Signals-and-Job-Control/Limits ulimit and rlimits|Limits ulimit and rlimits]] and [[10-Linux/02-Processes-Signals-and-Job-Control/Process Lifecycle ps and procfs|Process Lifecycle ps and procfs]]
 
 ## Summary
 

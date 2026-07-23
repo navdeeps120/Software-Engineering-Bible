@@ -222,7 +222,7 @@ function firstDuplicateInWindow(ids: string[], window: number): string | null {
 
 - One-off glue scripts with n < 100 and no growth path
 - Problems already solved by DB/query planner with correct indexes—see [[08-Databases/04-Query-Processing-and-Planning/EXPLAIN and EXPLAIN ANALYZE Literacy|EXPLAIN and EXPLAIN ANALYZE Literacy]]
-- When the bottleneck is network I/O, not CPU algorithmics—see [[09-System-Design/README|System Design]]
+- When the bottleneck is network I/O, not CPU algorithmics—see [[09-System-Design/01-Capacity-Latency-and-Bottlenecks/Bottleneck Finding CPU Memory Disk Network|Bottleneck Finding CPU Memory Disk Network]]
 
 ## Exercises
 

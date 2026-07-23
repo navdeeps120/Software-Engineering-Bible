@@ -34,7 +34,7 @@ This toolkit is **not a production Express replacement, ORM, OAuth IdP, message 
 
 - Reimplementing Node core, libuv, or V8 → [[06-NodeJS/README|Node.js]]
 - Database engine internals, query planners, or replication → [[08-Databases/README|Databases]]
-- Multi-region capacity, consistency, and federation → [[09-System-Design/README|System Design]]
+- Multi-region capacity, consistency, and federation → [[09-System-Design/01-Capacity-Latency-and-Bottlenecks/Back-of-Envelope Capacity Estimation|Back-of-Envelope Capacity Estimation]] / [[09-System-Design/03-Consistency-Models-and-CAP/CAP and PACELC as Product Constraints|CAP and PACELC as Product Constraints]] / [[09-System-Design/07-Multi-Region-and-Geo/Multi-Region Active-Passive Active-Active Patterns|Multi-Region patterns]]
 - Full OAuth/OIDC broker or enterprise IdP products.
 - Kafka/Redis engine implementations—only application patterns with fake/in-process adapters.
 

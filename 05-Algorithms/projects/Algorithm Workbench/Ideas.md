@@ -28,7 +28,7 @@ updated: 2026-07-21
 
 | Idea | Redirect |
 | --- | --- |
-| Raft/Paxos consensus lab | [[09-System-Design/README|System Design]] |
+| Raft/Paxos consensus lab | [[09-System-Design/08-Coordination-Consensus-and-Locks/Consensus Intuition Raft and Paxos for Designers|Consensus Intuition Raft and Paxos for Designers]] |
 | SQL query optimizer | [[08-Databases/README|Databases]] |
 | REST pathfinding microservice | [[07-Backend/README|Backend]] |
 | GPU sort kernels | Advanced systems elective |

@@ -143,7 +143,7 @@ Synthesize connection pooling at engine and proxy, backups with PITR and restore
 
 - [ ] Mermaid timeline with RTO gates
 - [ ] Data loss window stated honestly
-- [ ] Handoff to [[09-System-Design/README|System Design]] for product traffic shift
+- [ ] Handoff to [[09-System-Design/02-Load-Balancing-and-Edge-Entry/Edge Admission Control and Global Traffic Steering|Edge Admission Control and Global Traffic Steering]] for product traffic shift
 
 ## Rubric
 

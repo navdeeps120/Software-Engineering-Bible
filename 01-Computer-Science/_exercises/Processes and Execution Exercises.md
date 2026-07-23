@@ -127,5 +127,5 @@ sequenceDiagram
 ## Related Notes
 
 - [[01-Computer-Science/code/README|code labs]]
-- [[10-Linux/README|Linux]]
+- [[10-Linux/02-Processes-Signals-and-Job-Control/Process Lifecycle ps and procfs|Process Lifecycle ps and procfs]]
 - [[01-Computer-Science/_interview/Processes and Execution Interview Questions|Processes and Execution Interview Questions]]

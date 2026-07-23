@@ -214,7 +214,7 @@ Advisory lock patterns in [[08-Databases/projects/Database Engines Workbench/REA
 - Prefer `pg_try_advisory_xact_lock` for short DB-bound work
 - Namespace keys: `hashtext('service:job:name')`
 - Set `lock_timeout` when using blocking advisory locks
-- Distributed coordination product design → [[09-System-Design/README|System Design]]
+- Distributed coordination product design → [[09-System-Design/08-Coordination-Consensus-and-Locks/Distributed Locks Leases and Fencing Tokens|Distributed Locks Leases and Fencing Tokens]]
 
 ## Summary
 

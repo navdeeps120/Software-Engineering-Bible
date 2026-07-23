@@ -26,7 +26,7 @@ A first-principles track for **database engines**: pages and buffer pools, WAL a
 - Distinguish physical vs logical replication and failover mechanics
 - Select among relational, document, and in-memory engines with explicit trade-offs
 - Operate engines: pooling, backups/PITR, monitoring, and least privilege
-- Hand off repositories/ORM usage to Backend and multi-region topology to System Design
+- Hand off repositories/ORM usage to Backend and multi-region topology to [[09-System-Design/07-Multi-Region-and-Geo/Multi-Region Active-Passive Active-Active Patterns|Multi-Region patterns]]
 
 ## Why This Track Matters
 
@@ -54,7 +54,7 @@ flowchart TD
 | B+ *page* structures, secondary/covering indexes | B-tree *fanout/invariants* pedagogy ↁE[[04-Data-Structures/README\|Data Structures]] |
 | Query planning, cost models, join algorithms, EXPLAIN | External sort *algorithms* ↁE[[05-Algorithms/README\|Algorithms]] |
 | Isolation, MVCC, locks, vacuum/bloat | Transactions *as service boundaries* ↁE[[07-Backend/README\|Backend]] |
-| Replication *mechanics*, lag, promote/split-brain | Multi-region capacity/CAP product design ↁE[[09-System-Design/README\|System Design]] |
+| Replication *mechanics*, lag, promote/split-brain | Multi-region capacity/CAP product design → [[09-System-Design/03-Consistency-Models-and-CAP/CAP and PACELC as Product Constraints\|CAP and PACELC as Product Constraints]] |
 | Postgres / Mongo / Redis as *engines* | Cache-aside, outbox, Mini ORM, repos ↁEBackend |
 | Backups, PITR, pooling, DB roles/TLS | Containers/CI platforms ↁE[[16-DevOps/README\|DevOps]] |
 

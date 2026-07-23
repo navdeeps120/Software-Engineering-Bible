@@ -18,7 +18,7 @@ updated: 2026-07-22
 
 ## Overview
 
-**Operational readiness** asks: can this Express service run in production with known SLOs, observability, rollback, on-call runbooks, and security signoff? Synthesizes Backend track modules—reliability, observability, health, deploy, config, security—without duplicating [[16-DevOps/README|DevOps]] platform provisioning or [[09-System-Design/README|System Design]] multi-service capacity planning.
+**Operational readiness** asks: can this Express service run in production with known SLOs, observability, rollback, on-call runbooks, and security signoff? Synthesizes Backend track modules—reliability, observability, health, deploy, config, security—without duplicating [[16-DevOps/README|DevOps]] platform provisioning or [[09-System-Design/01-Capacity-Latency-and-Bottlenecks/Back-of-Envelope Capacity Estimation|Back-of-Envelope Capacity Estimation]] multi-service capacity planning.
 
 ## Learning Objectives
 

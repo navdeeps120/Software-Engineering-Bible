@@ -67,7 +67,7 @@ Modern engines (PostgreSQL, MongoDB WiredTiger, Redis with AOF) inherit the same
 | No crash recovery story | Redo/undo from WAL (see [[08-Databases/02-WAL-Durability-and-Recovery/Crash Recovery Redo and Undo Concepts|Crash Recovery Redo and Undo Concepts]]) |
 | Unbounded memory for large datasets | Buffer pool + page-oriented I/O (see [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]) |
 
-Engines do **not** replace product design: idempotency keys, cache-aside, and multi-region failover live in [[07-Backend/README|Backend]] and [[09-System-Design/README|System Design]].
+Engines do **not** replace product design: idempotency keys, cache-aside, and multi-region failover live in [[07-Backend/README|Backend]] and [[09-System-Design/07-Multi-Region-and-Geo/Failover RPO RTO and Split-Brain Product Policy|Failover RPO RTO and Split-Brain Product Policy]].
 
 ## Internal Implementation
 
@@ -251,7 +251,7 @@ Add a "Storage contract" section to [[08-Databases/projects/Database Engines Wor
 - Treating `INSERT` as magic without understanding WAL and buffer pool
 - Using Redis as primary store because "it's fast" without durability contract
 - Reimplementing WAL/paging in application code poorly
-- Confusing database replication with multi-region product design ([[09-System-Design/README|System Design]])
+- Confusing database replication with multi-region product design ([[09-System-Design/07-Multi-Region-and-Geo/Multi-Region Active-Passive Active-Active Patterns|Multi-Region Active-Passive Active-Active Patterns]])
 
 ## Best Practices
 
@@ -277,7 +277,7 @@ Databases exist because applications need **shared, durable, structured state** 
 - [[08-Databases/01-Storage-and-Buffer-Pool/Pages Blocks and IO Units|Pages Blocks and I/O Units]]
 - [[07-Backend/08-Data-Access-and-Persistence-Patterns/Handing Off to Database Engines|Handing Off to Database Engines]]
 - [[04-Data-Structures/README|Data Structures]]  Ein-memory structures vs on-disk pages
-- [[09-System-Design/README|System Design]]  Emulti-region and CAP product choices
+- [[09-System-Design/03-Consistency-Models-and-CAP/CAP and PACELC as Product Constraints|CAP and PACELC as Product Constraints]] — multi-region and CAP product choices
 
 ## Progress Checklist
 

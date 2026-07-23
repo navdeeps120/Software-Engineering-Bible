@@ -184,7 +184,8 @@ Layered models decompose networking into replaceable responsibilities. TCP/IP is
 
 - Kurose & Ross, *Computer Networking* — Ch. 1
 - RFC 1122 — host requirements
-- [[10-Linux/README|Linux]] — tcpdump, nftables
+- [[10-Linux/05-Networking-Stack-and-Host-Firewall/Packet Capture tcpdump and Wireshark Triage|Packet Capture tcpdump and Wireshark Triage]]
+- [[10-Linux/05-Networking-Stack-and-Host-Firewall/nftables and Firewalld Operator Model|nftables and Firewalld Operator Model]]
 
 ## Related Notes
 

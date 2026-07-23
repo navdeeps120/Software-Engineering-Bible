@@ -259,7 +259,7 @@ Compare cluster vs single-process + worker pool in [[06-NodeJS/projects/Node Run
 ## Further Reading
 
 - [Node.js cluster documentation](https://nodejs.org/api/cluster.html)
-- [[09-System-Design/README|System Design]] — horizontal scaling patterns
+- [[09-System-Design/02-Load-Balancing-and-Edge-Entry/Load Balancer Roles L4 vs L7|Load Balancer Roles L4 vs L7]] — horizontal scaling patterns
 
 ## Related Notes
 

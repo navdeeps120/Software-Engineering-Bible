@@ -207,7 +207,7 @@ Add durability tiers to [[08-Databases/projects/Toy Page and WAL Store/README|To
 ## Common Mistakes
 
 - Measuring INSERT throughput with sync off, deploying with sync on
-- Ignoring replica lag as "durability" ([[09-System-Design/README|System Design]] routing)
+- Ignoring replica lag as "durability" ([[09-System-Design/07-Multi-Region-and-Geo/Replica Lag as User-Facing Consistency Budget|Replica Lag as User-Facing Consistency Budget]] routing)
 - Battery-backed cache mistaken for skipping fsync policy
 
 ## Best Practices

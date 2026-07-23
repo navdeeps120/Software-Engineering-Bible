@@ -202,7 +202,7 @@ Low addresses  ← RSP
 ### When to Use
 
 - Writing C/Rust/Go native extensions for [[02-JavaScript/README|JavaScript]] or [[03-Python/README|Python]]
-- Interpreting crash dumps and `perf` stack samples on [[10-Linux/README|Linux]]
+- Interpreting crash dumps and `perf` stack samples on [[10-Linux/08-Observability-Tracing-and-Profiling/perf CPU Profiles and Flame Graph Intuition|perf CPU Profiles and Flame Graph Intuition]]
 - Choosing compiler flags for production observability vs peak performance
 
 ### When Not to Use
@@ -273,7 +273,7 @@ Registers are the CPU's working memory; calling conventions are the social contr
 - [[01-Computer-Science/08-Languages-and-Computation/Compilers Interpreters and Virtual Machines|Compilers Interpreters and Virtual Machines]]
 - [[02-JavaScript/README|JavaScript]] — N-API, WebAssembly call conventions
 - [[03-Python/README|Python]] — ctypes, Cython, CPython C-API
-- [[10-Linux/README|Linux]] — ELF, `backtrace`, core dumps
+- [[10-Linux/08-Observability-Tracing-and-Profiling/perf CPU Profiles and Flame Graph Intuition|perf CPU Profiles and Flame Graph Intuition]] — ELF, `backtrace`, core dumps
 
 ## Progress Checklist
 

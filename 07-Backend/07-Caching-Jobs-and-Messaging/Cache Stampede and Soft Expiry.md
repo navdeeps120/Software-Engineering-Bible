@@ -267,7 +267,7 @@ Cache stampedes happen when **many misses meet one expiry**. Combine **jittered 
 - [[07-Backend/07-Caching-Jobs-and-Messaging/Cache-Aside and TTL Strategies|Cache-Aside and TTL Strategies]]
 - [[07-Backend/06-Reliability-and-Abuse-Resistance/Rate Limiting and Quotas|Rate Limiting and Quotas]]
 - [[08-Databases/README|Databases]]
-- [[09-System-Design/README|System Design]]
+- [[09-System-Design/05-Caching-at-Product-Scale/Hot Keys Stampede and Thundering Herd at Scale|Hot Keys Stampede and Thundering Herd at Scale]]
 
 ## Progress Checklist
 

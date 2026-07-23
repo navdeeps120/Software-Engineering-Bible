@@ -8,7 +8,7 @@ status: active
 prerequisites: ["[[00-Introduction/README|Introduction]]"]
 tags: [meta, roadmap]
 created: 2026-07-21
-updated: 2026-07-22
+updated: 2026-07-23
 ---
 
 # Master Roadmap
@@ -91,19 +91,23 @@ Databases begins at [[08-Databases/00-Orientation/Why Databases Exist|Why Databa
 
 ### 6. System Design
 
-- [[09-System-Design/README|System Design]]
+- [[09-System-Design/README|System Design]] — **complete curriculum available**
 
 Outcome: capacity, consistency, partitioning, caching, and graceful degradation.
 
+System Design begins at [[09-System-Design/00-Orientation-and-Boundaries/Why System Design Exists|Why System Design Exists]] and progresses through capacity and latency budgets, load balancing and edge entry, CAP/PACELC product constraints, partitioning and hotspots, caching at fleet scale, messaging topologies, multi-region design, coordination for designers, product-scale failure modes, multi-service observability, reference architectures, and clone case studies. Use [[09-System-Design/code/README|System Design code labs]] for TypeScript simulations (capacity, percentiles, consistent hash, LB health/drain, quorum N/R/W, partition skew, cache stampede, queue lag, multi-region failover policy, fencing tokens). Practice with module exercises and interview sets under `09-System-Design/_exercises/` and `_interview/`, five mini projects, and the [[09-System-Design/projects/Distributed Systems Workbench/README|Distributed Systems Workbench]] portfolio.
+
 ### 7. Linux
 
-- [[10-Linux/README|Linux]]
+- [[10-Linux/README|Linux]] — **complete curriculum available**
 
 Outcome: production fluency with processes, filesystems, networking, and observability basics.
 
+Linux begins at [[10-Linux/00-Orientation-and-Boundaries/Why Linux Exists for Engineers|Why Linux Exists for Engineers]] and progresses through shell and permissions, processes and signals, memory and OOM, filesystems and disk I/O, networking and nftables, systemd and journald, cgroups and namespaces, observability (`strace`/`perf`/eBPF intro), host security primitives, performance tuning, packaging basics, and incident runbooks. Use [[10-Linux/code/README|Linux code labs]] for TypeScript host simulations (procfs, permissions, signals/rlimits, page-cache/OOM, mounts/ENOSPC, sockets, cgroup v2, namespaces, systemd unit graphs, journal rate limits). Practice with module exercises and interview sets under `10-Linux/_exercises/` and `_interview/`, five mini projects, and the [[10-Linux/projects/Linux Host Workbench/README|Linux Host Workbench]] portfolio.
+
 ### 8. Cloud
 
-- [[11-AWS/README|AWS]]
+- [[11-AWS/README|AWS]] — **next milestone (M13)**
 - [[12-Azure/README|Azure]]
 - [[13-Google-Cloud/README|Google Cloud]]
 

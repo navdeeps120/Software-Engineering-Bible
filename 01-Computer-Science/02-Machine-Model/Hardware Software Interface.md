@@ -160,7 +160,7 @@ with open("/etc/hosts") as f:
 # strace would show: openat, read, close syscalls
 ```
 
-Use `strace -f -e trace=open,read python script.py` on [[10-Linux/README|Linux]] for observability.
+Use `strace -f -e trace=open,read python script.py` — see [[10-Linux/08-Observability-Tracing-and-Profiling/strace and lsof First-Aid Tracing|strace and lsof First-Aid Tracing]] for observability.
 
 ### Production-Shaped Example — Container vs VM
 
@@ -265,7 +265,7 @@ The hardware–software interface is where CPUs enforce trust: user programs run
 - [[01-Computer-Science/04-Processes-and-Execution/System Calls|System Calls]]
 - [[01-Computer-Science/04-Processes-and-Execution/Processes|Processes]]
 - [[01-Computer-Science/04-Processes-and-Execution/Context Switching|Context Switching]]
-- [[10-Linux/README|Linux]]
+- [[10-Linux/08-Observability-Tracing-and-Profiling/strace and lsof First-Aid Tracing|strace and lsof First-Aid Tracing]]
 - [[14-Docker/README|Docker]]
 - [[18-Security/README|Security]]
 - [[02-JavaScript/README|JavaScript]] — libuv thread pool syscalls

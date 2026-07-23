@@ -56,13 +56,18 @@ Status: complete
 
 ### Phase 3 — Databases and System Design
 
+Status: complete
+
 - [x] Complete [[08-Databases/README|Databases]] across relational, document, and caching systems
-- Complete [[09-System-Design/README|System Design]] with capacity, consistency, and failure modes
-- Add reference architectures and trade-off matrices
+- [x] Complete [[09-System-Design/README|System Design]] with capacity, consistency, and failure modes
+- [x] Add reference architectures and trade-off matrices
 
 ### Phase 4 — Linux, Cloud, Containers, DevOps
 
-- Complete [[10-Linux/README|Linux]], [[11-AWS/README|AWS]], [[12-Azure/README|Azure]], [[13-Google-Cloud/README|Google Cloud]]
+Status: in progress — next milestone [[11-AWS/README|AWS]] (M13)
+
+- [x] Complete [[10-Linux/README|Linux]] with processes, filesystems, networking, cgroups, systemd, and host observability
+- Complete [[11-AWS/README|AWS]], [[12-Azure/README|Azure]], [[13-Google-Cloud/README|Google Cloud]]
 - Complete [[14-Docker/README|Docker]], [[15-Kubernetes/README|Kubernetes]], [[16-DevOps/README|DevOps]]
 - Prefer portable concepts over vendor trivia
 
@@ -92,7 +97,9 @@ Status: complete
 | M8 | Node.js track includes complete notes, labs, practice, and projects | complete |
 | M9 | Backend track includes complete notes, labs, practice, and projects | complete |
 | M10 | Databases track includes storage engines, indexing, transactions, and modeling trade-offs | complete |
-| M11 | System Design track includes capacity, consistency, partitioning, and failure modes | pending |
+| M11 | System Design track includes capacity, consistency, partitioning, and failure modes | complete |
+| M12 | Linux track includes processes, filesystems, networking, and observability basics | complete |
+| M13 | AWS track includes portable cloud concepts with vendor-specific mapping where useful | pending |
 
 ## Explicit Non-Goals for Phase 0
 

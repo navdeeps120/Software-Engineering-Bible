@@ -20,7 +20,7 @@ updated: 2026-07-21
 
 A **context switch** is the kernel operation that stops running one thread (or process) and resumes another on a CPU: save register state, switch address space if needed, update run queues, and restore the next thread's saved context. It is the mechanical heart of **multitasking**—how one core appears to run many programs concurrently.
 
-This note explains **what work the kernel does** and **what it costs**. Profiling tools on Linux (`perf`, `vmstat`) interpret these costs operationally in [[10-Linux/README|Linux]]; here we reason from the machine model upward.
+This note explains **what work the kernel does** and **what it costs**. Profiling tools on Linux (`perf`, `vmstat`) interpret these costs operationally in [[10-Linux/08-Observability-Tracing-and-Profiling/perf CPU Profiles and Flame Graph Intuition|perf CPU Profiles and Flame Graph Intuition]]; here we reason from the machine model upward.
 
 ## Learning Objectives
 
@@ -210,7 +210,7 @@ In [[01-Computer-Science/projects/Concurrent Runtime and Protocol Workbench/READ
 
 - Right-size thread pools; align with core count for CPU work
 - Prefer batching and event-driven I/O for connection-heavy servers ([[06-NodeJS/README|Node.js]], [[07-Backend/README|Backend]])
-- Use affinity and NUMA awareness only after measurement ([[10-Linux/README|Linux]] ops)
+- Use affinity and NUMA awareness only after measurement ([[10-Linux/02-Processes-Signals-and-Job-Control/Job Control Nice and Affinity Ops|Job Control Nice and Affinity Ops]], [[10-Linux/03-Memory-Swap-and-OOM/NUMA Basics for Host Operators|NUMA Basics for Host Operators]])
 - Watch run-queue length and switch rates as leading indicators of overload
 
 ## Summary
@@ -228,7 +228,8 @@ Context switching is how the kernel time-shares CPUs: save state, pick the next 
 - [[01-Computer-Science/04-Processes-and-Execution/Scheduling Concepts|Scheduling Concepts]]
 - [[01-Computer-Science/04-Processes-and-Execution/System Calls|System Calls]]
 - [[01-Computer-Science/04-Processes-and-Execution/Threads|Threads]]
-- [[10-Linux/README|Linux]]
+- [[10-Linux/08-Observability-Tracing-and-Profiling/perf CPU Profiles and Flame Graph Intuition|perf CPU Profiles and Flame Graph Intuition]]
+- [[10-Linux/03-Memory-Swap-and-OOM/NUMA Basics for Host Operators|NUMA Basics for Host Operators]]
 - [[01-Computer-Science/code/README|code labs]]
 
 ## Progress Checklist

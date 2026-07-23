@@ -222,7 +222,7 @@ Add a "Failure modes" section to [[08-Databases/projects/Toy Page and WAL Store/
 - Assuming replicas fix durability without sync policy
 - Restoring without testing WAL continuity
 - Ignoring checksum failures as "maybe glitch"
-- Using `--force` promote without fencing old primary ([[09-System-Design/README|System Design]])
+- Using `--force` promote without fencing old primary ([[09-System-Design/07-Multi-Region-and-Geo/Failover RPO RTO and Split-Brain Product Policy|Failover RPO RTO and Split-Brain Product Policy]])
 
 ## Best Practices
 

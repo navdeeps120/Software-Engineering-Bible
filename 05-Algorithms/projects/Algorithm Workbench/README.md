@@ -32,7 +32,7 @@ A dual-language in-memory algorithms library and CLI that exposes core algorithm
 
 ## Non-Goals
 
-- Distributed consensus, leader election, or replication protocols—see [[09-System-Design/README|System Design]].
+- Distributed consensus, leader election, or replication protocols—see [[09-System-Design/08-Coordination-Consensus-and-Locks/Consensus Intuition Raft and Paxos for Designers|Consensus Intuition Raft and Paxos for Designers]].
 - Database query planners, WAL, disk sorts, or execution engines—see [[08-Databases/README|Databases]].
 - HTTP APIs, caches, queues, or product microservices—see [[07-Backend/README|Backend]].
 - Graph **storage** ADTs—see [[04-Data-Structures/projects/Graph Store CLI/README|Graph Store CLI]].

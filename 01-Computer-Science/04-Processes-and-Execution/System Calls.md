@@ -19,7 +19,7 @@ updated: 2026-07-21
 
 A **system call** is the controlled gateway from user mode to kernel mode: user programs request privileged services (I/O, memory mapping, process creation, networking) via a trap instruction with a syscall number and arguments. The kernel validates credentials and parameters, performs the operation, and returns a result or error code. Every file read, socket send, and `malloc` page fault path eventually crosses this boundary.
 
-This note explains the **mechanism** (trap, syscall table, return paths). Tracing syscalls in production (`strace`, eBPF) belongs to [[10-Linux/README|Linux]]; understanding traps explains *why* those traces look the way they do.
+This note explains the **mechanism** (trap, syscall table, return paths). Tracing syscalls in production (`strace`, eBPF) belongs to [[10-Linux/08-Observability-Tracing-and-Profiling/strace and lsof First-Aid Tracing|strace and lsof First-Aid Tracing]] and [[10-Linux/08-Observability-Tracing-and-Profiling/eBPF Intro for Operators|eBPF Intro for Operators]]; understanding traps explains *why* those traces look the way they do.
 
 ## Learning Objectives
 
@@ -211,7 +211,7 @@ Include a syscall/epoll diagram in [[01-Computer-Science/projects/Socket Worksho
 
 - Use buffered I/O or vector I/O for bulk transfers
 - Handle `EINTR`, partial I/O, and `EAGAIN` explicitly in network code
-- Profile with `strace -c`, `perf`, or eBPF before micro-optimizing ([[10-Linux/README|Linux]])
+- Profile with `strace -c`, `perf`, or eBPF before micro-optimizing ([[10-Linux/08-Observability-Tracing-and-Profiling/strace and lsof First-Aid Tracing|strace and lsof]], [[10-Linux/08-Observability-Tracing-and-Profiling/perf CPU Profiles and Flame Graph Intuition|perf CPU Profiles]])
 - Document platform-specific syscall behavior in portable services ([[07-Backend/README|Backend]])
 
 ## Summary
@@ -228,7 +228,8 @@ System calls are the kernel API: trap, dispatch, validate, execute, return. They
 
 - [[01-Computer-Science/04-Processes-and-Execution/Processes|Processes]]
 - [[01-Computer-Science/04-Processes-and-Execution/Context Switching|Context Switching]]
-- [[10-Linux/README|Linux]]
+- [[10-Linux/08-Observability-Tracing-and-Profiling/strace and lsof First-Aid Tracing|strace and lsof First-Aid Tracing]]
+- [[10-Linux/08-Observability-Tracing-and-Profiling/perf CPU Profiles and Flame Graph Intuition|perf CPU Profiles and Flame Graph Intuition]]
 - [[06-NodeJS/README|Node.js]] — libuv syscall batching
 - [[07-Backend/README|Backend]]
 - [[01-Computer-Science/code/README|code labs]]

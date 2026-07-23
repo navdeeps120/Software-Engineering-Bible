@@ -215,7 +215,7 @@ Link [[01-Computer-Science/04-Processes-and-Execution/Processes|Processes]].
 
 ## Portfolio Project
 
-Capacity study: same service with THP on/off, swap on/off, cgroup limits. Document p99 latency and OOM behavior for [[09-System-Design/README|System Design]].
+Capacity study: same service with THP on/off, swap on/off, cgroup limits. Document p99 latency and OOM behavior for [[09-System-Design/01-Capacity-Latency-and-Bottlenecks/Back-of-Envelope Capacity Estimation|Back-of-Envelope Capacity Estimation]].
 
 ## Interview Questions
 
@@ -262,7 +262,7 @@ Virtual memory decouples program addresses from physical RAM through page tables
 - [[01-Computer-Science/02-Machine-Model/Hardware Software Interface|Hardware Software Interface]]
 - [[01-Computer-Science/02-Machine-Model/Cache Hierarchy and Locality|Cache Hierarchy and Locality]]
 - [[01-Computer-Science/04-Processes-and-Execution/Processes|Processes]]
-- [[10-Linux/README|Linux]]
+- [[10-Linux/03-Memory-Swap-and-OOM/Virtual Memory Ops RSS vs VSZ|Virtual Memory Ops RSS vs VSZ]]
 - [[15-Kubernetes/README|Kubernetes]]
 - [[08-Databases/README|Databases]] — buffer pool vs OS page cache
 

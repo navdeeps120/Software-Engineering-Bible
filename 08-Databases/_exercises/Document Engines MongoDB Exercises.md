@@ -111,7 +111,7 @@ Model documents and storage engines, design multikey indexes, trace aggregation 
 
 - [ ] `mongot`/`explain` evidence template
 - [ ] Monotonic shard key vs hashed trade-off
-- [ ] Handoff to [[09-System-Design/README|System Design]] for sharding product design
+- [ ] Handoff to [[09-System-Design/04-Partitioning-Sharding-and-Placement/Partition Keys Hotspots and Skew|Partition Keys Hotspots and Skew]] for sharding product design
 
 ### Problem 2 — `advanced`
 

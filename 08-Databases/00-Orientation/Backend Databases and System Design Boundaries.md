@@ -56,7 +56,7 @@ Training materials often teach "SQL + REST" as one blob. Production separates **
 | Cache-aside, stampede | [[07-Backend/07-Caching-Jobs-and-Messaging/Cache-Aside and TTL Strategies|Cache-Aside and TTL Strategies]] |
 | B-tree fanout proofs | [[04-Data-Structures/05-Trees-and-Ordered-Maps/B-Trees and B-Plus Trees Concepts|B-Trees and B-Plus Trees Concepts]] |
 | External sort complexity | [[05-Algorithms/README|Algorithms]] |
-| Global table design for 9 regions | [[09-System-Design/README|System Design]] |
+| Global table design for 9 regions | [[09-System-Design/07-Multi-Region-and-Geo/Multi-Region Active-Passive Active-Active Patterns|Multi-Region Active-Passive Active-Active Patterns]] |
 | WAL redo, buffer pool | **This track** |
 
 ## Internal Implementation

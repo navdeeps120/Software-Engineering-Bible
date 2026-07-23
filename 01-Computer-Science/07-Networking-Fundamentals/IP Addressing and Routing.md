@@ -124,7 +124,7 @@ function parseCidr(cidr: string): { base: string; prefix: number } {
 
 ### Production-Shaped Example
 
-VPC design: public subnets (/24) with IGW, private app subnets, DB subnets without internet route, **security groups** (stateful) vs **NACLs** (stateless). Document which routes use NAT gateway vs VPC endpoints — ops detail in [[11-AWS/README|AWS]] / [[10-Linux/README|Linux]].
+VPC design: public subnets (/24) with IGW, private app subnets, DB subnets without internet route, **security groups** (stateful) vs **NACLs** (stateless). Document which routes use NAT gateway vs VPC endpoints — ops detail in [[11-AWS/README|AWS]] / [[10-Linux/05-Networking-Stack-and-Host-Firewall/Interfaces Addressing and Routing Tables|Interfaces Addressing and Routing Tables]].
 
 ## Trade-offs
 

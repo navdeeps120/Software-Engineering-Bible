@@ -176,7 +176,7 @@ Postgres guidance: prefer **B-tree** unless measured hash win on pure equality a
 
 - Proven equality-only at scale with benchmarks (rare in Postgres)
 - Teaching hash-to-bucket disk mapping in labs
-- Understanding Redis/Dynamo hash partitioning conceptually ([[09-System-Design/README|System Design]] for sharding)
+- Understanding Redis/Dynamo hash partitioning conceptually ([[09-System-Design/04-Partitioning-Sharding-and-Placement/Partition Keys Hotspots and Skew|Partition Keys Hotspots and Skew]] for sharding)
 
 ### When Not to Use
 

@@ -18,7 +18,7 @@ updated: 2026-07-22
 
 ## Overview
 
-**Dual write problem**: updating database and publishing to message broker in one request—either can succeed alone. **Transactional outbox** writes an event row in the **same DB transaction** as business data; a **relay** publishes to the broker asynchronously. **Inbox pattern** stores incoming message IDs processed in the same transaction as side effects—**deduplicating** at-least-once delivery. Application pattern here; broker topology → [[09-System-Design/README|System Design]]; Kafka/Redis engines → [[08-Databases/README|Databases]].
+**Dual write problem**: updating database and publishing to message broker in one request—either can succeed alone. **Transactional outbox** writes an event row in the **same DB transaction** as business data; a **relay** publishes to the broker asynchronously. **Inbox pattern** stores incoming message IDs processed in the same transaction as side effects—**deduplicating** at-least-once delivery. Application pattern here; broker topology → [[09-System-Design/06-Messaging-Streams-and-Async-Topologies/Outbox at System Scale Cross-Service Contracts|Outbox at System Scale Cross-Service Contracts]]; Kafka/Redis engines → [[08-Databases/README|Databases]].
 
 ## Learning Objectives
 

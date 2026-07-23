@@ -290,7 +290,8 @@ Caches bridge the speed gap between CPUs and DRAM by exploiting locality. Unders
 - [[04-Data-Structures/README|Data Structures]]
 - [[05-Algorithms/README|Algorithms]]
 - [[09-System-Design/README|System Design]]
-- [[10-Linux/README|Linux]] — `perf`, NUMA tools
+- [[10-Linux/08-Observability-Tracing-and-Profiling/perf CPU Profiles and Flame Graph Intuition|perf CPU Profiles and Flame Graph Intuition]] — `perf`, NUMA tools
+- [[10-Linux/03-Memory-Swap-and-OOM/NUMA Basics for Host Operators|NUMA Basics for Host Operators]]
 
 ## Progress Checklist
 

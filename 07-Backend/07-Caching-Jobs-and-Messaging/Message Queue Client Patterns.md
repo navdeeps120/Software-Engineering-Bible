@@ -17,7 +17,7 @@ updated: 2026-07-22
 
 ## Overview
 
-**Message queue clients** connect application code to brokers: publish with keys and headers, subscribe with consumer groups, handle ack/nack, visibility timeouts, and backpressure. This note covers **client-side contracts**—serialization, error handling, reconnect, ordering expectations—not broker cluster design ([[09-System-Design/README|System Design]]) or Redis/Kafka engine internals ([[08-Databases/README|Databases]]).
+**Message queue clients** connect application code to brokers: publish with keys and headers, subscribe with consumer groups, handle ack/nack, visibility timeouts, and backpressure. This note covers **client-side contracts**—serialization, error handling, reconnect, ordering expectations—not broker cluster design ([[09-System-Design/06-Messaging-Streams-and-Async-Topologies/Queue vs Log vs Pub-Sub Topology Choice|Queue vs Log vs Pub-Sub Topology Choice]]) or Redis/Kafka engine internals ([[08-Databases/README|Databases]]).
 
 ## Learning Objectives
 
@@ -240,7 +240,7 @@ MQ **clients** encode product contracts: envelopes, keys, ack timing, and idempo
 ## Further Reading
 
 - [[08-Databases/README|Databases]] — Kafka/Redis as storage
-- [[09-System-Design/README|System Design]] — event-driven architecture
+- [[09-System-Design/06-Messaging-Streams-and-Async-Topologies/Queue vs Log vs Pub-Sub Topology Choice|Queue vs Log vs Pub-Sub Topology Choice]] — event-driven architecture
 
 ## Related Notes
 

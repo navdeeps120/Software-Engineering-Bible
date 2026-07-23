@@ -8,7 +8,7 @@ status: active
 prerequisites: ["[[07-Backend/README|Backend]]"]
 tags: [reference, backend, http, apis, auth, express, openapi, reliability]
 created: 2026-07-22
-updated: 2026-07-22
+updated: 2026-07-23
 ---
 
 # Backend References
@@ -74,7 +74,7 @@ Thin `http`/`net`/`tls` and libuv semantics belong to [[06-NodeJS/README|Node.js
 | [Transactional Outbox pattern](https://microservices.io/patterns/data/transactional-outbox.html) | Dual-write avoidance | [[07-Backend/07-Caching-Jobs-and-Messaging/Transactional Outbox and Inbox Patterns\|Transactional Outbox and Inbox Patterns]] |
 | [Cache-Aside pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside) | TTL, stampede mitigation | [[07-Backend/07-Caching-Jobs-and-Messaging/Cache-Aside and TTL Strategies\|Cache-Aside and TTL Strategies]] |
 
-Multi-region capacity, consensus, and broker internals hand off to [[09-System-Design/README|System Design]] and [[08-Databases/README|Databases]].
+Multi-region capacity, consensus, and broker topology hand off to [[09-System-Design/01-Capacity-Latency-and-Bottlenecks/Back-of-Envelope Capacity Estimation|Back-of-Envelope Capacity Estimation]], [[09-System-Design/08-Coordination-Consensus-and-Locks/Consensus Intuition Raft and Paxos for Designers|Consensus Intuition]], and [[09-System-Design/06-Messaging-Streams-and-Async-Topologies/Queue vs Log vs Pub-Sub Topology Choice|Queue vs Log vs Pub-Sub]]; broker *engines* to [[08-Databases/README|Databases]].
 
 ## OpenAPI and Testing
 

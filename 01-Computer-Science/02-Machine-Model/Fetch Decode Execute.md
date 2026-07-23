@@ -317,7 +317,8 @@ Fetch-decode-execute is the heartbeat of computation: read instruction bits, int
 - [[01-Computer-Science/08-Languages-and-Computation/Compilers Interpreters and Virtual Machines|Compilers Interpreters and Virtual Machines]]
 - [[02-JavaScript/README|JavaScript]] — V8 bytecode execution pipeline
 - [[03-Python/README|Python]] — CPython eval loop
-- [[10-Linux/README|Linux]] — signals, `gdb`, `perf`
+- [[10-Linux/02-Processes-Signals-and-Job-Control/Signals Delivery and Common Handlers|Signals Delivery and Common Handlers]] — signals, `gdb`
+- [[10-Linux/08-Observability-Tracing-and-Profiling/perf CPU Profiles and Flame Graph Intuition|perf CPU Profiles and Flame Graph Intuition]]
 
 ## Progress Checklist
 

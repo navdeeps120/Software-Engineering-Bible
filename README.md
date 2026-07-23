@@ -35,7 +35,7 @@ If you cannot teach a concept, you do not yet understand it.
 | --- | --- |
 | [[00-Introduction/README\|Introduction]] | Onboarding and how to use this vault |
 | [[00-Introduction/Roadmap\|Master Roadmap]] | Canonical curriculum map |
-| [ROADMAP.md](ROADMAP.md) | Phased build plan for the repository (Phase 3 in progress — Databases complete) |
+| [ROADMAP.md](ROADMAP.md) | Phased build plan for the repository (Phase 4 in progress — next: AWS M13) |
 | [[00-Templates/README\|Templates]] | Note and project templates |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Writing and contribution standards |
 | [CHANGELOG.md](CHANGELOG.md) | Release history |
@@ -73,8 +73,8 @@ flowchart TD
 6. [[06-NodeJS/README|Node.js]] — V8/libuv host runtime, streams, networking, workers, diagnostics, supply chain, and production Node (11 modules, 62 topics)
 7. [[07-Backend/README|Backend]] — HTTP/API contracts, Express middleware, auth, reliability, caching/jobs, data access, observability, and production services (11 modules, 62 topics)
 8. [[08-Databases/README|Databases]] — storage engines, WAL, indexing, transactions, Postgres/Mongo/Redis depth, and production ops (13 modules, 65 topics)
-9. [[09-System-Design/README|System Design]]
-10. [[10-Linux/README|Linux]]
+9. [[09-System-Design/README|System Design]] — capacity, consistency, partitioning, multi-region, and failure modes (13 modules, 65 topics)
+10. [[10-Linux/README|Linux]] — processes, filesystems, networking, cgroups, systemd, and host observability (13 modules, 65 topics)
 11. [[11-AWS/README|AWS]]
 12. [[12-Azure/README|Azure]]
 13. [[13-Google-Cloud/README|Google Cloud]]

@@ -19,7 +19,7 @@ updated: 2026-07-21
 
 **Randomized algorithms** use explicit random choices during execution. **Las Vegas** algorithms always return correct output; runtime is random (e.g., quicksort with random pivot). **Monte Carlo** algorithms may err with bounded probability; runtime deterministic (e.g., Miller–Rabin primality). Production requires **reproducible RNG**: seeded PRNG streams, logged seeds, and separation of crypto-random vs simulation-random sources.
 
-Distributed consensus randomness → [[09-System-Design/README|System Design]]; this note covers in-memory algorithmic use.
+Distributed consensus randomness → [[09-System-Design/08-Coordination-Consensus-and-Locks/Consensus Intuition Raft and Paxos for Designers|Consensus Intuition Raft and Paxos for Designers]]; this note covers in-memory algorithmic use.
 
 ## Learning Objectives
 

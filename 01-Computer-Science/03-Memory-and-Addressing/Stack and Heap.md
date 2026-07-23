@@ -259,7 +259,7 @@ The stack handles automatic, fast, scoped memory tied to the call chain; the hea
 - [[01-Computer-Science/02-Machine-Model/Registers and Calling Conventions|Registers and Calling Conventions]]
 - [[02-JavaScript/README|JavaScript]]
 - [[03-Python/README|Python]]
-- [[10-Linux/README|Linux]]
+- [[10-Linux/03-Memory-Swap-and-OOM/Virtual Memory Ops RSS vs VSZ|Virtual Memory Ops RSS vs VSZ]]
 
 ## Progress Checklist
 

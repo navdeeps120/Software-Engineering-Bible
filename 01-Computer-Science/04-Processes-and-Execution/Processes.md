@@ -19,7 +19,7 @@ updated: 2026-07-21
 
 A **process** is the operating system's unit of **resource ownership and isolation**: an address space, a set of file descriptors, credentials, scheduling state, and one or more threads of execution. From first principles, a process is how the kernel multiplexes a single machine among many programs without letting them corrupt each other's memory or I/O state.
 
-This note teaches the **CS process model**—what the kernel guarantees, what data structures represent a process, and how creation/termination works. Operational commands (`ps`, `top`, cgroups, systemd) live in [[10-Linux/README|Linux]]; here we build the mental model those tools inspect.
+This note teaches the **CS process model**—what the kernel guarantees, what data structures represent a process, and how creation/termination works. Operational commands (`ps`, `top`, cgroups, systemd) live in [[10-Linux/02-Processes-Signals-and-Job-Control/Process Lifecycle ps and procfs|Process Lifecycle ps and procfs]], [[10-Linux/07-Cgroups-Namespaces-and-Isolation/cgroup v2 Controllers CPU Memory IO|cgroup v2 Controllers]], and [[10-Linux/06-systemd-Timers-and-Logging/Unit Types Dependencies and Targets|Unit Types Dependencies and Targets]]; here we build the mental model those tools inspect.
 
 ## Learning Objectives
 
@@ -224,14 +224,17 @@ Extend [[01-Computer-Science/projects/Concurrent Runtime and Protocol Workbench/
 
 ## Summary
 
-A process is the kernel's container for memory, files, and scheduling: it buys isolation and accountability at the cost of startup and IPC overhead. Threads run *inside* a process and share its address space; the next note covers that split. Operational tooling on Linux inspects this model—see [[10-Linux/README|Linux]]—but debugging production outages requires understanding PCBs, fork/exec semantics, and exit propagation first.
+A process is the kernel's container for memory, files, and scheduling: it buys isolation and accountability at the cost of startup and IPC overhead. Threads run *inside* a process and share its address space; the next note covers that split. Operational tooling on Linux inspects this model—see [[10-Linux/02-Processes-Signals-and-Job-Control/Process Lifecycle ps and procfs|Process Lifecycle ps and procfs]]—but debugging production outages requires understanding PCBs, fork/exec semantics, and exit propagation first.
 
 ## Further Reading
 
 - [[01-Computer-Science/04-Processes-and-Execution/Threads|Threads]]
 - [[01-Computer-Science/04-Processes-and-Execution/System Calls|System Calls]]
 - [[01-Computer-Science/04-Processes-and-Execution/Interprocess Communication Fundamentals|Interprocess Communication Fundamentals]]
-- [[10-Linux/README|Linux track]] for `ps`, signals, cgroups, systemd
+- [[10-Linux/02-Processes-Signals-and-Job-Control/Process Lifecycle ps and procfs|Process Lifecycle ps and procfs]] for `ps`/`procfs`
+- [[10-Linux/02-Processes-Signals-and-Job-Control/Signals Delivery and Common Handlers|Signals Delivery and Common Handlers]]
+- [[10-Linux/07-Cgroups-Namespaces-and-Isolation/cgroup v2 Controllers CPU Memory IO|cgroup v2 Controllers CPU Memory IO]]
+- [[10-Linux/06-systemd-Timers-and-Logging/Unit Types Dependencies and Targets|Unit Types Dependencies and Targets]]
 
 ## Related Notes
 

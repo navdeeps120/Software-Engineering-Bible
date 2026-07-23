@@ -35,7 +35,7 @@ This workbench is **not an Express/Fastify product stack, ORM, repository layer,
 - Express, Nest, or other application HTTP frameworks.
 - ORMs, query builders, repository patterns, or migration products.
 - Claiming to replace PostgreSQL, MongoDB, or Redis in production.
-- Multi-region CAP product design (handoff to [[09-System-Design/README|System Design]]).
+- Multi-region CAP product design (handoff to [[09-System-Design/03-Consistency-Models-and-CAP/CAP and PACELC as Product Constraints|CAP and PACELC as Product Constraints]]).
 - Full SQL compatibility, wire protocols, or replication clusters.
 
 ## Architecture Snapshot

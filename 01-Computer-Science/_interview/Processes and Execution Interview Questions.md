@@ -83,5 +83,5 @@ Expect depth on isolation, scheduling, and syscall cost—not memorizing every e
 
 - [[Career/README|Career]]
 - [[01-Computer-Science/_exercises/Processes and Execution Exercises|Processes and Execution Exercises]]
-- [[10-Linux/README|Linux]]
+- [[10-Linux/02-Processes-Signals-and-Job-Control/Process Lifecycle ps and procfs|Process Lifecycle ps and procfs]]
 - [[16-DevOps/README|DevOps]]

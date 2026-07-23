@@ -20,7 +20,7 @@ updated: 2026-07-21
 
 The **algorithm selection decision matrix** is a structured method to map **problem contracts** (input size, query pattern, weight constraints, memory, latency SLA, adversarial risk) to **algorithm families** before writing code. It synthesizes modules 00–12 into actionable rows—not a substitute for proofs, but a production gate preventing wrong-family incidents.
 
-Distributed placement, consensus, and multi-region caching → [[09-System-Design/README|System Design]]. Query planning and disk-resident sorts → [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|Parse Bind Plan Execute Pipeline]].
+Distributed placement, consensus, and multi-region caching → [[09-System-Design/04-Partitioning-Sharding-and-Placement/Partition Keys Hotspots and Skew|Partition Keys Hotspots and Skew]], [[09-System-Design/08-Coordination-Consensus-and-Locks/Consensus Intuition Raft and Paxos for Designers|Consensus Intuition]], and [[09-System-Design/05-Caching-at-Product-Scale/Cache Hierarchies CDN Edge Regional App|Cache Hierarchies]]. Query planning and disk-resident sorts → [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|Parse Bind Plan Execute Pipeline]].
 
 ## Learning Objectives
 

@@ -17,7 +17,7 @@ updated: 2026-07-22
 
 ## Overview
 
-**Cache-aside** (lazy loading): application reads cache first; on miss, loads from database, populates cache, returns. Writes update database then **invalidate** or update cache. **TTL** (time-to-live) bounds staleness when invalidation is missed. This note covers **application caching patterns**—Redis/memory engine semantics, eviction, and clustering live in [[08-Databases/10-Redis-and-In-Memory-Engines/RDB Snapshots and AOF|RDB Snapshots and AOF]] and [[09-System-Design/README|System Design]].
+**Cache-aside** (lazy loading): application reads cache first; on miss, loads from database, populates cache, returns. Writes update database then **invalidate** or update cache. **TTL** (time-to-live) bounds staleness when invalidation is missed. This note covers **application caching patterns**—Redis/memory engine semantics, eviction, and clustering live in [[08-Databases/10-Redis-and-In-Memory-Engines/RDB Snapshots and AOF|RDB Snapshots and AOF]] and [[09-System-Design/05-Caching-at-Product-Scale/Cache Hierarchies CDN Edge Regional App|Cache Hierarchies CDN Edge Regional App]].
 
 ## Learning Objectives
 
@@ -243,7 +243,7 @@ Cache-aside puts the application in control: **read cache, fill on miss, invalid
 ## Further Reading
 
 - [[08-Databases/10-Redis-and-In-Memory-Engines/RDB Snapshots and AOF|RDB Snapshots and AOF]] — Redis data structures and persistence
-- [[09-System-Design/README|System Design]] — CDN and multi-tier caching
+- [[09-System-Design/05-Caching-at-Product-Scale/Cache Hierarchies CDN Edge Regional App|Cache Hierarchies CDN Edge Regional App]] — CDN and multi-tier caching
 
 ## Related Notes
 

@@ -17,7 +17,7 @@ updated: 2026-07-21
 
 ## Overview
 
-**Scheduling** is the policy and mechanism by which the kernel chooses which runnable thread executes on which CPU and for how long. Goals often conflict: maximize throughput, minimize response time, enforce fairness, respect priorities, and meet deadlines. This note teaches classic policies (FCFS, SJF, round-robin, multilevel feedback) and maps them to modern CFS-like behavior conceptually—without duplicating Linux sysctl tuning covered in [[10-Linux/README|Linux]].
+**Scheduling** is the policy and mechanism by which the kernel chooses which runnable thread executes on which CPU and for how long. Goals often conflict: maximize throughput, minimize response time, enforce fairness, respect priorities, and meet deadlines. This note teaches classic policies (FCFS, SJF, round-robin, multilevel feedback) and maps them to modern CFS-like behavior conceptually—without duplicating Linux sysctl tuning covered in [[10-Linux/10-Performance-Tuning-and-Kernel-Knobs/sysctl Trade-offs Documentation Discipline|sysctl Trade-offs Documentation Discipline]].
 
 ## Learning Objectives
 
@@ -146,7 +146,7 @@ while q:
 
 ### Production-Shaped Example
 
-Backend service mixing **latency-sensitive** RPC handlers and **batch** exporters on one host—separate cgroup CPU weights or run batch on dedicated nodes ([[07-Backend/README|Backend]], [[10-Linux/README|Linux]] ops):
+Backend service mixing **latency-sensitive** RPC handlers and **batch** exporters on one host—separate cgroup CPU weights or run batch on dedicated nodes ([[07-Backend/README|Backend]], [[10-Linux/07-Cgroups-Namespaces-and-Isolation/cgroup v2 Controllers CPU Memory IO|cgroup v2 Controllers]] ops):
 
 ```text
 API cgroup:   cpu.weight = 100  → protected share
@@ -212,7 +212,7 @@ Document scheduler assumptions in [[01-Computer-Science/projects/Concurrent Runt
 - Separate latency-critical and batch workloads by cgroup, node, or queue
 - Size thread pools near CPU capacity for compute-bound work
 - Measure p50/p99/p999, not just averages ([[01-Computer-Science/07-Networking-Fundamentals/Latency Bandwidth Throughput and Tail Latency|Tail Latency]])
-- Document niceness/affinity decisions in runbooks ([[10-Linux/README|Linux]])
+- Document niceness/affinity decisions in runbooks ([[10-Linux/02-Processes-Signals-and-Job-Control/Job Control Nice and Affinity Ops|Job Control Nice and Affinity Ops]])
 
 ## Summary
 
@@ -231,7 +231,8 @@ Scheduling decides which ready thread runs on which CPU under competing goals. C
 - [[01-Computer-Science/04-Processes-and-Execution/System Calls|System Calls]]
 - [[06-NodeJS/README|Node.js]]
 - [[07-Backend/README|Backend]]
-- [[10-Linux/README|Linux]]
+- [[10-Linux/07-Cgroups-Namespaces-and-Isolation/cgroup v2 Controllers CPU Memory IO|cgroup v2 Controllers CPU Memory IO]]
+- [[10-Linux/02-Processes-Signals-and-Job-Control/Job Control Nice and Affinity Ops|Job Control Nice and Affinity Ops]]
 - [[01-Computer-Science/code/README|code labs]]
 
 ## Progress Checklist

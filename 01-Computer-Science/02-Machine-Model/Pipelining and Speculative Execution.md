@@ -263,7 +263,8 @@ Pipelining overlaps instruction stages to raise throughput; speculative executio
 - [[01-Computer-Science/05-Concurrency-Fundamentals/Atomics and Memory Ordering|Atomics and Memory Ordering]]
 - [[05-Algorithms/README|Algorithms]]
 - [[18-Security/README|Security]]
-- [[10-Linux/README|Linux]] — microcode, `perf`, mitigations sysfs
+- [[10-Linux/08-Observability-Tracing-and-Profiling/perf CPU Profiles and Flame Graph Intuition|perf CPU Profiles and Flame Graph Intuition]] — microcode, `perf`, mitigations sysfs
+- [[10-Linux/09-Security-Primitives-on-the-Host/Kernel Hardening Sysctl Surface|Kernel Hardening Sysctl Surface]]
 
 ## Progress Checklist
 

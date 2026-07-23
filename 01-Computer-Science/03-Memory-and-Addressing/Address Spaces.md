@@ -270,7 +270,7 @@ An address space is the program's view of memory: regions with permissions mappe
 - [[01-Computer-Science/03-Memory-and-Addressing/Pointers References and Aliasing|Pointers References and Aliasing]]
 - [[01-Computer-Science/02-Machine-Model/Hardware Software Interface|Hardware Software Interface]]
 - [[01-Computer-Science/04-Processes-and-Execution/Processes|Processes]]
-- [[10-Linux/README|Linux]]
+- [[10-Linux/03-Memory-Swap-and-OOM/Virtual Memory Ops RSS vs VSZ|Virtual Memory Ops RSS vs VSZ]]
 - [[18-Security/README|Security]]
 - [[02-JavaScript/README|JavaScript]] — V8 heap cages
 - [[03-Python/README|Python]] — CPython object layout

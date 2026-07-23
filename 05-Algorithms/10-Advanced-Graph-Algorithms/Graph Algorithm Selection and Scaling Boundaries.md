@@ -21,7 +21,7 @@ updated: 2026-07-21
 
 Graph problems share notation but differ by **contract**: unweighted vs weighted, directed vs undirected, single-source vs all-pairs, acyclic vs cyclic, optimization objective (shortest, spanning, max flow, matching). This note synthesizes **when** to apply each algorithm family and **where** asymptotics break against real hardware—without re-deriving every algorithm (see modules 07–10).
 
-Handoffs: graph storage → [[04-Data-Structures/08-Graphs-as-Representation/Graph ADT Vertices Edges and Labels|Graph ADT]]; distributed graph processing → [[09-System-Design/README|System Design]].
+Handoffs: graph storage → [[04-Data-Structures/08-Graphs-as-Representation/Graph ADT Vertices Edges and Labels|Graph ADT]]; distributed graph processing → [[09-System-Design/04-Partitioning-Sharding-and-Placement/Partition Keys Hotspots and Skew|Partition Keys Hotspots and Skew]].
 
 ## Learning Objectives
 
@@ -203,7 +203,7 @@ Constants and cache matter: profile before switching families ([[05-Algorithms/1
 
 ### When Not to Use
 
-- Distributed graph analytics at cluster scale → [[09-System-Design/README|System Design]]
+- Distributed graph analytics at cluster scale → [[09-System-Design/04-Partitioning-Sharding-and-Placement/Partition Keys Hotspots and Skew|Partition Keys Hotspots and Skew]]
 - SQL join order optimization → [[08-Databases/README|Databases]]
 - Replacing domain-specific spatial indexes with generic Dijkstra
 

@@ -191,8 +191,9 @@ npm test
   [[08-Databases/07-Replication-Mechanics/WAL Shipping and Streaming Replication|WAL Shipping and Streaming Replication]]
   for how `wal.ts`'s durable log is literally what a real streaming
   replica ships over the wire, and
-  [[09-System-Design/README|System Design]] for the multi-region topology,
-  failover, and CAP-theorem trade-off layer built on top of it.
+  [[09-System-Design/07-Multi-Region-and-Geo/Multi-Region Active-Passive Active-Active Patterns|Multi-Region Active-Passive Active-Active Patterns]]
+  and [[09-System-Design/03-Consistency-Models-and-CAP/CAP and PACELC as Product Constraints|CAP and PACELC as Product Constraints]]
+  for the multi-region topology, failover, and CAP-theorem trade-off layer built on top of it.
 
 ## Related Notes
 

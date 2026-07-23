@@ -17,7 +17,7 @@ updated: 2026-07-22
 
 ## Overview
 
-Backend services **use** databases through repositories and transactions; **database engines** own storage formats, [[08-Databases/02-WAL-Durability-and-Recovery/Write-Ahead Logging Protocol|WAL]], replication, [[08-Databases/05-Transactions-and-Isolation/Isolation Levels and Product Defaults|isolation implementation]], [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|query planning]], and index structures. This note defines the **handoff boundary**: what backend engineers must know to write correct SQL and operable services vs what to defer to [[08-Databases/README|Databases]] and [[09-System-Design/README|System Design]] (sharding, CAP trade-offs at scale).
+Backend services **use** databases through repositories and transactions; **database engines** own storage formats, [[08-Databases/02-WAL-Durability-and-Recovery/Write-Ahead Logging Protocol|WAL]], replication, [[08-Databases/05-Transactions-and-Isolation/Isolation Levels and Product Defaults|isolation implementation]], [[08-Databases/04-Query-Processing-and-Planning/Parse Bind Plan Execute Pipeline|query planning]], and index structures. This note defines the **handoff boundary**: what backend engineers must know to write correct SQL and operable services vs what to defer to [[08-Databases/README|Databases]] and [[09-System-Design/04-Partitioning-Sharding-and-Placement/Partition Keys Hotspots and Skew|Partition Keys Hotspots and Skew]] / [[09-System-Design/03-Consistency-Models-and-CAP/CAP and PACELC as Product Constraints|CAP and PACELC as Product Constraints]] (sharding, CAP trade-offs at scale).
 
 ## Learning Objectives
 
@@ -169,7 +169,7 @@ Scope table from [[07-Backend/README|Backend README]]:
 | Missing LIMIT | Add in repo | — |
 | Seq scan on big table | Temporary cap | Index + stats |
 | Hot row updates | App retry/backoff | Engine lock tuning |
-| Global scale | Read replica routing in app | Sharding (System Design) |
+| Global scale | Read replica routing in app | Sharding ([[09-System-Design/04-Partitioning-Sharding-and-Placement/Partition Keys Hotspots and Skew\|Partition Keys Hotspots and Skew]]) |
 
 ### When to Use
 

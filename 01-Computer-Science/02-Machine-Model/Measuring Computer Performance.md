@@ -260,7 +260,7 @@ Performance is measured along multiple axes—time, throughput, counters, and ta
 - [[01-Computer-Science/09-Correctness-and-Reliability/Observability Fundamentals|Observability Fundamentals]]
 - [[05-Algorithms/README|Algorithms]]
 - [[09-System-Design/README|System Design]]
-- [[10-Linux/README|Linux]]
+- [[10-Linux/08-Observability-Tracing-and-Profiling/perf CPU Profiles and Flame Graph Intuition|perf CPU Profiles and Flame Graph Intuition]]
 - [[16-DevOps/README|DevOps]]
 - [[02-JavaScript/README|JavaScript]] — V8 `--prof`, clinic.js
 - [[03-Python/README|Python]] — `cProfile`, `py-spy`

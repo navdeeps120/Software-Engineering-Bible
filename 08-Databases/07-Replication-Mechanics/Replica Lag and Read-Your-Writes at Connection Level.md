@@ -177,7 +177,7 @@ SELECT pg_wait_for_lsn('W');  -- blocks until replay reaches W (extension/altern
 
 - Do not round-robin reads after write without stickiness
 - Do not use replica for uniqueness checks immediately after insert
-- Global multi-region consistency → [[09-System-Design/README|System Design]]
+- Global multi-region consistency → [[09-System-Design/07-Multi-Region-and-Geo/Replica Lag as User-Facing Consistency Budget|Replica Lag as User-Facing Consistency Budget]]
 
 ## Exercises
 

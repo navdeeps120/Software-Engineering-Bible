@@ -177,7 +177,7 @@ function isTransientConnectionError(err: unknown): boolean {
 
 - Do not promote standby while old primary may still write
 - Do not rely on DNS TTL alone as fencing mechanism
-- Multi-region active-active design → [[09-System-Design/README|System Design]]
+- Multi-region active-active design → [[09-System-Design/07-Multi-Region-and-Geo/Multi-Region Active-Passive Active-Active Patterns|Multi-Region Active-Passive Active-Active Patterns]]
 
 ## Exercises
 

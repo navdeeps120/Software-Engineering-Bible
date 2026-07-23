@@ -31,7 +31,7 @@ updated: 2026-07-21
 | Redis-backed cache module | [[07-Backend/README|Backend]] |
 | Disk-backed graph store | [[08-Databases/README|Databases]] |
 | Dijkstra/BFS CLI | [[05-Algorithms/projects/Pathfinding Lab/README\|Pathfinding Lab]] |
-| Distributed sharded hash map | [[09-System-Design/README|System Design]] |
+| Distributed sharded hash map | [[09-System-Design/04-Partitioning-Sharding-and-Placement/Partition Keys Hotspots and Skew|Partition Keys Hotspots and Skew]] |
 | Lock-free production map | Concepts + CS concurrency notes only |
 
 Ideas enter [[04-Data-Structures/projects/Structures Workbench/Roadmap|Roadmap]] only with measurable learning outcome, ADR impact, and maintainer owner.

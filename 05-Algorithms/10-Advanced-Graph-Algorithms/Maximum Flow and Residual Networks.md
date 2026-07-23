@@ -253,7 +253,7 @@ Space `O(V + E)` for adjacency with reverse edges.
 
 - Uncapacitated matching only → specialized Hopcroft–Karp may suffice
 - Global min-cut without s/t → Stoer–Wagner or Karger (randomized)
-- Distributed consensus or partition tolerance → [[09-System-Design/README|System Design]]
+- Distributed consensus or partition tolerance → [[09-System-Design/03-Consistency-Models-and-CAP/CAP and PACELC as Product Constraints|CAP and PACELC as Product Constraints]]
 
 ## Exercises
 

@@ -19,7 +19,7 @@ updated: 2026-07-21
 
 An **asynchronous event-driven** program structures work as **tasks** driven by an **event loop** (or reactor): register interest in I/O or timers, continue other work while waits are outstanding, resume via callbacks or `async/await` continuations when events fire. One thread can manage many concurrent I/O-bound operations without one thread per connection.
 
-This is a **concurrency model**, not automatic **parallelism**. Node.js, asyncio, and Java NIO embody variants; kernel multiplexers (`epoll`, `kqueue`, IOCP) sit below—see [[01-Computer-Science/06-IO-and-Persistence/Blocking Nonblocking and Multiplexed IO|Multiplexed I/O]] and [[10-Linux/README|Linux]] ops for tuning.
+This is a **concurrency model**, not automatic **parallelism**. Node.js, asyncio, and Java NIO embody variants; kernel multiplexers (`epoll`, `kqueue`, IOCP) sit below—see [[01-Computer-Science/06-IO-and-Persistence/Blocking Nonblocking and Multiplexed IO|Multiplexed I/O]] and [[10-Linux/05-Networking-Stack-and-Host-Firewall/TCP UDP Sockets ss and Conntrack|TCP UDP Sockets ss and Conntrack]] ops for tuning.
 
 ## Learning Objectives
 

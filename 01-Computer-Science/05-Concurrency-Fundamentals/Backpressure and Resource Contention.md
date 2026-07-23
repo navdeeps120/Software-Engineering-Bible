@@ -262,7 +262,7 @@ Load-test report for [[01-Computer-Science/projects/Concurrent Runtime and Proto
 - Bound every queue; expose depth and wait time metrics
 - Fail fast with actionable errors (429/503 + Retry-After)
 - Size pools from measured service time and SLA, not guesses
-- Load test beyond expected peak ([[09-System-Design/README|System Design]])
+- Load test beyond expected peak ([[09-System-Design/01-Capacity-Latency-and-Bottlenecks/Back-of-Envelope Capacity Estimation|Back-of-Envelope Capacity Estimation]])
 
 ## Summary
 
@@ -280,7 +280,7 @@ Backpressure propagates saturation signals upstream so systems reject or slow wo
 - [[01-Computer-Science/05-Concurrency-Fundamentals/Asynchronous Event-Driven Models|Asynchronous Event-Driven Models]]
 - [[07-Backend/README|Backend]]
 - [[06-NodeJS/README|Node.js]]
-- [[10-Linux/README|Linux]] — cgroup memory/CPU limits as hard backpressure
+- [[10-Linux/07-Cgroups-Namespaces-and-Isolation/cgroup v2 Controllers CPU Memory IO|cgroup v2 Controllers CPU Memory IO]] — cgroup memory/CPU limits as hard backpressure
 - [[01-Computer-Science/code/README|code labs]]
 
 ## Progress Checklist

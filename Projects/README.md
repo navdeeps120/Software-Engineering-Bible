@@ -8,7 +8,7 @@ status: active
 prerequisites: ["[[00-Introduction/README|Introduction]]"]
 tags: [projects, portfolio]
 created: 2026-07-21
-updated: 2026-07-22
+updated: 2026-07-23
 ---
 
 # Projects
@@ -116,6 +116,24 @@ Every important system should leave behind:
 - [[08-Databases/projects/Mini Redis Persistence Lab/README|Mini Redis Persistence Lab]]
 - [[08-Databases/projects/EXPLAIN Literacy Workbench/README|EXPLAIN Literacy Workbench]]
 - [[08-Databases/projects/Database Engines Workbench/README|Database Engines Workbench]] (portfolio)
+
+### System Design — capacity, consistency, and fleet topology
+
+- [[09-System-Design/projects/Capacity Estimator Lab/README|Capacity Estimator Lab]]
+- [[09-System-Design/projects/Load Balancer From Scratch/README|Load Balancer From Scratch]]
+- [[09-System-Design/projects/Shard Router and Hotspot Clinic/README|Shard Router and Hotspot Clinic]]
+- [[09-System-Design/projects/Consistency and Quorum Demo/README|Consistency and Quorum Demo]]
+- [[09-System-Design/projects/Multi-Region Failover Playbook Lab/README|Multi-Region Failover Playbook Lab]]
+- [[09-System-Design/projects/Distributed Systems Workbench/README|Distributed Systems Workbench]] (portfolio)
+
+### Linux — host operations and incident triage
+
+- [[10-Linux/projects/Procfs Inspector Lab/README|Procfs Inspector Lab]]
+- [[10-Linux/projects/Cgroup Budget Clinic/README|Cgroup Budget Clinic]]
+- [[10-Linux/projects/Host Network Triage Toolkit/README|Host Network Triage Toolkit]]
+- [[10-Linux/projects/systemd Unit Workshop/README|systemd Unit Workshop]]
+- [[10-Linux/projects/Observability First-Aid Kit/README|Observability First-Aid Kit]]
+- [[10-Linux/projects/Linux Host Workbench/README|Linux Host Workbench]] (portfolio)
 
 ## Related Notes
 

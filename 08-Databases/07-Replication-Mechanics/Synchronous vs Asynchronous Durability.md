@@ -169,7 +169,7 @@ export function createMetricsPool(url: string): pg.Pool {
 
 - Do not globally disable synchronous_commit without RPO sign-off
 - Do not point sync rep at slow cross-region standby without latency budget
-- Multi-region product CAP → [[09-System-Design/README|System Design]]
+- Multi-region product CAP → [[09-System-Design/03-Consistency-Models-and-CAP/CAP and PACELC as Product Constraints|CAP and PACELC as Product Constraints]]
 
 ## Exercises
 

@@ -39,7 +39,7 @@ Compare physical vs logical replication, sync vs async durability, WAL shipping 
 
 - [ ] Mermaid diagram with send/receive/flush/replay
 - [ ] Difference flush vs replay lag
-- [ ] Handoff to [[09-System-Design/README|System Design]] for multi-region product design
+- [ ] Handoff to [[09-System-Design/07-Multi-Region-and-Geo/Multi-Region Active-Passive Active-Active Patterns|Multi-Region Active-Passive Active-Active Patterns]] for multi-region product design
 
 ### Problem 2 — `intermediate`
 
@@ -145,7 +145,7 @@ Compare physical vs logical replication, sync vs async durability, WAL shipping 
 
 - [ ] Read replica lag per region honest assessment
 - [ ] No multi-master Postgres fantasy without trade-offs
-- [ ] Explicit handoff to [[09-System-Design/README|System Design]]
+- [ ] Explicit handoff to [[09-System-Design/07-Multi-Region-and-Geo/Multi-Region Active-Passive Active-Active Patterns|Multi-Region Active-Passive Active-Active Patterns]]
 
 ## Rubric
 

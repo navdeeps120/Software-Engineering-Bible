@@ -87,7 +87,7 @@ flowchart TD
     NodeHTTP --> Express
 ```
 
-Node libuv and thread pool details: [[06-NodeJS/02-Event-Loop-and-libuv/libuv Architecture Overview|libuv Architecture Overview]]. Multi-region edge routing: [[09-System-Design/README|System Design]].
+Node libuv and thread pool details: [[06-NodeJS/02-Event-Loop-and-libuv/libuv Architecture Overview|libuv Architecture Overview]]. Multi-region edge routing: [[09-System-Design/02-Load-Balancing-and-Edge-Entry/Edge Admission Control and Global Traffic Steering|Edge Admission Control and Global Traffic Steering]].
 
 ## Mermaid Diagrams
 

@@ -199,7 +199,7 @@ Integrate latency breakdown into workbench load generator; correlate with TCP re
 
 ## Summary
 
-Latency is delay, bandwidth is capacity, throughput is achieved rate — related but not interchangeable. Tail latency drives user experience at scale because fan-out and queueing amplify rare slow events. Measure distributions, understand BDP, and hand distributed mitigation patterns to [[09-System-Design/README|System Design]].
+Latency is delay, bandwidth is capacity, throughput is achieved rate — related but not interchangeable. Tail latency drives user experience at scale because fan-out and queueing amplify rare slow events. Measure distributions, understand BDP, and hand distributed mitigation patterns to [[09-System-Design/01-Capacity-Latency-and-Bottlenecks/Latency Budgets Percentiles and Tail Behavior|Latency Budgets Percentiles and Tail Behavior]].
 
 ## Further Reading
 

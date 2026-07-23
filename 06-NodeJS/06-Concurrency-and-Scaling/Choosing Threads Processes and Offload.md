@@ -244,7 +244,7 @@ Use the **event loop** for async I/O, **worker_threads** for CPU-bound JS, **chi
 
 ## Further Reading
 
-- [[09-System-Design/README|System Design]] — scaling and queue patterns
+- [[09-System-Design/06-Messaging-Streams-and-Async-Topologies/Queue vs Log vs Pub-Sub Topology Choice|Queue vs Log vs Pub-Sub Topology Choice]] — scaling and queue patterns
 - [[06-NodeJS/02-Event-Loop-and-libuv/Starvation Backpressure and Loop Health|Starvation Backpressure and Loop Health]]
 
 ## Related Notes

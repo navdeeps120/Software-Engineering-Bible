@@ -29,7 +29,7 @@ updated: 2026-07-22
 ## Explicitly Not Ideas (Handoff Elsewhere)
 
 - Postgres replication tuning → [[08-Databases/README|Databases]]
-- Multi-region active-active → [[09-System-Design/README|System Design]]
+- Multi-region active-active → [[09-System-Design/07-Multi-Region-and-Geo/Multi-Region Active-Passive Active-Active Patterns|Multi-Region Active-Passive Active-Active Patterns]]
 - OAuth IdP implementation → [[18-Security/README|Security]] depth
 - libuv/event-loop reimplementation → [[06-NodeJS/README|Node.js]]
 
